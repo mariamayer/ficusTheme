@@ -105,7 +105,7 @@ add_action( 'widgets_init', 'ficus_widgets_init' );
  * Enqueue scripts and styles.
  */
 function ficus_scripts() {
-	wp_enqueue_style( 'ficus-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'ficus-style', get_stylesheet_uri(),false,null);
 
 	wp_enqueue_style( 'ficus-boostsrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css',false, null);
 

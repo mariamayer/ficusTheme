@@ -42,15 +42,31 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
-html {
-	font-family: sans-serif;
+
+@font-face {
+    font-family: 'Van Condensed';
+    src: url('fonts/Van Condensed-regular.otf');
+}
+@font-face {
+    font-family: 'Van Condensed Light';
+    src: url('fonts/Van Condensed-light.otf');
+}
+@font-face {
+    font-family: 'Van Condensed Bold';
+    src: url('fonts/Van Condensed-bold.otf');
+}
+@font-face {
+    font-family: 'Unicorn Flakes';
+    src: url('fonts/Unicorn Flakes.ttf');
+}
+html,.home{
+	font-family: 'Van Condensed';
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
 }
 
 body {
 	margin:0;
-    font-family: 'Roboto', sans-serif;
 	text-align: center;
     color: #333333;
 }
@@ -505,10 +521,6 @@ a {
 	color: royalblue;
 }
 
-a:visited {
-	color: purple;
-}
-
 a:hover,
 a:focus,
 a:active {
@@ -545,10 +557,6 @@ a:active {
     color: #fff;
 		font-weight: bolder;
 }
-.content-section img{
-	width:100%;
-}
-
 .centrado {
 text-align: center
 }
@@ -572,13 +580,22 @@ margin-top: 10em;
     font-size: 32px;
     text-transform: uppercase;
 }
+.intro .valores{
+	border-right:2px solid black;
 
-
+}
+.intro .valores .valor li{
+	text-transform: uppercase;
+	font-size: 18px;
+	padding:5px;
+}
 .boton{
 font-size: 14px;
 line-height: 15px;
 display: inline-block;
 border: 2px solid #000000;
+font-family: 'Van Condensed Bold';
+color:#000;
 padding: 12px 28px;
 background-color: #c2d72e;
 position: relative;
@@ -589,7 +606,6 @@ text-transform: uppercase;
 
 }
 
-
 .nosotros {
 background: gray;
 color: white;
@@ -597,12 +613,13 @@ color: white;
 
 .valor {
 list-style: none;
-margin-left:-30px;
-} 
+margin:0;
+padding:0;
+}
 
 .somos {
 color: #999999;
-font-family: 'Unicorn Flakes', sans-serif;
+font-family: 'Unicorn Flakes';
 font-size: 18px;
 font-weight: 400;
 line-height: 26px;
@@ -610,20 +627,46 @@ text-align: justify;
 }
 
 .quehacemos {
-background: #c2d72e;
 text-align: center;
 }
-
+#servicio{
+	background: #c2d72e;
+	position: relative;
+}
+#servicio .line{
+	position: absolute;
+	height: 100%;
+	border-right: 3px dashed white;
+	left: 5px;
+}
 .servicios {
 list-style: none;
-padding: 2em;
+margin:50px;
+padding: 0;
 
 }
 .hacemos {
-width: 300px;
-display: inline-block; 
+	width: 300px;
+	display: inline-block;
+	border-left: 3px dashed black;
+	height:120px;
+	vertical-align: top;
+	position: relative;
+	margin:50px 0 150px 0;
+	background-color: #c2d72e;
 }
-
+.hacemos.last{
+	border-right: 3px dashed black;
+}
+.hacemos .ti-servicio{
+	display: block;
+	font-family: 'Van Condensed Bold';
+	font-size: 30px;
+	text-transform: uppercase;
+	position: absolute;
+	bottom:-120px;
+	width:100%;
+}
 
 .tecnologias {
 background: #333333;
@@ -633,14 +676,22 @@ text-align: center;
 .usamos {
 list-style: none;
 padding: 2em;
+margin:0;
 
 }
 .tecno {
-width: 100px;
-display: inline-block; 
-margin-left: 100px
+width: 220px;
+text-align: center;
+display: inline-block;
+vertical-align: top;
 }
-
+.tecno .ti-servicio{
+	display: block;
+	color:#fff;
+	font-family: 'Van Condensed Light';
+	font-size: 20px;
+	margin-top:10px;
+}
 
 .como-trabajamos {
 margin-top: 100px;
