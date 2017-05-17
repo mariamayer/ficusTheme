@@ -577,8 +577,8 @@ margin-top: 20em;
 
 .fiqus {
     color: #c2d72e;
-    font-size: 34px;
-    text-align: justify;
+    font-size: 46px;
+    text-align: center;
     text-transform: uppercase;
 }
 .intro .valores .valor li{
@@ -587,17 +587,12 @@ margin-top: 20em;
 	padding:5px;
 }
 .boton{
-font-size: 14px;
-line-height: 15px;
+font-size: 16px;
 display: inline-block;
 border: 2px solid #000000;
-<<<<<<< Updated upstream
 font-family: 'Van Condensed Bold';
 color:#000;
-padding: 12px 28px;
-=======
-padding: 6px 8px;
->>>>>>> Stashed changes
+padding: 4px 4px;
 background-color: #c2d72e;
 position: relative;
 overflow: hidden;
@@ -606,41 +601,58 @@ text-decoration: none !important;
 text-transform: uppercase;
 }
 
+
+
+.nosotros {
+background: #333333;
+color: white;
+}
+
+.nosotros-derecha {
+float: left;
+width: 50%;
+display: block;
+height:inherit;
+}
+
+.nosotros-izquierda {
+float: left;
+width: 50%;
+height:inherit;
+}
+
 .valores {
 	text-align: left;
 	margin-top: 10em;
-}
-
-.nosotros {
-background: gray;
-color: white;
+	margin-bottom: 2em;
 }
 
 .valor {
 list-style: none;
-<<<<<<< Updated upstream
 margin:0;
 padding:0;
+font-size: 14px;
+line-height: 18px;
 }
-=======
-margin-left:-30px;
-font-size: 18px;
-line-height: 32px;
-} 
->>>>>>> Stashed changes
 
 .somos {
-color: #999999;
+color: #333333;
 font-family: 'Unicorn Flakes';
 font-size: 18px;
 font-weight: 400;
-line-height: 26px;
+line-height: 28px;
 text-align: justify;
+}
+
+
+.enterate {
+	 vertical-align: -16px;
 }
 
 .quehacemos {
 text-align: center;
 }
+
 #servicio{
 	background: #c2d72e;
 	position: relative;
@@ -653,18 +665,17 @@ text-align: center;
 }
 .servicios {
 list-style: none;
-margin:50px;
+margin:1em;
 padding: 0;
-
 }
+
 .hacemos {
 	width: 300px;
 	display: inline-block;
 	border-left: 3px dashed black;
-	height:120px;
-	vertical-align: top;
+	height:60px;
 	position: relative;
-	margin:50px 0 150px 0;
+	margin:20px 0 100px 0;
 	background-color: #c2d72e;
 }
 .hacemos.last{
@@ -673,10 +684,11 @@ padding: 0;
 .hacemos .ti-servicio{
 	display: block;
 	font-family: 'Van Condensed Bold';
-	font-size: 30px;
+	font-size: 24px;
+	line-height: 28px;
 	text-transform: uppercase;
 	position: absolute;
-	bottom:-120px;
+	bottom:-100px;
 	width:100%;
 }
 
@@ -697,21 +709,140 @@ text-align: center;
 display: inline-block;
 vertical-align: top;
 }
+
 .tecno .ti-servicio{
 	display: block;
 	color:#fff;
 	font-family: 'Van Condensed Light';
-	font-size: 20px;
+	font-size: 12px;
 	margin-top:10px;
 }
 
 .como-trabajamos {
-margin-top: 100px;
-margin-bottom: 100px;
+margin-top: 80px;
 }
 
+.feedback {
+	overflow: inherit !important;
+	font-size: 18px !important;
+}
+
+.lineas {
+	font-size: 32px;
+	vertical-align: -6px;
+}
+
+.esquema{
+margin-top: 5em;
+margin-bottom: 5em;
+}
+
+.final {
+font-size: 18px;
+display: inline-block;
+font-family: 'Van Condensed Bold';
+color:#fff;
+padding: 8px 8px;
+background-color: #333333;
+position: relative;
+overflow: hidden;
+text-decoration: none !important;
+text-transform: uppercase;
+margin-bottom: 3em;
+}
+
+.ejemplos {
+background: #333333;
+text-align: center;
+color: #ffffff;
+margin-bottom: 2em;
+}
+
+.selector {
+font-size: 12px;
+display: inline-block;
+font-family: 'Van Condensed Bold';
+color:#fff;
+padding: 4px 8px;
+background-color: #333333;
+position: relative;
+overflow: hidden;
+text-decoration: none !important;
+text-transform: uppercase;
+}
+
+.grilla {
+	height: 12em;
+	background: #333333;
+	margin-bottom: 1em;
+	padding: 0.5em;
+	color: #ffffff;
+	text-align: center;
+}
+
+.tag-ul {
+list-style: none;
+padding: 0;
+margin: 0px;
+}
+
+.tag {
+font-size: 10px;
+display: inline-block;
+font-family: 'Van Condensed Bold';
+color:#333333;
+padding: 1px 4px;
+background-color: #fff;
+position: relative;
+overflow: hidden;
+text-decoration: none !important;
+text-transform: uppercase;
+}
+
+.muestra {
+	height: 30em;
+	background: #f2f2f2;
+	margin-bottom: 1em;
+	padding: 2em;
+	color: #ffffff;
+	text-align: center;
+}
+
+.selector2 {
+font-size: 12px;
+display: inline-block;
+font-family: 'Van Condensed Bold';
+color:#fff;
+padding: 4px 8px;
+background-color: #333333;
+position: relative;
+overflow: hidden;
+text-decoration: none !important;
+text-transform: uppercase;
+}
+
+.propios {
+background: #333333;
+text-align: center;
+color: #000000;
+margin: 2em;
+}
 
 .footer{
 	background:#F2F2F2;
 	padding:10px;
 }
+
+
+
+.slider {
+	height: 30em;
+	background: #f2f2f2;
+	margin-bottom: 1em;
+	padding: 2em;
+	color: #ffffff;
+	text-align: center;
+}
+
+
+
