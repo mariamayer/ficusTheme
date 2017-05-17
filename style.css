@@ -581,10 +581,6 @@ margin-top: 20em;
     text-align: justify;
     text-transform: uppercase;
 }
-.intro .valores{
-	border-right:2px solid black;
-
-}
 .intro .valores .valor li{
 	text-transform: uppercase;
 	font-size: 18px;
