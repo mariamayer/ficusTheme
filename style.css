@@ -570,14 +570,15 @@ text-align: center
     }
 
 .central {
-width: 600px;
+width: 500px;
 margin: 0 auto;
-margin-top: 10em;
+margin-top: 20em;
 }
 
 .fiqus {
     color: #c2d72e;
-    font-size: 32px;
+    font-size: 34px;
+    text-align: justify;
     text-transform: uppercase;
 }
 .intro .valores{
@@ -594,16 +595,24 @@ font-size: 14px;
 line-height: 15px;
 display: inline-block;
 border: 2px solid #000000;
+<<<<<<< Updated upstream
 font-family: 'Van Condensed Bold';
 color:#000;
 padding: 12px 28px;
+=======
+padding: 6px 8px;
+>>>>>>> Stashed changes
 background-color: #c2d72e;
 position: relative;
 overflow: hidden;
-border-radius: 1px;
+border-radius: 2px;
 text-decoration: none !important;
 text-transform: uppercase;
+}
 
+.valores {
+	text-align: left;
+	margin-top: 10em;
 }
 
 .nosotros {
@@ -613,9 +622,16 @@ color: white;
 
 .valor {
 list-style: none;
+<<<<<<< Updated upstream
 margin:0;
 padding:0;
 }
+=======
+margin-left:-30px;
+font-size: 18px;
+line-height: 32px;
+} 
+>>>>>>> Stashed changes
 
 .somos {
 color: #999999;
