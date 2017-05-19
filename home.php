@@ -109,91 +109,153 @@ get_header(); ?>
 </section><!--end seccion como trabajamos-->
 
 <section id="proyectos" class="content-section">
-		<div class="ejemplos container-fluid">
+		<div class="ejemplos">
 		<h1>PROYECTOS</h1>
 		</div>
+		<div class="container-fluid">
+			<div class="col-md-12">
 
-	<div class="col-md-12">
+				<div class="col-md-4 col-md-offset-1 text-left proyectos">
+					<div>
+						<ul class="servicios">
+						<li class="selector"> Web </li>
+						<li class="selector"> App mobile </li>
+						<li class="selector"> Desarrollos a medida </li>
+						<li class="selector"> Games </li>
+						<li class="selector"> Todos </li>
+						</ul>
+					</div>
 
-		<div class="col-md-4 col-md-offset-1 text-left">
-			<div>
-				<ul class="servicios">
-				<li class="selector"> Web </li>
-				<li class="selector"> App mobile </li>
-				<li class="selector"> Desarrollos a medida </li>
-				<li class="selector"> Games </li>
-				<li class="selector"> Todos </li>
-				</ul>
+					<div class="col-md-6">
+						<div class=" grilla">
+							<h4>Betterez </h4>
+							<p>Aplicación web y mobile para venta online de tickets de transporte y eventos.</p>
+								<ul class="tag-ul">
+								<li class="tag"> NodeJS </li>
+								<li class="tag"> Drupal </li>
+								<li class="tag"> Wordpress </li>
+								</ul>
+						</div>
+						<div class="grilla">
+							<h4>Betterez </h4>
+							<p>Aplicación web y mobile para venta online de tickets de transporte y eventos.</p>
+								<ul class="tag-ul">
+								<li class="tag"> NodeJS </li>
+								<li class="tag"> Drupal </li>
+								<li class="tag"> Wordpress </li>
+								</ul>
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<div class=" grilla">
+							<h4>Betterez </h4>
+							<p>Aplicación web y mobile para venta online de tickets de transporte y eventos.</p>
+								<ul class="tag-ul">
+								<li class="tag"> NodeJS </li>
+								<li class="tag"> Drupal </li>
+								<li class="tag"> Wordpress </li>
+								</ul>
+						</div>
+						<div class="grilla">
+							<h4>Betterez </h4>
+							<p>Aplicación web y mobile para venta online de tickets de transporte y eventos.</p>
+								<ul class="tag-ul">
+								<li class="tag"> NodeJS </li>
+								<li class="tag"> Drupal </li>
+								<li class="tag"> Wordpress </li>
+								</ul>
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<div class=" grilla">
+							<h4>Betterez </h4>
+							<p>Aplicación web y mobile para venta online de tickets de transporte y eventos.</p>
+								<ul class="tag-ul">
+								<li class="tag"> NodeJS </li>
+								<li class="tag"> Drupal </li>
+								<li class="tag"> Wordpress </li>
+								</ul>
+						</div>
+						<div class="grilla">
+							<h4>Betterez </h4>
+							<p>Aplicación web y mobile para venta online de tickets de transporte y eventos.</p>
+								<ul class="tag-ul">
+								<li class="tag"> NodeJS </li>
+								<li class="tag"> Drupal </li>
+								<li class="tag"> Wordpress </li>
+								</ul>
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<div class=" grilla">
+							<h4>Betterez </h4>
+							<p>Aplicación web y mobile para venta online de tickets de transporte y eventos.</p>
+								<ul class="tag-ul">
+								<li class="tag"> NodeJS </li>
+								<li class="tag"> Drupal </li>
+								<li class="tag"> Wordpress </li>
+								</ul>
+						</div>
+						<div class="grilla">
+						<h4>Betterez </h4>
+							<p>Aplicación web y mobile para venta online de tickets de transporte y eventos.</p>
+								<ul class="tag-ul">
+								<li class="tag"> NodeJS </li>
+								<li class="tag"> Drupal </li>
+								<li class="tag"> Wordpress </li>
+								</ul>
+						</div>
+					</div>
+				</div>
+					<div class="col-md-6 muestra">
+						<img class="compu" src="<?php echo get_template_directory_uri(); ?>/img/fiqus-19.png">
+						<p class="selector2"> Drupal Node JS Hola </p>
+						<p> DrAplicación web y mobile para venta online de tickets de transporte y eventos.
+					</div>
 			</div>
-
-			<div class="col-md-6"> 
-				<div class=" grilla">
-					<h4>Betterez </h4>
-					<p>Aplicación web y mobile para venta online de tickets de transporte y eventos.</p>
-						<ul class="tag-ul">
-						<li class="tag"> NodeJS </li>
-						<li class="tag"> Drupal </li>
-						<li class="tag"> Wordpress </li>
-						</ul>
-				</div>
-				<div class="grilla">
-					<h4>Betterez </h4>
-					<p>Aplicación web y mobile para venta online de tickets de transporte y eventos.</p>
-						<ul class="tag-ul">
-						<li class="tag"> NodeJS </li>
-						<li class="tag"> Drupal </li>
-						<li class="tag"> Wordpress </li>
-						</ul>
-				</div>
-			</div>
-
-			<div class="col-md-6"> 
-				<div class=" grilla">
-					<h4>Betterez </h4>
-					<p>Aplicación web y mobile para venta online de tickets de transporte y eventos.</p>
-						<ul class="tag-ul">
-						<li class="tag"> NodeJS </li>
-						<li class="tag"> Drupal </li>
-						<li class="tag"> Wordpress </li>
-						</ul>
-				</div>
-				<div class="grilla">
-				<h4>Betterez </h4>
-					<p>Aplicación web y mobile para venta online de tickets de transporte y eventos.</p>
-						<ul class="tag-ul">
-						<li class="tag"> NodeJS </li>
-						<li class="tag"> Drupal </li>
-						<li class="tag"> Wordpress </li>
-						</ul>
-				</div>
 			</div>
 		</div>
-			<div class="col-md-6 muestra">
-				<img class="compu" src="<?php echo get_template_directory_uri(); ?>/img/fiqus-19.png">
-				<p class="selector2"> Drupal Node JS Hola </p>
-				<p> DrAplicación web y mobile para venta online de tickets de transporte y eventos. </div>
-			</div>
-	</div>
-
+		<div id="next"><</div>
 </section><!--end seccion proyectos-->
 
 <section id="productos" class="content-section">
-		<h1> PRODUCTOS </h1>
-			<div class="col-md-12 slider">
-			ofdfniasdfasdasd
-			ofdfniasdfasdasd
-			ofdfniasdfasdasd
-			ofdfniasdfasdasd
-			ofdfniasdfasdasd
-			ofdfniasdfasdasd
-			ofdfniasdfasdasd
-			ofdfniasdfasdasd
-			ofdfniasdfasdasd
-			ofdfniasdfasdasd
-			ofdfniasdfasdasd
+	<div class="ejemplos">
+	<h1> PRODUCTOS </h1>
+	</div>
+	<div class="container-fluid">
+		<div class="col-md-12 slider">
+			<ul class="rslides">
+			  <li>
+					<div class="col-md-6">
+						<img src="<?php echo get_template_directory_uri(); ?>/img/slide.png" alt="">
+					</div>
+					<div class="col-md-6">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.
+					</div>
+				</li>
+				<li>
+					<div class="col-md-6">
+						<img src="<?php echo get_template_directory_uri(); ?>/img/slide.png" alt="">
+					</div>
+					<div class="col-md-6">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.
+					</div>
+				</li>
+				<li>
+					<div class="col-md-6">
+						<img src="<?php echo get_template_directory_uri(); ?>/img/slide.png" alt="">
+					</div>
+					<div class="col-md-6">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.
+					</div>
+				</li>
+			</ul>
+		</div>
 
-			</div>
-
+	</div>
 
 </section><!--end seccion propios-->
 
