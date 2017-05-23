@@ -151,3 +151,45 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+// add categories to attachments
+function wptp_add_categories_to_attachments() {
+      register_taxonomy_for_object_type( 'category', 'attachment' );
+}
+add_action( 'init' , 'wptp_add_categories_to_attachments' );
+
+add_action( 'init', 'create_posttype_blog' );
+function create_posttype_blog() {
+  register_post_type( 'nota',
+    array(
+      'labels' => array(
+        'name' => __( 'Notas' ),
+        'singular_name' => __( 'Nota' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'rewrite' => array('slug' => 'products'),
+			'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt')
+    )
+  );
+}
+add_action( 'init', 'create_posttype_proyecto' );
+function create_posttype_proyecto() {
+  register_post_type( 'producto',
+    array(
+      'labels' => array(
+        'name' => __( 'Productos' ),
+        'singular_name' => __( 'Producto' ),
+				'add_new' => _x('Agregar Nuevo', 'Producto'),
+		    'add_new_item' => __('Agregar Nuevo Producto'),
+		    'edit_item' => __('Editar Producto'),
+		    'new_item' => __('Nuevo'),
+		    'menu_name' => __('Productos')
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'rewrite' => array('slug' => 'productos'),
+			'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt')
+    )
+  );
+}

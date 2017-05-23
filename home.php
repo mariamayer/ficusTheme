@@ -118,97 +118,39 @@ get_header(); ?>
 				<div class="col-md-4 col-md-offset-1 text-left proyectos">
 					<div>
 						<ul class="servicios">
-						<li class="selector"> Web </li>
-						<li class="selector"> App mobile </li>
-						<li class="selector"> Desarrollos a medida </li>
-						<li class="selector"> Games </li>
+							<?php
+							$categories = get_categories( array(
+							    'orderby' => 'name',
+							    'parent'  => 0
+							) );
+
+							foreach ( $categories as $category ) {
+								echo '<li class="selector"> '.$category->name.'</li>';
+							}
+							?>
 						<li class="selector"> Todos </li>
 						</ul>
 					</div>
 
-					<div class="col-md-6">
-						<div class=" grilla">
-							<h4>Betterez </h4>
-							<p>Aplicación web y mobile para venta online de tickets de transporte y eventos.</p>
-								<ul class="tag-ul">
-								<li class="tag"> NodeJS </li>
-								<li class="tag"> Drupal </li>
-								<li class="tag"> Wordpress </li>
-								</ul>
-						</div>
-						<div class="grilla">
-							<h4>Betterez </h4>
-							<p>Aplicación web y mobile para venta online de tickets de transporte y eventos.</p>
-								<ul class="tag-ul">
-								<li class="tag"> NodeJS </li>
-								<li class="tag"> Drupal </li>
-								<li class="tag"> Wordpress </li>
-								</ul>
-						</div>
-					</div>
 
-					<div class="col-md-6">
+					<?php query_posts('posts_per_page=6'); ?>
+			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+						<div class="col-md-6">
 						<div class=" grilla">
-							<h4>Betterez </h4>
-							<p>Aplicación web y mobile para venta online de tickets de transporte y eventos.</p>
-								<ul class="tag-ul">
-								<li class="tag"> NodeJS </li>
-								<li class="tag"> Drupal </li>
-								<li class="tag"> Wordpress </li>
-								</ul>
+							<h4><?php echo get_the_title(); ?></h4>
+							<p><?php echo the_content(); ?></p>
+							<?php
+							$tags = get_tags();
+							echo '<ul class="tag-ul">';
+							foreach ($tags as $tag) {
+							  echo '<li class="tag">' . $tag->name . '</li>';
+							}
+							echo '</ul>';
+							?>
 						</div>
-						<div class="grilla">
-							<h4>Betterez </h4>
-							<p>Aplicación web y mobile para venta online de tickets de transporte y eventos.</p>
-								<ul class="tag-ul">
-								<li class="tag"> NodeJS </li>
-								<li class="tag"> Drupal </li>
-								<li class="tag"> Wordpress </li>
-								</ul>
 						</div>
-					</div>
+						<?php endwhile; endif; ?>
 
-					<div class="col-md-6">
-						<div class=" grilla">
-							<h4>Betterez </h4>
-							<p>Aplicación web y mobile para venta online de tickets de transporte y eventos.</p>
-								<ul class="tag-ul">
-								<li class="tag"> NodeJS </li>
-								<li class="tag"> Drupal </li>
-								<li class="tag"> Wordpress </li>
-								</ul>
-						</div>
-						<div class="grilla">
-							<h4>Betterez </h4>
-							<p>Aplicación web y mobile para venta online de tickets de transporte y eventos.</p>
-								<ul class="tag-ul">
-								<li class="tag"> NodeJS </li>
-								<li class="tag"> Drupal </li>
-								<li class="tag"> Wordpress </li>
-								</ul>
-						</div>
-					</div>
-
-					<div class="col-md-6">
-						<div class=" grilla">
-							<h4>Betterez </h4>
-							<p>Aplicación web y mobile para venta online de tickets de transporte y eventos.</p>
-								<ul class="tag-ul">
-								<li class="tag"> NodeJS </li>
-								<li class="tag"> Drupal </li>
-								<li class="tag"> Wordpress </li>
-								</ul>
-						</div>
-						<div class="grilla">
-						<h4>Betterez </h4>
-							<p>Aplicación web y mobile para venta online de tickets de transporte y eventos.</p>
-								<ul class="tag-ul">
-								<li class="tag"> NodeJS </li>
-								<li class="tag"> Drupal </li>
-								<li class="tag"> Wordpress </li>
-								</ul>
-						</div>
-					</div>
 				</div>
 					<div class="col-md-6 muestra">
 						<img class="compu" src="<?php echo get_template_directory_uri(); ?>/img/fiqus-19.png">
