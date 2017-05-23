@@ -203,11 +203,46 @@ get_header(); ?>
 
 
 <section id="blog content-section">
+	<div class="ejemplos">
+	<h1 class="blog"> VISITA NUESTRO BLOG-------<span style="color:#c2d72e">● </span></h1>
+	</div>
+	<div class="col-md-12 col-md-offset-1 ">
+	<div class="noticia col-md-5 text-left">
+		<h2 class="novedad"> Introducción a la programación funcional </h2>
+		<p class="contenido"> En Fiqus tenemos programadores a los que aparte de programar imperativamente, nos gusta y nos motiva programar funcionalmente. ¿Qué es la programación funcional? Es un paradigma de programación declarativa basado en el uso de funciones matemáticas. Desmenuzando conceptos… La programación funcional genera un código lindo y declarativo -se lee y se entiende lo que hace-. La diferencia entre una función matemática y “función” utilizada en programación imperativa es que esta ... </p> 
+		<span><a href="#" class="leermas"> Leer más </a> </span>
+		 
+	</div>
+	<div class="noticia col-md-5 text-left contenido">
+		<h2 class="novedad"> Nos vamos de viaje al SUR</h2>
+		<p class="contenido"> En Fiqus tenemos programadores a los que aparte de programar imperativamente, nos gusta y nos motiva programar funcionalmente. ¿Qué es la programación funcional? Es un paradigma de programación declarativa basado en el uso de funciones matemáticas. Desmenuzando conceptos… La programación funcional genera un código lindo y declarativo -se lee y se entiende lo que hace-. La diferencia entre una función matemática y “función” utilizada en programación imperativa es que esta ... </p> 
+		 <span><a href="#" class="leermas"> Leer más </a> </span>
+	</div>
+	</div>
+
 		<img src="<?php echo get_template_directory_uri(); ?>/img/blog.png">
 </section>
 
 
 <section id="contactos" class="content-section">
+
+	<div class="ejemplos">
+	<h1 class="blog"> CONTACTO-------<span style="color:#c2d72e">● </span></h1>
+	</div>
+	<div class="col-md-12">
+	<div class="noticia col-md-7 text-left">
+		<h2 class="novedad"> Introducción a la programación funcional </h2>
+		<p class="contenido"> En Fiqus tenemos programadores a los que aparte de programar imperativamente, nos gusta y nos motiva programar funcionalmente. ¿Qué es la programación funcional? Es un paradigma de programación declarativa basado en el uso de funciones matemáticas. Desmenuzando conceptos… La programación funcional genera un código lindo y declarativo -se lee y se entiende lo que hace-. La diferencia entre una función matemática y “función” utilizada en programación imperativa es que esta ... </p> 
+		<span><a href="#" class="leermas"> Leer más </a> </span>
+		 
+	</div>
+	<div class="noticia col-md-5 text-left contenido">
+		<h2 class="novedad"> Nos vamos de viaje al SUR</h2>
+		<p class="contenido"> En Fiqus tenemos programadores a los que aparte de programar imperativamente, nos gusta y nos motiva programar funcionalmente. ¿Qué es la programación funcional? Es un paradigma de programación declarativa basado en el uso de funciones matemáticas. Desmenuzando conceptos… La programación funcional genera un código lindo y declarativo -se lee y se entiende lo que hace-. La diferencia entre una función matemática y “función” utilizada en programación imperativa es que esta ... </p> 
+		 <span><a href="#" class="leermas"> Leer más </a> </span>
+	</div>
+	</div>
+
 		<img src="<?php echo get_template_directory_uri(); ?>/img/contactos.png">
 </section>
 
