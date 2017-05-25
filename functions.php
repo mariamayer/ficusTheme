@@ -107,11 +107,17 @@ add_action( 'widgets_init', 'ficus_widgets_init' );
 function ficus_scripts() {
 	wp_enqueue_style( 'ficus-style', get_stylesheet_uri(),false,null);
 
+	wp_enqueue_style( 'ficus-slick-theme', get_template_directory_uri() . '/slick-theme.css',false,auto);
+
+	wp_enqueue_style( 'ficus-slick', get_template_directory_uri() . '/slick.css',false,auto);
+
 	wp_enqueue_style( 'ficus-boostsrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css',false, null);
 
 	wp_enqueue_script( 'ficus-jquery', 'http://code.jquery.com/jquery-1.11.3.min.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'ficus-main', get_template_directory_uri() . '/js/main.js', array(), '1.0.2', true );
+	wp_enqueue_script( 'ficus-slick', get_template_directory_uri() . '/js/slick.min.js', array(), '1.0.3', true );
+
+	wp_enqueue_script( 'ficus-main', get_template_directory_uri() . '/js/main.js', array(), '1.0.5', true );
 
 	wp_enqueue_script( 'ficus-boostsrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array(), true );
 
@@ -158,6 +164,11 @@ function wptp_add_categories_to_attachments() {
 }
 add_action( 'init' , 'wptp_add_categories_to_attachments' );
 
+function wptp_add_tags_to_attachments() {
+        register_taxonomy_for_object_type( 'post_tag', 'attachment' );
+    }
+    add_action( 'init' , 'wptp_add_tags_to_attachments' );
+
 add_action( 'init', 'create_posttype_blog' );
 function create_posttype_blog() {
   register_post_type( 'nota',
@@ -168,14 +179,15 @@ function create_posttype_blog() {
       ),
       'public' => true,
       'has_archive' => true,
-      'rewrite' => array('slug' => 'products'),
+      'rewrite' => array('slug' => 'notas'),
 			'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt')
     )
   );
 }
 add_action( 'init', 'create_posttype_proyecto' );
 function create_posttype_proyecto() {
-  register_post_type( 'producto',
+  register_post_type(
+		'producto',
     array(
       'labels' => array(
         'name' => __( 'Productos' ),
@@ -189,7 +201,8 @@ function create_posttype_proyecto() {
       'public' => true,
       'has_archive' => true,
       'rewrite' => array('slug' => 'productos'),
-			'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt')
+			'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt'),
+			'taxonomies' => array('post_tag')
     )
   );
 }

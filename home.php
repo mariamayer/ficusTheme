@@ -39,53 +39,54 @@ get_header(); ?>
 	</div>
 	<div class="quehacemos container-fluid">
 			<ul class="servicios">
-				 <li class="hacemos">
-	                  <img class="fq_servicio" src="<?php echo get_template_directory_uri(); ?>/img/web.png" alt="Web">
-	                  <span class="ti-servicio">Web</span>
-	              </li>
-	              <li class="hacemos">
-	                  <img class="fq_servicio" src="<?php echo get_template_directory_uri(); ?>/img/desarrollos.png" alt="Desarrollos a medida">
-	                  <span class="ti-servicio">Desarrollos a medida</span>
-	              </li>
-				 <li class="hacemos">
-	                  <img class="fq_servicio" src="<?php echo get_template_directory_uri(); ?>/img/app-mobile.png" alt="App">
-	                  <span class="ti-servicio">App Mobile</span>
-	              </li>
-
-
-				 <li class="hacemos last">
-	                  <img class="fq_servicio" src="<?php echo get_template_directory_uri(); ?>/img/games.png" alt="Games">
-	                  <span class="ti-servicio">Games</span>
-	              </li>
-	     	</ul>
+				<?php
+				$categories = get_categories( array(
+						'orderby' => 'name',
+						'parent'  => 0
+				) );
+				foreach ( $categories as $category ) {
+					echo '<li class="hacemos">';
+					$args = array(
+					    'post_type' => 'attachment',
+					    'category_name' =>$category->name,
+					);
+					$attachments = get_posts($args);
+					echo '<img class="fq_servicio" src="'.$attachments[0]->guid.'" alt="">';
+					echo '<span class="ti-servicio">'.$category->name.'</span>';
+					echo '</li>';
+				}
+				?>
+			</ul>
 	</div> <!--end class que-hacemos-->
 </section>
 
 <section id="tecnologias" class="content-section">
 		<div class="tecnologias container-fluid">
 			<ul class="usamos">
-					 <li class="tecno">
-		                  <img class="fq_servicio" src="<?php echo get_template_directory_uri(); ?>/img/tecno-20.png" alt="Web">
-		                   <span class="ti-servicio">Django, Flask, Celery</span>
-		              </li>
-					 <li class="tecno">
-		                  <img class="fq_servicio" src="<?php echo get_template_directory_uri(); ?>/img/tecno-21.png" alt="App">
-		                   <span class="ti-servicio">NodeJS, Angular, React, Aurelia, vueJS</span>
-		              </li>
-					 <li class="tecno">
-		                  <img class="fq_servicio" src="<?php echo get_template_directory_uri(); ?>/img/tecno-22.png" alt="Desarrollos a medida">
-		                   <span class="ti-servicio">Drupal Wordpress</span>
-		              </li>
-
-					 <li class="tecno">
-		                  <img class="fq_servicio" src="<?php echo get_template_directory_uri(); ?>/img/tecno-23.png" alt="Games">
-		                   <span class="ti-servicio">MySQL, postreSQL, MongoDB.</span>
-		              </li>
-		               <li class="tecno">
-		                  <img class="fq_servicio" src="<?php echo get_template_directory_uri(); ?>/img/tecno-24.png" alt="Games">
-		                   <span class="ti-servicio">Ionic, Android nativo.</span>
-		              </li>
-		                </ul>
+				<?php
+				$tags = get_tags( array(
+						'hide_empty' => false,
+						'parent'  => 0
+				) );
+				foreach ( $tags as $tag ) {
+					echo '<li class="tecno">';
+					$args = array(
+					    'post_type' => 'attachment',
+							'tax_query' => array(
+		            array(
+		                'taxonomy' => 'post_tag',
+		                'field' => 'slug',
+		                'terms' => $tag->slug
+		            )
+		        )
+					);
+					$attachments = get_posts($args);
+					echo '<img class="fq_servicio" src="'.$attachments[0]->guid.'" alt="">';
+					echo '<span class="ti-servicio">'.$tag->description.'</span>';
+					echo '</li>';
+				}
+				?>
+		  </ul>
 		</div><!--end  que-hacemos-->
 </section><!--end seccion tecnologias-->
 
@@ -123,24 +124,54 @@ get_header(); ?>
 							    'orderby' => 'name',
 							    'parent'  => 0
 							) );
-
 							foreach ( $categories as $category ) {
-								echo '<li class="selector"> '.$category->name.'</li>';
+								echo '<li class="selector" data-cat="'.$category->slug.'"> '.$category->name.'</li>';
 							}
 							?>
-						<li class="selector"> Todos </li>
+						<li class="selector" data-cat="todos"> Todos </li>
 						</ul>
 					</div>
-
-
-					<?php query_posts('posts_per_page=6'); ?>
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+					<?php $i=1; ?>
+					<?php query_posts('posts_per_page=-1'); ?>
+					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 						<div class="col-md-6">
-						<div class=" grilla">
+							<?php if($i==1){
+								$content = strip_shortcodes(get_the_content());
+								$gallery = get_post_gallery( get_the_ID(), false );
+								$excerpt=get_the_excerpt();
+								$tags_current = wp_get_post_tags(get_the_ID());
+								$active="active";
+							}else{
+								$active="";
+							}
+							$gal=get_post_gallery( get_the_ID(), false );
+							$ids = explode( ",", $gal['ids'] );
+							$imgs= array();
+							foreach( $ids as $id ){
+								$src=wp_get_attachment_image_src($id , 'large' );
+								array_push($imgs,$src[0]);
+							}
+							$post_tags=wp_get_post_tags(get_the_ID());
+							$tags_array= array();
+							foreach($post_tags as $tag) {
+							  array_push($tags_array, $tag->description);
+							}
+							$classes='';
+							$cats=get_the_category(get_the_ID());
+							foreach ($cats as $cat) {
+								$classes.= ' '.$cat->slug;
+							}
+							?>
+							<div class="grilla <?php echo $active; ?><?php echo $classes; ?>"
+							data-content='<?php echo strip_shortcodes(get_the_content());?>'
+							data-gallery='<?php echo json_encode($imgs); ?>'
+							data-excerpt='<?php echo get_the_excerpt();?>'
+							data-tags='<?php echo json_encode($tags_array);?>'
+							>
 							<h4><?php echo get_the_title(); ?></h4>
-							<p><?php echo the_content(); ?></p>
+							<p><?php echo strip_shortcodes(get_the_content()); ?></p>
 							<?php
-							$tags = get_tags();
+							$tags = wp_get_post_tags(get_the_ID());
 							echo '<ul class="tag-ul">';
 							foreach ($tags as $tag) {
 							  echo '<li class="tag">' . $tag->name . '</li>';
@@ -149,13 +180,26 @@ get_header(); ?>
 							?>
 						</div>
 						</div>
+						<?php $i++; ?>
 						<?php endwhile; endif; ?>
 
 				</div>
 					<div class="col-md-6 muestra">
-						<img class="compu" src="<?php echo get_template_directory_uri(); ?>/img/fiqus-19.png">
-						<p class="selector2"> Drupal Node JS Hola </p>
-						<p> DrAplicación web y mobile para venta online de tickets de transporte y eventos.
+						<ul class="rslides">
+							<?php
+							$ids = explode( ",", $gallery['ids'] );
+							foreach( $ids as $id ) {
+							    $image  = wp_get_attachment_image( $id, "large");
+							    echo "<li class='img-container' >" . $image . "</li>" ;
+							} ?>
+						</ul>
+						<?php
+						foreach ($tags_current as $tag) {
+						  echo '<p class="selector2">' . $tag->name . '</p>';
+						}
+					 	?>
+						<p class="contenido"><?php echo $content; ?></p>
+						</div>
 					</div>
 			</div>
 			</div>
@@ -169,32 +213,45 @@ get_header(); ?>
 	</div>
 	<div class="container-fluid">
 		<div class="col-md-12 slider">
-			<ul class="rslides">
-			  <li>
-					<div class="col-md-6">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/slide.png" alt="">
-					</div>
-					<div class="col-md-6">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.
-					</div>
-				</li>
-				<li>
-					<div class="col-md-6">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/slide.png" alt="">
-					</div>
-					<div class="col-md-6">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.
-					</div>
-				</li>
-				<li>
-					<div class="col-md-6">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/slide.png" alt="">
-					</div>
-					<div class="col-md-6">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.
-					</div>
-				</li>
-			</ul>
+			<div class="slick">
+				<?php
+				    $loop = new WP_Query( array( 'post_type' => 'producto', 'posts_per_page' => '-1') );
+				    if ( $loop->have_posts() ) :
+				        while ( $loop->have_posts() ) : $loop->the_post(); ?>
+								<div>
+									<div class="col-md-7">
+										<div class="img-container">
+											<img src="<?php the_post_thumbnail_url( 'full' ); ?>" alt="<?php echo get_the_title(); ?>">
+										</div>
+									</div>
+									<div class="col-md-5">
+										<h2 class="novedad"><?php echo get_the_title(); ?></h2>
+										<p class="contenido"><?php echo get_the_content(); ?></p>
+										<p class="label">
+											<?php
+											$tags=wp_get_post_tags(get_the_ID());
+											foreach ( $tags as $tag ) {
+												$args = array(
+												    'post_type' => 'attachment',
+														'tax_query' => array(
+									            array(
+									                'taxonomy' => 'post_tag',
+									                'field' => 'slug',
+									                'terms' => $tag->slug
+									            )
+									        )
+												);
+												$attachments = get_posts($args);
+												echo '<img src="'.$attachments[0]->guid.'" alt=""> '.$tag->description;
+											}
+											?>
+										</p>
+									</div>
+								</div>
+				        <?php endwhile;
+				    endif;
+				    wp_reset_postdata(); ?>
+			</div>
 		</div>
 
 	</div>
@@ -207,17 +264,18 @@ get_header(); ?>
 	<h1 class="blog"> VISITA NUESTRO BLOG-------<span style="color:#c2d72e">● </span></h1>
 	</div>
 	<div class="col-md-12 col-md-offset-1 ">
-	<div class="noticia col-md-5 text-left">
-		<h2 class="novedad"> Introducción a la programación funcional </h2>
-		<p class="contenido"> En Fiqus tenemos programadores a los que aparte de programar imperativamente, nos gusta y nos motiva programar funcionalmente. ¿Qué es la programación funcional? Es un paradigma de programación declarativa basado en el uso de funciones matemáticas. Desmenuzando conceptos… La programación funcional genera un código lindo y declarativo -se lee y se entiende lo que hace-. La diferencia entre una función matemática y “función” utilizada en programación imperativa es que esta ... </p> 
-		<span><a href="#" class="leermas"> Leer más </a> </span>
-		 
-	</div>
-	<div class="noticia col-md-5 text-left contenido">
-		<h2 class="novedad"> Nos vamos de viaje al SUR</h2>
-		<p class="contenido"> En Fiqus tenemos programadores a los que aparte de programar imperativamente, nos gusta y nos motiva programar funcionalmente. ¿Qué es la programación funcional? Es un paradigma de programación declarativa basado en el uso de funciones matemáticas. Desmenuzando conceptos… La programación funcional genera un código lindo y declarativo -se lee y se entiende lo que hace-. La diferencia entre una función matemática y “función” utilizada en programación imperativa es que esta ... </p> 
-		 <span><a href="#" class="leermas"> Leer más </a> </span>
-	</div>
+		<?php
+		    $loop = new WP_Query( array( 'post_type' => 'nota', 'posts_per_page' => '2') );
+		    if ( $loop->have_posts() ) :
+		        while ( $loop->have_posts() ) : $loop->the_post(); ?>
+							<div class="noticia col-md-5 text-left">
+								<h2 class="novedad"><?php echo get_the_title(); ?></h2>
+								<p class="contenido"><?php echo get_the_excerpt(); ?></p>
+								<span><a href="<?php echo get_the_permalink(); ?>" class="leermas"> Leer más </a> </span>
+							</div>
+		        <?php endwhile;
+		    endif;
+		    wp_reset_postdata(); ?>
 	</div>
 
 		<img src="<?php echo get_template_directory_uri(); ?>/img/blog.png">
@@ -232,13 +290,13 @@ get_header(); ?>
 	<div class="col-md-12">
 	<div class="noticia col-md-7 text-left">
 		<h2 class="novedad"> Introducción a la programación funcional </h2>
-		<p class="contenido"> En Fiqus tenemos programadores a los que aparte de programar imperativamente, nos gusta y nos motiva programar funcionalmente. ¿Qué es la programación funcional? Es un paradigma de programación declarativa basado en el uso de funciones matemáticas. Desmenuzando conceptos… La programación funcional genera un código lindo y declarativo -se lee y se entiende lo que hace-. La diferencia entre una función matemática y “función” utilizada en programación imperativa es que esta ... </p> 
+		<p class="contenido"> En Fiqus tenemos programadores a los que aparte de programar imperativamente, nos gusta y nos motiva programar funcionalmente. ¿Qué es la programación funcional? Es un paradigma de programación declarativa basado en el uso de funciones matemáticas. Desmenuzando conceptos… La programación funcional genera un código lindo y declarativo -se lee y se entiende lo que hace-. La diferencia entre una función matemática y “función” utilizada en programación imperativa es que esta ... </p>
 		<span><a href="#" class="leermas"> Leer más </a> </span>
-		 
+
 	</div>
 	<div class="noticia col-md-5 text-left contenido">
 		<h2 class="novedad"> Nos vamos de viaje al SUR</h2>
-		<p class="contenido"> En Fiqus tenemos programadores a los que aparte de programar imperativamente, nos gusta y nos motiva programar funcionalmente. ¿Qué es la programación funcional? Es un paradigma de programación declarativa basado en el uso de funciones matemáticas. Desmenuzando conceptos… La programación funcional genera un código lindo y declarativo -se lee y se entiende lo que hace-. La diferencia entre una función matemática y “función” utilizada en programación imperativa es que esta ... </p> 
+		<p class="contenido"> En Fiqus tenemos programadores a los que aparte de programar imperativamente, nos gusta y nos motiva programar funcionalmente. ¿Qué es la programación funcional? Es un paradigma de programación declarativa basado en el uso de funciones matemáticas. Desmenuzando conceptos… La programación funcional genera un código lindo y declarativo -se lee y se entiende lo que hace-. La diferencia entre una función matemática y “función” utilizada en programación imperativa es que esta ... </p>
 		 <span><a href="#" class="leermas"> Leer más </a> </span>
 	</div>
 	</div>

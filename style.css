@@ -798,7 +798,9 @@ text-transform: uppercase;
 	color: #ffffff;
 	text-align: center;
 }
-
+.grilla.active{
+  background:#c2d72e;
+}
 .tag-ul {
 list-style: none;
 padding: 0;
@@ -889,9 +891,19 @@ margin: 2em;
 	background:#F2F2F2;
 	padding:10px;
 }
-
-
-
+.img-container img{
+  float:none !important;
+  width:100%;
+}
+.img-container{
+  width: 90%;
+  margin: auto;
+  background: url(../ficus/img/fiqus-19.png) no-repeat;
+  padding: 3% 12% 6%;
+  background-size: 100% 100%;
+  position: relative;
+  height: 100%;
+}
 .slider {
 	height: 30em;
 	background: #f2f2f2;
@@ -904,9 +916,9 @@ margin: 2em;
   position: relative;
   list-style: none;
   overflow: hidden;
-  width: 100%;
+  width: 80%;
   padding: 0;
-  margin: 0;
+  margin: auto;
   }
 
 .rslides li {
@@ -931,22 +943,24 @@ margin: 2em;
   width: 100%;
   border: 0;
   }
-.rslides_nav{
+.slick-arrow{
   position: absolute;
   top: 50%;
   color:#1a1a1a;
   font-size: 50px;
   padding:10px;
   text-decoration: none;
-  z-index:5
+  z-index:5;
+  font-style: normal;
+  cursor:pointer;
 }
-.rslides_nav:hover,.rslides_nav:focus{
+.slick-arrow:hover,.slick-arrow:focus{
   color:#000;
   text-decoration: none;
 }
-.rslides_nav.prev{
+.arrow-right{
   left:0
 }
-.rslides_nav.next{
+.arrow-left{
   right:0
 }
