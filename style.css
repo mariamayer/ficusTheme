@@ -660,7 +660,7 @@ text-align: center;
 #servicio .line{
 	position: absolute;
 	height: 100%;
-	border-right: 3px dashed white;
+	border-right: none;
 	left: 5px;
 }
 .servicios {
@@ -788,6 +788,7 @@ position: relative;
 overflow: hidden;
 text-decoration: none !important;
 text-transform: uppercase;
+margin-left: 5px;
 }
 
 .grilla {
