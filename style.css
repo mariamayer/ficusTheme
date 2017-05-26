@@ -887,6 +887,59 @@ margin: 2em;
     text-transform: uppercase;
 }
 
+.contacto{
+	text-align: left;
+	padding-left: 20px;
+}
+
+.mapas {
+	padding: 20px;
+}
+
+
+.completar {
+width: 100%;
+margin-bottom: 20px;
+	border-bottom: 1px dotted #fff;
+    color: #fff;
+    background: none;
+    opacity: 0.7;
+    line-height: 25px;
+}
+
+.enviar{
+display: inline-block;
+border: 2px solid #000000;
+font-family: 'Van Condensed Bold';
+color: #000;
+padding: 4px 4px;
+background-color: #c2d72e;
+position: relative;
+overflow: hidden;
+border-radius: 2px;
+text-decoration: none !important;
+text-transform: uppercase;
+margin: 20px 0px 40px;
+font-size: 14px !important;
+}
+
+
+.mensaje {
+	height: 180px;
+}
+ .horizontal {
+ 		list-style: none;
+		margin: 0;
+		padding: 0;
+ }
+
+ .social {
+ 	 display:inline-block; 
+ 	 float:left; 
+ 	 margin-right: 20px;
+ }
+
+
 .footer{
 	background:#F2F2F2;
 	padding:10px;

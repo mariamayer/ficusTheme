@@ -288,18 +288,43 @@ get_header(); ?>
 	<h1 class="blog"> CONTACTO-------<span style="color:#c2d72e">● </span></h1>
 	</div>
 	<div class="col-md-12">
-	<div class="noticia col-md-7 text-left">
-		<h2 class="novedad"> Introducción a la programación funcional </h2>
-		<p class="contenido"> En Fiqus tenemos programadores a los que aparte de programar imperativamente, nos gusta y nos motiva programar funcionalmente. ¿Qué es la programación funcional? Es un paradigma de programación declarativa basado en el uso de funciones matemáticas. Desmenuzando conceptos… La programación funcional genera un código lindo y declarativo -se lee y se entiende lo que hace-. La diferencia entre una función matemática y “función” utilizada en programación imperativa es que esta ... </p>
-		<span><a href="#" class="leermas"> Leer más </a> </span>
+			<div class="noticia col-md-6 text-left">
+			<input type="text" class="completar" required="" name="name" placeholder="Nombre" /> 
+			<input type="text" class="completar" required="" name="email" placeholder="Correo Electrónico" /> 
+			<textarea class="mensaje"  name="message" required="" placeholder="Mensaje"></textarea>
+			<input type="submit" class="enviar" value="Enviar" />
+					<ul class="horizontal">
+						<li class="social"><img src="<?php echo get_template_directory_uri(); ?>/img/fiquscontacto.png"></li>
+						<li class="social"> <a mailto="info@fiqus.com">info@fiqus.com</a> </br> Teléfono +54 9 11 4568 9390  </li>
+					</ul>
+			</div>
+	
 
+			<div class="col-md-6 mapas">
+						<div class="col-md-6">
+						<p class=" text-left"> Cuenca 1554 Oficina "P" <br> 
+							Ciudad de Buenos Aires, Argentina<br>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.5320919459723!2d-58.48551354875639!3d-34.6159916655597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9e7cdd9539d%3A0x8810b580f342f227!2sCuenca+1554%2C+C1416BCN+CABA!5e0!3m2!1ses-419!2sar!4v1495824446852" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe></p>
+						
+						</div>
+						<div class="col-md-6">
+						<p class="text-left"> Av. Arrayanes 66, Local 7 <br> 
+							Villa La Angostura, Argentina <br>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23577.339947613524!2d-71.65240240950418!3d-40.76444729617304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9610bf68e258aae1%3A0x7c306be0fbc05418!2sAv.+Arrayanes%2C+Villa+La+Angostura%2C+Neuqu%C3%A9n!5e1!3m2!1ses-419!2sar!4v1495824612462" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe></p>					
+						</div>
+						<div class="col-md-12">
+							<ul class="horizontal">
+								<li class="social"><a href="https://www.facebook.com/fiquscoop" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/fb-fiqus.png" alt="Facebook"></a></li>
+								<li class="social"><a href="https://twitter.com/fiquscoop" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/tw-fiqus.png" alt="Twitter"></a></li>
+								<li class="social"><a href="https://plus.google.com/u/0/112462059414887056058/posts" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/gp-fiqus.png" alt="Google Plus"></a></li>
+								<li class="social"><a href="https://github.com/fiqus" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/git-fiqus.png" alt="Github"></a></li>
+							</ul>
+						</div>
+
+						
+			</div>
 	</div>
-	<div class="noticia col-md-5 text-left contenido">
-		<h2 class="novedad"> Nos vamos de viaje al SUR</h2>
-		<p class="contenido"> En Fiqus tenemos programadores a los que aparte de programar imperativamente, nos gusta y nos motiva programar funcionalmente. ¿Qué es la programación funcional? Es un paradigma de programación declarativa basado en el uso de funciones matemáticas. Desmenuzando conceptos… La programación funcional genera un código lindo y declarativo -se lee y se entiende lo que hace-. La diferencia entre una función matemática y “función” utilizada en programación imperativa es que esta ... </p>
-		 <span><a href="#" class="leermas"> Leer más </a> </span>
-	</div>
-	</div>
+	
 
 		<img src="<?php echo get_template_directory_uri(); ?>/img/contactos.png">
 </section>
