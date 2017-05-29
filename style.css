@@ -432,12 +432,9 @@ table {
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+{
 	border: 1px solid;
-	border-color: #ccc #ccc #bbb;
+	border-color: #ccc #bbb #aaa;
 	border-radius: 3px;
 	background: #e6e6e6;
 	color: rgba(0, 0, 0, .8);
@@ -451,7 +448,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	border-color: #ccc #bbb #aaa;
+	border-color: #333 #333 #333;
 }
 
 button:focus,
@@ -462,7 +459,7 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-	border-color: #aaa #bbb #bbb;
+	border-color: #333 #333 #333;
 }
 
 input[type="text"],
@@ -481,14 +478,14 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	color: #666;
-	border: 1px solid #ccc;
-	border-radius: 3px;
+	color: #333;
+	border: 1px solid #f1f1f1;
 	padding: 3px;
+	background: #f2f2f2;
 }
 
 select {
-	border: 1px solid #ccc;
+	border: 1px solid #333;
 }
 
 input[type="text"]:focus,
@@ -518,13 +515,13 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: #c2d72e;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: midnightblue;
+	color: #c2d72e;
 }
 
 a:focus {
@@ -643,8 +640,8 @@ height:inherit;
 
 .valores {
 	text-align: left;
-	margin-top: 10em;
-	margin-bottom: 2em;
+	margin-top: 15em;
+	margin-bottom: 3em;
 }
 
 .valor {
@@ -652,7 +649,7 @@ list-style: none;
 margin:0;
 padding:0;
 font-size: 14px;
-line-height: 18px;
+line-height: 24px;
 }
 
 .somos {
@@ -782,9 +779,20 @@ background: #333333;
 text-align: center;
 color: #ffffff;
 margin-bottom: 2em;
+padding: 40px 0px 20px 0px;
 }
+
+.head-blog{
+background: #c2d72e;
+text-align: center;
+color: #ffffff;
+margin-bottom: 2em;
+padding: 40px 0px 20px 0px;
+}
+
 .ejemplos h1{
   margin-top:0
+
 }
 #trabajamos{
   position: relative;
@@ -829,6 +837,7 @@ overflow: hidden;
 text-decoration: none !important;
 text-transform: uppercase;
 margin-left: 5px;
+  cursor:pointer;
 }
 
 .grilla {
@@ -864,9 +873,9 @@ margin-right: 5px;
 
 .muestra {
 	height: 30em;
-	background: #f2f2f2;
 	margin-bottom: 1em;
-	padding: 3em;
+	border-left: 3px dashed #333333;
+	padding: 1em;
 	color: #ffffff;
 	text-align: center;
 }
@@ -882,6 +891,7 @@ position: relative;
 overflow: hidden;
 text-decoration: none !important;
 text-transform: uppercase;
+margin-left: 5px;
 }
 
 .propios {
@@ -891,9 +901,31 @@ color: #000000;
 margin: 2em;
 }
 
+.contenido-proyecto {
+	font-size: 16px;
+	text-align: center;
+	border-right: 3px black;
+	padding-right: 80px;
+	color: #333333;	
+	font-family: 'Van Condensed Light';
+}
+
+.gris {
+	text-co:#333333 !important;
+}
+
+#productos {
+	background: #f2f2f2;
+}
+
 .blog-header{
 	text-align: right;
 	padding-right: 20px;
+}
+
+.contacto-header{
+	text-align: left;
+	padding-left: 50px;
 }
 
 .novedad {
@@ -902,14 +934,20 @@ margin: 2em;
 	padding: 4px 4px;
 	text-decoration: none !important;
 	text-transform: uppercase;
+	color: #333333;
+}
+
+.prod-descripcion {
+	color: #333333;
 }
 
 .contenido {
 	font-size: 16px;
-	text-align: center;
+	text-align: justify;
 	border-right: 3px black;
 	padding-right: 80px;
-	color:#333333;
+	color:#333333;	
+	font-family: 'Van Condensed Light';
 }
 
 .noticia {
@@ -992,7 +1030,7 @@ font-size: 14px !important;
   width:100%;
 }
 .img-container{
-  width: 90%;
+  width: 80%;
   margin: auto;
   background: url(../ficus/img/fiqus-19.png) no-repeat;
   padding: 3% 12% 6%;

@@ -133,7 +133,7 @@ get_header(); ?>
 		<h1>PROYECTOS</h1>
 		</div>
 		<div class="container-fluid">
-			<div class="col-md-12">
+			<div class="col-md-11 col-md-offset-1">
 
 				<div class="col-md-5 text-left proyectos">
 					<div>
@@ -231,7 +231,7 @@ get_header(); ?>
 	<h1> PRODUCTOS </h1>
 	</div>
 	<div class="container-fluid">
-		<div class="col-md-12 slider">
+		<div class="col-md-10 slider">
 			<div class="slick">
 				<?php
 				    $loop = new WP_Query( array( 'post_type' => 'producto', 'posts_per_page' => '-1') );
@@ -245,7 +245,7 @@ get_header(); ?>
 									</div>
 									<div class="col-md-5">
 										<h2 class="novedad"><?php echo get_the_title(); ?></h2>
-										<p class="contenido"><?php echo get_the_content(); ?></p>
+										<p class="contenido-proyecto"><?php echo get_the_content(); ?></p>
 										<p class="label">
 											<?php
 											$tags=wp_get_post_tags(get_the_ID());
@@ -279,8 +279,8 @@ get_header(); ?>
 
 
 <section id="blog content-section">
-	<div class="ejemplos">
-	<h1 class="blog-header"> VISITA NUESTRO BLOG-------<span style="color:#c2d72e">● </span></h1>
+	<div class="ejemplos head-blog">
+	<h1 class="blog-header"> VISITA NUESTRO BLOG-------<span style="color:#333333">● </span></h1>
 	</div>
 	<div class="container-fluid">
 		<div class="col-md-12 col-md-offset-1 ">
@@ -288,7 +288,7 @@ get_header(); ?>
 			    $loop = new WP_Query( array( 'post_type' => 'nota', 'posts_per_page' => '2') );
 			    if ( $loop->have_posts() ) :
 			        while ( $loop->have_posts() ) : $loop->the_post(); ?>
-								<div class="noticia col-md-5 text-left">
+								<div class="noticia col-md-5 text-left prod-descripcion">
 									<h2 class="novedad"><?php echo get_the_title(); ?></h2>
 									<p class="contenido"><?php echo get_the_excerpt(); ?></p>
 									<span><a href="<?php echo get_the_permalink(); ?>" class="leermas"> Leer más </a> </span>
@@ -303,7 +303,7 @@ get_header(); ?>
 
 <section id="contactos" class="content-section">
 	<div class="ejemplos">
-	<h1 class="blog"> CONTACTO-------<span style="color:#c2d72e">● </span></h1>
+	<h1 class="contacto-header"> CONTACTO-------<span style="color:#c2d72e">● </span></h1>
 	</div>
 	<div class="container-fluid">
 		<div class="col-md-12">
