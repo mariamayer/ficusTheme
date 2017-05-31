@@ -141,7 +141,7 @@ get_header(); ?>
 		<h1>PROYECTOS</h1>
 		</div>
 		<div class="container-fluid">
-			<div class="col-md-8 col-md-offset-2">
+			<div class="col-md-10 col-md-offset-1">
 
 				<div class="col-md-6 text-left proyectos">
 					<div>
@@ -290,7 +290,8 @@ get_header(); ?>
 
 <section id="blog content-section" class="blog-seccion"> 
 	<div class="ejemplos head-blog">
-	<h1 class="blog-header"> <a href="/blog" class="link-blanco"> VISITA NUESTRO BLOG-------<span style="color:#333333">● </span> </a> </h1>
+	<h1 class="blog-header"> <a href="/blog" class="link-blanco" > VISITA NUESTRO BLOG-------<span style="color:#333333">● </span> </a> </h1>
+
 	</div>
 	<div class="container-fluid">
 		<div class="col-md-12 col-md-offset-1 ">

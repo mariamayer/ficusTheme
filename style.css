@@ -602,7 +602,6 @@ position: relative;
   padding:0 20px;
   line-height: 30px;
 }
-<<<<<<< Updated upstream
 .intro .linea{
   border-right: 3px dashed #c2d72e;
   border-top: 3px dashed #c2d72e;
@@ -616,12 +615,12 @@ position: relative;
   transition: all 1s;
 }
 .boton{
-font-size: 16px;
+font-size: 20px;
 display: inline-block;
 border: 2px solid #000000;
 font-family: 'Van Condensed Bold';
 color:#000 !important;
-padding: 4px 4px;
+padding: 6px 10px;
 background-color: #c2d72e;
 position: relative;
 overflow: hidden;
@@ -700,6 +699,8 @@ line-height: 24px;
 
 .enterate {
 	 vertical-align: -16px;
+	 font-size: 14px;
+	 padding: 4px 6px;
 }
 
 .quehacemos {
@@ -858,14 +859,14 @@ padding: 40px 0px 20px 0px;
 }
 #trabajamos{
   position: relative;
-  background:url(../ficus/img/trabajamos.png) no-repeat;
+  background:url(../fiqustheme/img/trabajamos.png) no-repeat;
   background-size:100%;
   background-position:bottom center;
   height:770px;
 }
 #proyectos{
   position: relative;
-  background:url(../ficus/img/bg-proyectos.png) no-repeat;
+  background:url(../fiqustheme/img/bg-proyectos.png) no-repeat;
   background-size:100% 100%;
   background-position:0 20px;
 }
