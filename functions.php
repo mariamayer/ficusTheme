@@ -105,7 +105,7 @@ add_action( 'widgets_init', 'ficus_widgets_init' );
  * Enqueue scripts and styles.
  */
 function ficus_scripts() {
-	wp_enqueue_style( 'ficus-style', get_stylesheet_uri());
+	wp_enqueue_style( 'ficus-style', get_stylesheet_uri(),false,null);
 
 	wp_enqueue_style( 'ficus-slick-theme', get_template_directory_uri() . '/slick-theme.css',false,auto);
 
