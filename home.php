@@ -115,18 +115,20 @@ get_header(); ?>
 
 <section id="trabajamos" class="content-section">
 		<div class="container centrado">
-		<div class="text-right como-trabajamos scrollme">
-		<div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-300"><span class="lineas "><h2 class="boton feedback"> Cómo trabajamos </h2>---&#x25CF;</span></div>
-		</div>
-
-		<div class="col-md-8 col-md-offset-2 centrado esquema">
-		<img src="<?php echo get_template_directory_uri(); ?>/img/trabajamos.gif" alt="Esquema de trabajo">
-		<div class="scrollme">
-			<div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="300"><span class="lineas">---<h2 class="boton feedback"> Feedback </h2> </span></div>
+			<div class="text-right como-trabajamos scrollme">
+			<div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-300"><span class="lineas "><h2 class="boton feedback"> Cómo trabajamos </h2>---&#x25CF;</span></div>
 			</div>
-		</div>
-		<span class="final">Producto Final </span>
 
+			<div class="col-md-8 col-md-offset-2 centrado esquema">
+			<img src="<?php echo get_template_directory_uri(); ?>/img/trabajamos.gif" alt="Esquema de trabajo">
+				<div class="scrollme">
+				<div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="300"><span class="lineas">---<h2 class="boton feedback"> Feedback </h2> </span></div>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<span class="final">Producto Final</span> <br>
+				<span class="mantenimiento">Nuevas funcionalidades <br> Mantenimiento </span>
+			</div>
 		</div>
 </section><!--end seccion como trabajamos-->
 

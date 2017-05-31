@@ -777,14 +777,33 @@ position: relative;
 overflow: hidden;
 text-decoration: none !important;
 text-transform: uppercase;
+margin-bottom: 2em;
+}
+
+.mantenimiento {
+font-size: 18px;
+display: inline-block;
+font-family: 'Van Condensed Bold';
+color:#333333;
+padding: 8px 8px;
+background-color: #fff;
+border: 3px dashed #333333;
+position: relative;
+overflow: hidden;
+text-decoration: none !important;
+text-transform: uppercase;
 margin-bottom: 3em;
+}
+
+.producto-final {
+	margin-top: 80px;
+	margin-right: 49.15%;
 }
 
 .ejemplos {
 background: #333333;
 text-align: center;
 color: #ffffff;
-margin-bottom: 2em;
 padding: 40px 0px 20px 0px;
 }
 
@@ -805,7 +824,7 @@ padding: 40px 0px 20px 0px;
   background:url(../ficus/img/trabajamos.png) no-repeat;
   background-size:100%;
   background-position:bottom center;
-  height:700px;
+  height:770px;
 }
 #proyectos{
   position: relative;
@@ -814,12 +833,14 @@ padding: 40px 0px 20px 0px;
   background-position:0 20px;
 }
 #proyectos .proyectos{
-    height: 30em;
+    height: 38em;
     overflow: scroll;
     position: relative;
+    padding: 60px 0px;
+    border-right: 3px dashed #333333;
 }
 #proyectos .container-fluid{
-    padding:60px 50px;
+    padding:0px 50px;
 }
 #proyectos #next{
     position: absolute;
@@ -882,7 +903,7 @@ margin-right: 5px;
 .muestra {
 	height: 30em;
 	margin-bottom: 1em;
-	border-left: 3px dashed #333333;
+
 	padding: 1em;
 	color: #ffffff;
 	text-align: center;
@@ -1056,7 +1077,7 @@ font-size: 14px !important;
 	background: #f2f2f2;
 	margin-bottom: 1em;
 	padding: 2em;
-	color: #ffffff;
+	color: #333333;
 	text-align: center;
 }
 .slider p.label{
@@ -1145,7 +1166,7 @@ font-size: 14px !important;
     border:0;
   }
   #proyectos .container-fluid{
-    padding:0;
+    padding:0px;
   }
   .grilla,.muestra{
     height:auto;
