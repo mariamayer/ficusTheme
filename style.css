@@ -579,14 +579,11 @@ text-align: center
 .central {
 width: 500px;
 margin: 0 auto;
-margin-top: 20em;
+margin-top: 10em;
 position: relative;
 }
-#intro .fondo{
-  position: absolute;
-    width: 100%;
-    left: -13px;
-    top:5%;
+#intro{
+  background:#333333;
 }
 .fiqus {
     color: #c2d72e;
@@ -596,39 +593,59 @@ position: relative;
 }
 .intro .valores .valor li{
 	text-transform: uppercase;
-	font-size: 18px;
+  position: relative;
+	font-size: 22px;
 	padding:5px;
+  color: #fff;
+  margin:30px 0;
+  padding:0 20px;
+  line-height: 30px;
 }
+.intro .linea{
+  border-right: 3px dashed #c2d72e;
+  border-top: 3px dashed #c2d72e;
+  border-radius: 0 10% 0 0;
+  -webkit-transition: all 1s; /* For Safari 3.1 to 6.0 */
+  transition: all 1s;
+}
+.intro .gris{
+  border-color:gray;
+  -webkit-transition: all 1s; /* For Safari 3.1 to 6.0 */
+  transition: all 1s;
+}
+
 .boton{
-font-size: 16px;
-display: inline-block;
-border: 2px solid #000000;
-font-family: 'Van Condensed Bold';
-color:#000;
-padding: 4px 4px;
-background-color: #c2d72e;
-position: relative;
-overflow: hidden;
-border-radius: 2px;
-text-decoration: none !important;
-text-transform: uppercase;
+  border:0;
+  font-size: 18px;
+  display: inline-block;
+  font-family: 'Van Condensed Bold';
+  color:#000;
+  padding: 5px;
+  background-color: #c2d72e;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none !important;
+  text-transform: uppercase;
 }
 
-
+h2.boton.animateme {
+    left: 0;
+    top: -35px;
+}
 
 .nosotros {
-background: #333333;
-color: white;
+background: #fff;
+color: #666;
 position: absolute !important;
 right:0;
 display: none;
-top: 55%;
+top: 60%;
 height: 350px;
 overflow: scroll;
 padding:5px;
 }
 .intro .nosotros .close{
-  color:#fff;
+  color:#666;
   opacity: 1;
 }
 .nosotros-derecha {
@@ -644,8 +661,9 @@ width: 50%;
 height:inherit;
 }
 
-.valores {
+.home .intro .valores {
 	text-align: left;
+  padding:0 ;
 	margin-top: 15em;
 	margin-bottom: 3em;
 }
@@ -657,14 +675,24 @@ padding:0;
 font-size: 14px;
 line-height: 24px;
 }
-
+.valor .dot{
+  top:0;
+  font-size: 30px;
+  position: absolute;
+  color: #c2d72e;
+}
+.dot.right{
+  right:-10px;
+}
+.dot.left{
+  left:-10px;
+}
 .somos {
-color: #333333;
-font-family: 'Unicorn Flakes';
-font-size: 18px;
-font-weight: 400;
-line-height: 28px;
-text-align: justify;
+  color:#fff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: justify;
 }
 
 
@@ -917,10 +945,6 @@ margin: 2em;
 	color: #333333;
 	font-family: 'Van Condensed Light';
   margin-bottom:40px;
-}
-
-.gris {
-	text-co:#333333 !important;
 }
 
 #productos {

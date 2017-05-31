@@ -6,12 +6,11 @@
 get_header(); ?>
 
 <section id="intro" class="content-section">
-	<img class="fondo hidden-xs" src="<?php echo get_template_directory_uri(); ?>/img/home.gif" alt="">
 	<div class="intro container">
 		<div class="central centrado">
 			<img class="logo gris" src="<?php echo get_template_directory_uri(); ?>/img/logo-fiqus.png">
 			<h1 class="fiqus"> Cooperativa de Software </h1>
-			<p class="somos" >Somos una empresa cooperativa especializada en software, fundada en 2011 por ingenieros en sistemas y especialistas en programación con clientes en el mercado nacional e internacional que busca un desarrollo integral de sus socios que se refleje en la calidad  de los servicios brindados.    &#x25CF;- - - - - -<span><a href="#nosotros" class="boton enterate"> Enterate de más </a> </span>
+			<p class="somos" >Somos una empresa cooperativa especializada en software, fundada en 2011 por ingenieros en sistemas y especialistas en programación con clientes en el mercado nacional e internacional que busca un desarrollo integral de sus socios que se refleje en la calidad  de los servicios brindados.<span><a href="#nosotros" class="boton enterate"> Enterate de más </a></span>
  			</p>
 			<div class="nosotros col-md-12 text-left">
 				<a class="close" href="#">x</a>
@@ -40,16 +39,21 @@ get_header(); ?>
 				creer nos lleva a actuar, y la unión de estas acciones es a lo que llamamos Fiqus.
 			</div>
 		</div>
-		<div class="valores col-md-5 col-md-offset-1 text-left">
+		<div class="valores col-md-3 col-md-offset-3 linea gris">
 			<div class="scrollme">
 				<h2 class="boton animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-300"> Valores </h2>
 			</div>
+			 <ul class="valor text-right">
+				<li class="scrollme"><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-300">Distribución de las ganancias</div><span class="dot right">&#x25CF;</span></li>
+				<li class="scrollme"><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-300">Compromiso con la comunidad</div><span class="dot right">&#x25CF;</span></li>
+
+			</ul>
+		</div>
+		<div class="valores col-md-3 text-left">
 			 <ul class="valor">
-				<li class="scrollme"><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-300">Horizontalidad </div></li>
-				<li class="scrollme"><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-300">Participación en la toma de decisiones </div></li>
-				<li class="scrollme"><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-300">Ayuda mutua </div></li>
-				<li class="scrollme"><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-300">Distribución de las ganancias</div></li>
-				<li class="scrollme"><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-300">Compromiso con la comunidad </div></li>
+				<li class="scrollme"><span class="dot left">&#x25CF;</span><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="300">Horizontalidad</div></li>
+				<li class="scrollme"><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="300">Participación en la toma de decisiones </div></li>
+				<li class="scrollme"><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="300">Ayuda mutua</div></li>
 
 			</ul>
 		</div>
