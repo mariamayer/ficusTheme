@@ -59,7 +59,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
     font-family: 'Unicorn Flakes';
     src: url('fonts/Unicorn Flakes.ttf');
 }
-html,.home{
+html,.home,.blog,.single-nota{
 	font-family: 'Van Condensed';
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
@@ -580,6 +580,7 @@ text-align: center
 width: 500px;
 margin: 0 auto;
 margin-top: 20em;
+position: relative;
 }
 #intro .fondo{
   position: absolute;
@@ -619,12 +620,17 @@ text-transform: uppercase;
 background: #333333;
 color: white;
 position: absolute !important;
-right:-1800px;
-top: 60%;
-width: 75% !important;
-padding: 10px;
+right:0;
+display: none;
+top: 55%;
+height: 350px;
+overflow: scroll;
+padding:5px;
 }
-
+.intro .nosotros .close{
+  color:#fff;
+  opacity: 1;
+}
 .nosotros-derecha {
 float: left;
 width: 50%;
@@ -687,7 +693,7 @@ padding: 0;
 }
 
 .hacemos {
-	width: 300px;
+	width: 20%;
 	display: inline-block;
 	border-left: 3px dashed black;
 	height:60px;
@@ -817,6 +823,7 @@ padding: 40px 0px 20px 0px;
 }
 #proyectos #next{
     position: absolute;
+    cursor: pointer;
     bottom:6%;
     left:25%;
     color:#1a1a1a;
@@ -826,17 +833,18 @@ padding: 40px 0px 20px 0px;
     transform: rotate(-90deg);
 }
 .selector {
-font-size: 12px;
-display: inline-block;
-font-family: 'Van Condensed Bold';
-color:#fff;
-padding: 4px 8px;
-background-color: #333333;
-position: relative;
-overflow: hidden;
-text-decoration: none !important;
-text-transform: uppercase;
-margin-left: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  display: inline-block;
+  font-family: 'Van Condensed Bold';
+  color:#fff;
+  padding: 4px 8px;
+  background-color: #333333;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  margin-left: 5px;
   cursor:pointer;
 }
 
@@ -906,8 +914,9 @@ margin: 2em;
 	text-align: center;
 	border-right: 3px black;
 	padding-right: 80px;
-	color: #333333;	
+	color: #333333;
 	font-family: 'Van Condensed Light';
+  margin-bottom:40px;
 }
 
 .gris {
@@ -935,18 +944,22 @@ margin: 2em;
 	text-decoration: none !important;
 	text-transform: uppercase;
 	color: #333333;
+  margin-bottom:20px;
+  margin-top:20px;
 }
 
 .prod-descripcion {
 	color: #333333;
 }
-
+.muestra .contenido{
+  width:80%;
+  margin:auto;
+}
 .contenido {
 	font-size: 16px;
 	text-align: justify;
 	border-right: 3px black;
-	padding-right: 80px;
-	color:#333333;	
+	color:#333333;
 	font-family: 'Van Condensed Light';
 }
 
@@ -1046,6 +1059,15 @@ font-size: 14px !important;
 	color: #ffffff;
 	text-align: center;
 }
+.slider p.label{
+  background:#333333;
+  padding:10px;
+}
+.slider p.label img{
+  display: inline;
+  width: 45px;
+  padding: 5px;
+}
 .rslides {
   position: relative;
   list-style: none;
@@ -1097,4 +1119,49 @@ font-size: 14px !important;
 }
 .arrow-left{
   right:0
+}
+.nota{
+  min-height:100vh;
+  font-family:
+}
+.nota h1{
+  margin-top:150px;
+  margin-bottom:50px;
+}
+.nota p{
+  width: 60%;
+  margin: auto;
+  text-align: left;
+  line-height: 28px;
+}
+@media (max-width: 600px) {
+  .central{
+    width:90%;
+  }
+  .hacemos{
+    border:0;
+  }
+  .muestra{
+    border:0;
+  }
+  #proyectos .container-fluid{
+    padding:0;
+  }
+  .grilla,.muestra{
+    height:auto;
+  }
+  .slick-arrow{
+    top:10%;
+    font-size: 20px;
+  }
+  .slider{
+    height:auto;
+  }
+  .contenido-proyecto{
+    margin:5px;
+    padding:0;
+  }
+  .hacemos{
+    width:100%;
+  }
 }

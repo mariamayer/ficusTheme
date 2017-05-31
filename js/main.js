@@ -14,9 +14,13 @@
     });
 
 		//Enterate de mas
-		$('.intro .enterate').click(function(){
-				$('.intro .nosotros').animate({ left: '5%'});
-
+		$('.intro .nosotros .close').click( function(event) {
+			event.preventDefault();
+    	$('.intro .nosotros').fadeOut(200);
+		});
+		$('.intro .enterate').click(function(event){
+			event.preventDefault();
+				$('.intro .nosotros').fadeIn(200);
 		});
 
 		//Sliders

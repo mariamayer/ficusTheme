@@ -6,38 +6,27 @@
 get_header(); ?>
 
 <section id="intro" class="content-section">
-	<img class="fondo" src="<?php echo get_template_directory_uri(); ?>/img/home.gif" alt="">
+	<img class="fondo hidden-xs" src="<?php echo get_template_directory_uri(); ?>/img/home.gif" alt="">
 	<div class="intro container">
 		<div class="central centrado">
 			<img class="logo gris" src="<?php echo get_template_directory_uri(); ?>/img/logo-fiqus.png">
 			<h1 class="fiqus"> Cooperativa de Software </h1>
 			<p class="somos" >Somos una empresa cooperativa especializada en software, fundada en 2011 por ingenieros en sistemas y especialistas en programación con clientes en el mercado nacional e internacional que busca un desarrollo integral de sus socios que se refleje en la calidad  de los servicios brindados.    &#x25CF;- - - - - -<span><a href="#nosotros" class="boton enterate"> Enterate de más </a> </span>
  			</p>
-
-		<div class="valores col-md-5 col-md-offset-1 text-left scrollme">
-			 <ul class="valor">
-				<li class="scrollme"><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-300">Horizontalidad </div></li>
-				<li class="scrollme"><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-300">Participación en la toma de decisiones </div></li>
-				<li class="scrollme"><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-300">Ayuda mutua </div></li>
-				<li class="scrollme"><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-300">Distribución de las ganancias</div></li>
-				<li class="scrollme"><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-300">Compromiso con la comunidad </div></li>
-
-			</ul>
-		</div>
-		<div class="nosotros col-md-12 col-md-offset-1 text-left">
-			<p class="col-md-6">La fuerza e ideales de Fiqus no son más que la suma de fuerzas e ideales de cada
-			uno de sus integrantes. Cada uno de nosotros es un ingrediente vital, que
-			aporta ideas y personalidad. Al combinarnos surge algo mucho más fuerte que
-			la simple suma de las partes.
-			Cada miembro tiene voz y voto y, de esta forma, las decisiones son tomadas en
-			forma democrática y grupal. La única y exclusiva fórmula de Fiqus y sobre lo que
-			construimos el éxito de nuestro trabajo son las personas, cada uno de sus
-			miembros y la sinergia fruto de la interacción entre ellos.
-			Fiqus no se complace con el modelo actual vigente y busca algo diferente, algo
-			mucho más justo y natural, una sociedad que se base en sus miembros y no en
-			sus capitales, un espacio donde cada uno se sienta parte, y sus ideas den
-			frutos.</p>
-			<p class="col-md-6">
+			<div class="nosotros col-md-12 text-left">
+				<a class="close" href="#">x</a>
+				La fuerza e ideales de Fiqus no son más que la suma de fuerzas e ideales de cada
+				uno de sus integrantes. Cada uno de nosotros es un ingrediente vital, que
+				aporta ideas y personalidad. Al combinarnos surge algo mucho más fuerte que
+				la simple suma de las partes.
+				Cada miembro tiene voz y voto y, de esta forma, las decisiones son tomadas en
+				forma democrática y grupal. La única y exclusiva fórmula de Fiqus y sobre lo que
+				construimos el éxito de nuestro trabajo son las personas, cada uno de sus
+				miembros y la sinergia fruto de la interacción entre ellos.
+				Fiqus no se complace con el modelo actual vigente y busca algo diferente, algo
+				mucho más justo y natural, una sociedad que se base en sus miembros y no en
+				sus capitales, un espacio donde cada uno se sienta parte, y sus ideas den
+				frutos.
 				Nuestro crecimiento respecto a la cantidad de miembros no está basado en la
 				demanda de trabajo ni en las necesidades de algún cliente en particular, sino
 				que crecemos respecto a la cantidad de gente que se siente identificada con
@@ -49,8 +38,20 @@ get_header(); ?>
 				de todos nosotros sin dar demasiado a cambio.
 				Creemos en el cambio, creemos en la gente, creemos en un mundo justo. Este
 				creer nos lleva a actuar, y la unión de estas acciones es a lo que llamamos Fiqus.
-			</p>
 			</div>
+		</div>
+		<div class="valores col-md-5 col-md-offset-1 text-left">
+			<div class="scrollme">
+				<h2 class="boton animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-300"> Valores </h2>
+			</div>
+			 <ul class="valor">
+				<li class="scrollme"><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-300">Horizontalidad </div></li>
+				<li class="scrollme"><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-300">Participación en la toma de decisiones </div></li>
+				<li class="scrollme"><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-300">Ayuda mutua </div></li>
+				<li class="scrollme"><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-300">Distribución de las ganancias</div></li>
+				<li class="scrollme"><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-300">Compromiso con la comunidad </div></li>
+
+			</ul>
 		</div>
 	</div> <!--end class intro-->
 
@@ -124,6 +125,7 @@ get_header(); ?>
 			<div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="300"><span class="lineas">---<h2 class="boton feedback"> Feedback </h2> </span></div>
 			</div>
 		</div>
+		<span class="final">Producto Final </span>
 
 		</div>
 </section><!--end seccion como trabajamos-->
@@ -223,7 +225,7 @@ get_header(); ?>
 			</div>
 			</div>
 		</div>
-		<div id="next"><</div>
+		<div class="hidden-xs" id="next"><</div>
 </section><!--end seccion proyectos-->
 
 <section id="productos" class="content-section">
