@@ -4,12 +4,18 @@
 
 		//Prender Q de logo con scroll
 		var logo = $(".intro .logo");
+		var div = $(".intro .linea");
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
         if (scroll >= 10) {
-            logo.removeClass('gris').addClass("darkHeader");
+            logo.removeClass('gris');
         } else {
-            logo.addClass("gris").addClass('clearHeader');
+            logo.addClass('gris');
+        }
+				if (scroll >= 300) {
+            div.removeClass('gris');
+        } else {
+            div.addClass('gris');
         }
     });
 
