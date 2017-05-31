@@ -515,13 +515,14 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: #c2d72e;
+	color: #c2d72e !important;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: #c2d72e;
+	color: #333333;
+	cursor: pointer;
 }
 
 a:focus {
@@ -601,6 +602,7 @@ position: relative;
   padding:0 20px;
   line-height: 30px;
 }
+<<<<<<< Updated upstream
 .intro .linea{
   border-right: 3px dashed #c2d72e;
   border-top: 3px dashed #c2d72e;
@@ -612,6 +614,21 @@ position: relative;
   border-color:gray;
   -webkit-transition: all 1s; /* For Safari 3.1 to 6.0 */
   transition: all 1s;
+=======
+.boton{
+font-size: 16px;
+display: inline-block;
+border: 2px solid #000000;
+font-family: 'Van Condensed Bold';
+color:#000 !important;
+padding: 4px 4px;
+background-color: #c2d72e;
+position: relative;
+overflow: hidden;
+border-radius: 2px;
+text-decoration: none !important;
+text-transform: uppercase;
+>>>>>>> Stashed changes
 }
 
 .boton{
@@ -823,6 +840,13 @@ text-transform: uppercase;
 margin-bottom: 3em;
 }
 
+.separacion {
+margin-top: 5px;
+margin-bottom: 5px;
+border: 0;
+border-top: 2px solid #333;
+}
+
 .producto-final {
 	margin-top: 80px;
 	margin-right: 49.15%;
@@ -864,7 +888,7 @@ padding: 40px 0px 20px 0px;
     height: 38em;
     overflow: scroll;
     position: relative;
-    padding: 60px 0px;
+    padding: 60px 30px;
     border-right: 3px dashed #333333;
 }
 #proyectos .container-fluid{
@@ -898,9 +922,9 @@ padding: 40px 0px 20px 0px;
 }
 
 .grilla {
-	height: 12em;
+	min-height: 12em;
 	background: #333333;
-	margin-bottom: 1em;
+	margin-bottom: 2em;
 	padding: 0.5em;
 	color: #ffffff;
 	text-align: center;
@@ -931,8 +955,7 @@ margin-right: 5px;
 .muestra {
 	height: 30em;
 	margin-bottom: 1em;
-
-	padding: 1em;
+	padding: 120px;
 	color: #ffffff;
 	text-align: center;
 }
@@ -962,12 +985,17 @@ margin: 2em;
 	font-size: 16px;
 	text-align: center;
 	border-right: 3px black;
-	padding-right: 80px;
+	padding: 10px 60px;
 	color: #333333;
 	font-family: 'Van Condensed Light';
   margin-bottom:40px;
 }
 
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
 #productos {
 	background: #f2f2f2;
 }
@@ -993,9 +1021,17 @@ margin: 2em;
   margin-top:20px;
 }
 
-.prod-descripcion {
-	color: #333333;
+.contenido-producto {
+	margin-top: 20px;
 }
+
+.descripcion-producto {
+	margin-bottom: 10px;
+	max-width: 80%;
+	font-size: 16px;
+}
+
+
 .muestra .contenido{
   width:80%;
   margin:auto;
@@ -1007,6 +1043,22 @@ margin: 2em;
 	color:#333333;
 	font-family: 'Van Condensed Light';
 }
+
+
+.blog-seccion {
+margin-bottom: 30px;
+}
+
+.link-blanco {
+	color: #ffffff !important;
+}
+
+.link-blanco a:focus  a:hover {
+	color: #333333 !important;
+	text-decoration: none !important;
+}
+
+
 
 .noticia {
 	padding: 20px;
@@ -1024,6 +1076,10 @@ margin: 2em;
     overflow: hidden;
     text-decoration: none !important;
     text-transform: uppercase;
+}
+
+.leermas a:hover, a:active {    
+    color: #c2d72e !important;
 }
 
 .contacto{
@@ -1088,7 +1144,7 @@ font-size: 14px !important;
   width:100%;
 }
 .img-container{
-  width: 80%;
+  width: 90%;
   margin: auto;
   background: url(../ficus/img/fiqus-19.png) no-repeat;
   padding: 3% 12% 6%;
@@ -1097,7 +1153,6 @@ font-size: 14px !important;
   height: 100%;
 }
 .slider {
-	height: 30em;
 	background: #f2f2f2;
 	margin-bottom: 1em;
 	padding: 2em;
@@ -1105,8 +1160,9 @@ font-size: 14px !important;
 	text-align: center;
 }
 .slider p.label{
-  background:#333333;
+  background:#c2d72e;
   padding:10px;
+  margin: 10px;
 }
 .slider p.label img{
   display: inline;

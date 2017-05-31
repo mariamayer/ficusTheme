@@ -131,7 +131,7 @@ get_header(); ?>
 			</div>
 			<div class="col-md-12">
 				<span class="final">Producto Final</span> <br>
-				<span class="mantenimiento">Nuevas funcionalidades <br> Mantenimiento </span>
+				<span class="mantenimiento"> Nuevas funcionalidades <br> <hr class="separacion"> Mantenimiento </span>
 			</div>
 		</div>
 </section><!--end seccion como trabajamos-->
@@ -141,9 +141,9 @@ get_header(); ?>
 		<h1>PROYECTOS</h1>
 		</div>
 		<div class="container-fluid">
-			<div class="col-md-11 col-md-offset-1">
+			<div class="col-md-8 col-md-offset-2">
 
-				<div class="col-md-5 text-left proyectos">
+				<div class="col-md-6 text-left proyectos">
 					<div>
 						<ul class="servicios">
 							<?php
@@ -211,7 +211,7 @@ get_header(); ?>
 						<?php endwhile; endif; ?>
 
 				</div>
-					<div class="col-md-7 muestra">
+					<div class="col-md-6 muestra">
 						<ul class="rslides">
 							<?php
 							$ids = explode( ",", $gallery['ids'] );
@@ -225,7 +225,7 @@ get_header(); ?>
 						  echo '<p class="selector2">' . $tag->name . '</p>';
 						}
 					 	?>
-						<p class="contenido"><?php echo $content; ?></p>
+						<p class="contenido-proyecto"><?php echo $content; ?></p>
 						</div>
 					</div>
 			</div>
@@ -239,21 +239,22 @@ get_header(); ?>
 	<h1> PRODUCTOS </h1>
 	</div>
 	<div class="container-fluid">
-		<div class="col-md-10 slider">
+		<div class="col-md-10 col-md-offset-1 slider">
 			<div class="slick">
 				<?php
 				    $loop = new WP_Query( array( 'post_type' => 'producto', 'posts_per_page' => '-1') );
 				    if ( $loop->have_posts() ) :
 				        while ( $loop->have_posts() ) : $loop->the_post(); ?>
 								<div>
-									<div class="col-md-7">
+									<div class="col-md-6">
 										<div class="img-container">
 											<img src="<?php the_post_thumbnail_url( 'full' ); ?>" alt="<?php echo get_the_title(); ?>">
 										</div>
 									</div>
-									<div class="col-md-5">
-										<h2 class="novedad"><?php echo get_the_title(); ?></h2>
-										<p class="contenido-proyecto"><?php echo get_the_content(); ?></p>
+									<div class="col-md-6 contenido-producto">
+										<div class="descripcion-producto">
+										<h2 class="novedad"><?php echo get_the_title(); ?></h2>	
+										<p><?php echo get_the_content(); ?></p>
 										<p class="label">
 											<?php
 											$tags=wp_get_post_tags(get_the_ID());
@@ -273,6 +274,7 @@ get_header(); ?>
 											}
 											?>
 										</p>
+										</div>
 									</div>
 								</div>
 				        <?php endwhile;
@@ -286,9 +288,9 @@ get_header(); ?>
 </section><!--end seccion propios-->
 
 
-<section id="blog content-section">
+<section id="blog content-section" class="blog-seccion"> 
 	<div class="ejemplos head-blog">
-	<h1 class="blog-header"> VISITA NUESTRO BLOG-------<span style="color:#333333">● </span></h1>
+	<h1 class="blog-header"> <a href="/blog" class="link-blanco"> VISITA NUESTRO BLOG-------<span style="color:#333333">● </span> </a> </h1>
 	</div>
 	<div class="container-fluid">
 		<div class="col-md-12 col-md-offset-1 ">
