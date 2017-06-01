@@ -18,7 +18,7 @@ get_header(); ?>
 								<div class="noticia col-md-5 text-left prod-descripcion">
 									<h2 class="novedad"><?php echo get_the_title(); ?></h2>
 									<p class="contenido"><?php echo get_the_excerpt(); ?></p>
-									<span><a href="<?php echo get_the_permalink(); ?>" class="leermas"> Leer más </a> </span>
+									<span><a href="<?php echo get_the_permalink(); ?>" class="leermas"><?php echo __('[:en]Read More[:es]Leer más'); ?></a> </span>
 								</div>
 			        <?php endwhile;
 			    endif;
