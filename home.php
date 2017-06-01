@@ -10,7 +10,7 @@ get_header(); ?>
 		<div class="central centrado">
 			<img class="logo gris" src="<?php echo get_template_directory_uri(); ?>/img/logo-fiqus.png">
 			<h1 class="fiqus"> Cooperativa de Software </h1>
-			<p class="somos" >Somos una empresa cooperativa especializada en software, fundada en 2011 por ingenieros en sistemas y especialistas en programación con clientes en el mercado nacional e internacional que busca un desarrollo integral de sus socios que se refleje en la calidad  de los servicios brindados.<span><a href="#nosotros" class="boton enterate"> Enterate de más </a></span>
+			<p class="somos" >Somos una empresa <span style="color:#c2d72e">cooperativa </span> especializada en software, fundada en 2011 por ingenieros en sistemas y especialistas en <span style="color:#c2d72e">programación</span> con clientes en el mercado nacional e internacional que busca un <span style="color:#c2d72e">desarrollo integral </span>de sus socios que se refleje en la <span style="color:#c2d72e">calidad</span> de los servicios brindados.<span>-------<span style="color:#c2d72e">● </span> <a href="#nosotros" class="boton enterate"> Enterate de más </a></span>
  			</p>
 			<div class="nosotros col-md-12 text-left">
 				<a class="close" href="#">x</a>
@@ -129,9 +129,11 @@ get_header(); ?>
 				<div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="300"><span class="lineas">---<h2 class="boton feedback"> Feedback </h2> </span></div>
 				</div>
 			</div>
-			<div class="col-md-12">
+			<div class="col-md-12 scrollme">
 				<span class="final">Producto Final</span> <br>
-				<span class="mantenimiento"> Nuevas funcionalidades <br> <hr class="separacion"> Mantenimiento </span>
+				<div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-300">
+					<span class="mantenimiento"> Nuevas funcionalidades <br> <hr class="separacion"> Mantenimiento </span>
+				</div>
 			</div>
 		</div>
 </section><!--end seccion como trabajamos-->
@@ -287,10 +289,11 @@ get_header(); ?>
 
 </section><!--end seccion propios-->
 
+				
 
 <section id="blog content-section" class="blog-seccion"> 
-	<div class="ejemplos head-blog">
-	<h1 class="blog-header"> <a href="/blog" class="link-blanco" > VISITA NUESTRO BLOG-------<span style="color:#333333">● </span> </a> </h1>
+	<div class="ejemplos head-blog scrollme">
+	<div class="animateme" data-when="enter" data-from="1" data-to="0" data-opacity="10" data-translatex="-1000"><h1 class="blog-header"> <a href="/blog" class="link-blanco" > VISITA NUESTRO BLOG-------<span style="color:#333333">● </span> </a> </h1></div>
 
 	</div>
 	<div class="container-fluid">
@@ -317,7 +320,7 @@ get_header(); ?>
 	<h1 class="contacto-header"> CONTACTO-------<span style="color:#c2d72e">● </span></h1>
 	</div>
 	<div class="container-fluid">
-		<div class="col-md-12">
+		<div class="col-md-10 col-md-offset-1">
 				<div class="noticia col-md-6 text-left">
 				<input type="text" class="completar" required="" name="name" placeholder="Nombre" />
 				<input type="text" class="completar" required="" name="email" placeholder="Correo Electrónico" />

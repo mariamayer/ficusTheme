@@ -10,13 +10,13 @@ get_header(); ?>
 	<h1 class="blog-header">BLOG-------<span style="color:#333333">● </span></h1>
 	</div>
 	<div class="container-fluid">
-		<div class="col-md-12 col-md-offset-1 ">
+		<div class="col-md-6 col-md-offset-3 ">
 			<?php
 			    $loop = new WP_Query( array( 'post_type' => 'nota', 'posts_per_page' => '-1') );
 			    if ( $loop->have_posts() ) :
 			        while ( $loop->have_posts() ) : $loop->the_post(); ?>
-								<div class="noticia col-md-5 text-left prod-descripcion">
-									<h2 class="novedad"><?php echo get_the_title(); ?></h2>
+								<div class="noticia col-md-12 text-left prod-descripcion">
+									<h2 class="titulo-nota"><?php echo get_the_title(); ?></h2>
 									<p class="contenido"><?php echo get_the_excerpt(); ?></p>
 									<span><a href="<?php echo get_the_permalink(); ?>" class="leermas"> Leer más </a> </span>
 								</div>
