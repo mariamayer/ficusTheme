@@ -758,7 +758,7 @@ margin:0;
 
 }
 .tecno {
-width: 220px;
+width: 20%;
 text-align: center;
 display: inline-block;
 vertical-align: top;
@@ -1244,6 +1244,9 @@ font-size: 14px !important;
     padding:0;
   }
   .hacemos{
+    width:100%;
+  }
+  .tecno {
     width:100%;
   }
 }

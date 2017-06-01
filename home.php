@@ -192,11 +192,10 @@ get_header(); ?>
 							<div class="grilla <?php echo $active; ?><?php echo $classes; ?>"
 							data-content='<?php echo strip_shortcodes(get_the_content());?>'
 							data-gallery='<?php echo json_encode($imgs); ?>'
-							data-excerpt='<?php echo get_the_excerpt();?>'
 							data-tags='<?php echo json_encode($tags_array);?>'
 							>
 							<h4><?php echo get_the_title(); ?></h4>
-							<p><?php echo strip_shortcodes(get_the_content()); ?></p>
+							<p><?php echo get_the_excerpt(); ?></p>
 							<?php
 							$tags = wp_get_post_tags(get_the_ID());
 							echo '<ul class="tag-ul">';
@@ -253,7 +252,7 @@ get_header(); ?>
 									</div>
 									<div class="col-md-6 contenido-producto">
 										<div class="descripcion-producto">
-										<h2 class="novedad"><?php echo get_the_title(); ?></h2>	
+										<h2 class="novedad"><?php echo get_the_title(); ?></h2>
 										<p><?php echo get_the_content(); ?></p>
 										<p class="label">
 											<?php
@@ -288,7 +287,7 @@ get_header(); ?>
 </section><!--end seccion propios-->
 
 
-<section id="blog content-section" class="blog-seccion"> 
+<section id="blog content-section" class="blog-seccion">
 	<div class="ejemplos head-blog">
 	<h1 class="blog-header"> <a href="/blog" class="link-blanco" > VISITA NUESTRO BLOG-------<span style="color:#333333">● </span> </a> </h1>
 

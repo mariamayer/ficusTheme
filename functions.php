@@ -182,7 +182,7 @@ function create_posttype_blog() {
       'public' => true,
       'has_archive' => true,
       'rewrite' => array('slug' => 'nota'),
-			'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt')
+			'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt','custom-fields')
     )
   );
 }
@@ -203,7 +203,7 @@ function create_posttype_proyecto() {
       'public' => true,
       'has_archive' => true,
       'rewrite' => array('slug' => 'producto'),
-			'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt'),
+			'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt','custom-fields'),
 			'taxonomies' => array('post_tag')
     )
   );
