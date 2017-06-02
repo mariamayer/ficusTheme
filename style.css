@@ -548,7 +548,7 @@ a:active {
 		text-align: center;
 }
 .header .navbar-default .navbar-nav>li>a{
-    color: #fff;
+    	color: #fff !important;
 		font-size:16px;
 		text-transform: uppercase;
 }
@@ -561,6 +561,12 @@ a:active {
     color: #fff;
 		font-weight: bolder;
 }
+
+.superior>ul>a{
+    	color: #fff !important;
+
+}
+
 .centrado {
 text-align: center
 }
@@ -893,7 +899,7 @@ padding: 40px 0px 20px 0px;
     height: 38em;
     overflow: scroll;
     position: relative;
-    padding: 60px 30px;
+    padding: 30px 30px;
     border-right: 3px dashed #333333;
 }
 #proyectos .container-fluid{
@@ -927,7 +933,7 @@ padding: 40px 0px 20px 0px;
 }
 
 .grilla {
-	min-height: 12em;
+	min-height: 10em;
 	background: #333333;
 	margin-bottom: 2em;
 	padding: 0.5em;
@@ -960,7 +966,7 @@ margin-right: 5px;
 .muestra {
 	height: 30em;
 	margin-bottom: 1em;
-	padding: 120px;
+	padding: 60px;
 	color: #ffffff;
 	text-align: center;
 }
@@ -990,10 +996,10 @@ margin: 2em;
 	font-size: 16px;
 	text-align: center;
 	border-right: 3px black;
-	padding: 10px 60px;
+	padding: 0px 60px;
 	color: #333333;
 	font-family: 'Van Condensed Light';
-  margin-bottom:40px;
+ ¡
 }
 
 #productos {
@@ -1023,12 +1029,14 @@ margin: 2em;
 
 .contenido-producto {
 	margin-top: 20px;
+
 }
 
 .descripcion-producto {
 	margin-bottom: 10px;
 	max-width: 80%;
 	font-size: 16px;
+	margin-bottom: 20px;
 }
 
 
@@ -1175,13 +1183,16 @@ font-size: 32px;
 }
 .slider p.label{
   background:#333333;
-  padding:10px;
-  margin: 10px;
+ padding: 12px 10px;
+margin: 30px 10px;
+font-size: 14px;
 }
+
 .slider p.label img{
   display: inline;
-  width: 45px;
+  width: 30px;
   padding: 5px;
+
 }
 .rslides {
   position: relative;

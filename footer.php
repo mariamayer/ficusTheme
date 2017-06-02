@@ -13,10 +13,12 @@
 
 
 	<footer class="footer">
-		<div class="container">
-			<div class="row">
+		<div class="container-fluid">
+			<div class="row col-md-10 col-md-offset-1">
 				<div class="col-sm-2 text-left">
-					<img src="<?php echo get_template_directory_uri(); ?>/img/footer/1.png">
+					 <a href="http://creativecommons.org/licenses/by-sa/4.0/" alt="Creative Commons License"
+					 <img src="<?php echo get_template_directory_uri(); ?>/img/footer/1.png">
+					 </a>
 				</div>
 				<div class="col-sm-2 col-sm-offset-7 text-right">
 					<img src="<?php echo get_template_directory_uri(); ?>/img/footer/2.png">

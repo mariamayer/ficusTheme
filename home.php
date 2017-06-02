@@ -41,17 +41,16 @@ $somos_en="We are a cooperative company specialized in software, founded in 2011
 	<div class="intro container">
 		<div class="central centrado">
 			<img class="logo gris" src="<?php echo get_template_directory_uri(); ?>/img/logo-fiqus.png">
-<<<<<<< HEAD
-			<h1 class="fiqus"> Cooperativa de Software </h1>
+			<div class="scrollme">	
+				<h1 class="fiqus animateme" data-when="enter" data-from="1" data-to="0" data-opacity="0" data-translatey="50"> Cooperativa de Software </h1> 
+			</div>
 			<p class="somos" >Somos una empresa <span style="color:#c2d72e">cooperativa </span> especializada en software, fundada en 2011 por ingenieros en sistemas y especialistas en <span style="color:#c2d72e">programación</span> con clientes en el mercado nacional e internacional que busca un <span style="color:#c2d72e">desarrollo integral </span>de sus socios que se refleje en la <span style="color:#c2d72e">calidad</span> de los servicios brindados.<span>-------<span style="color:#c2d72e">● </span> <a href="#nosotros" class="boton enterate"> Enterate de más </a></span>
-=======
 			<h1 class="fiqus"><?php echo __('[:en]Software Cooperative[:es]Cooperativa de Software'); ?></h1>
 			<p class="somos">
 				<?php echo __('[:en]'.$somos_en.'[:es]'.$somos_es); ?>
 				<span>
 					<a href="#nosotros" class="boton enterate"><?php echo __('[:en]Learn More[:es]Enterate de más'); ?></a>
 				</span>
->>>>>>> 96da835378b2c0a33cc9e143bc284b94c2c1b3f7
  			</p>
 			<div class="nosotros col-md-12 text-left">
 				<a class="close" href="#">x</a>
@@ -150,31 +149,27 @@ $somos_en="We are a cooperative company specialized in software, founded in 2011
 				<div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="300"><span class="lineas">---<h2 class="boton feedback"> Feedback </h2> </span></div>
 				</div>
 			</div>
-<<<<<<< HEAD
+
+		
 			<div class="col-md-12 scrollme">
-				<span class="final">Producto Final</span> <br>
-				<div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-300">
-					<span class="mantenimiento"> Nuevas funcionalidades <br> <hr class="separacion"> Mantenimiento </span>
-				</div>
-=======
-			<div class="col-md-12">
 				<span class="final">
 					<?php echo __('[:en]Final Product[:es]Producto Final'); ?>
 				</span> <br>
+				<div class="animateme" data-when="enter" data-from="1" data-to="0" data-opacity="0" data-translatey="200">
 				<span class="mantenimiento">
 					<?php echo __('[:en]New Functionalities[:es]Nuevas Funcionalidades'); ?>
 					<br>
 					<hr class="separacion">
 					<?php echo __('[:en]Maintenance[:es]Mantenimiento'); ?>
 				</span>
->>>>>>> 96da835378b2c0a33cc9e143bc284b94c2c1b3f7
+				</div>
 			</div>
 		</div>
 </section><!--end seccion como trabajamos-->
 
 <section id="proyectos" class="content-section">
 		<div class="ejemplos">
-		<h1><?php echo __('[:en]PROYECTS[:es]PROYECTOS'); ?></h1>
+		<h1><?php echo __('[:en]PROJECTS[:es]PROYECTOS'); ?></h1>
 		</div>
 		<div class="container-fluid">
 			<div class="col-md-10 col-md-offset-1">
@@ -266,7 +261,7 @@ $somos_en="We are a cooperative company specialized in software, founded in 2011
 			</div>
 			</div>
 		</div>
-		<div class="hidden-xs" id="down"><</div>
+
 </section><!--end seccion proyectos-->
 
 <section id="productos" class="content-section">
@@ -324,15 +319,14 @@ $somos_en="We are a cooperative company specialized in software, founded in 2011
 
 				
 
-<<<<<<< HEAD
-<section id="blog content-section" class="blog-seccion"> 
-	<div class="ejemplos head-blog scrollme">
-	<div class="animateme" data-when="enter" data-from="1" data-to="0" data-opacity="10" data-translatex="-1000"><h1 class="blog-header"> <a href="/blog" class="link-blanco" > VISITA NUESTRO BLOG-------<span style="color:#333333">● </span> </a> </h1></div>
-=======
+
 <section id="blog content-section" class="blog-seccion">
-	<div class="ejemplos head-blog">
-	<h1 class="blog-header"> <a href="/blog" class="link-blanco" ><?php echo __('[:en]VISIT OUR BLOG[:es]VISITA NUESTRO BLOG'); ?> -------<span style="color:#333333">● </span> </a> </h1>
->>>>>>> 96da835378b2c0a33cc9e143bc284b94c2c1b3f7
+
+	<div class="ejemplos head-blog scrollme">
+	<div class="animateme" data-when="enter" data-from="1" data-to="0" data-opacity="10" data-translatex="-1000">
+	<h1 class="blog-header"> 
+		<a href="/blog" class="link-blanco" ><?php echo __('[:en]VISIT OUR BLOG[:es]VISITA NUESTRO BLOG'); ?> -------<span style="color:#333333">● </span> </a> </h1>
+	</div>
 
 	</div>
 	<div class="container-fluid">
