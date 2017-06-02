@@ -29,6 +29,17 @@
 				$('.intro .nosotros').fadeIn(200);
 		});
 
+		//Categorias
+		var containerWidth=$( ".quehacemos" ).width();
+		var liWidth=containerWidth/4;
+		var cant=$( ".hacemos" ).length;
+		if(cant>4){
+			$('#next').fadeIn(1000);
+			var width=cant*liWidth;
+			$(".servicios").css('width',width);
+			$(".hacemos").css('width',liWidth);
+		}
+
 		//Sliders
 		$(function() {
 			$(".rslides").responsiveSlides({
@@ -82,15 +93,26 @@
 
 		//Flecha que scrollea proyectos
 		function loopNext(){
-    	$('#proyectos .proyectos').stop().animate({scrollTop:'+=20'}, 'fast', 'linear', loopNext);
+    	$('.quehacemos').stop().animate({scrollLeft:'+=20'}, 'fast', 'linear', loopNext);
 		}
-		function stop(){
+		function stopNext(){
+		    $('.quehacemos').stop();
+		}
+		function loopDown(){
+    	$('#proyectos .proyectos').stop().animate({scrollTop:'+=20'}, 'fast', 'linear', loopDown);
+		}
+		function stopDown(){
 		    $('#proyectos .proyectos').stop();
 		}
 		$('#next').hover(function () {
 		   loopNext();
 		},function () {
-		   stop();
+		   stopNext();
+		});
+		$('#down').hover(function () {
+		   loopDown();
+		},function () {
+		   stopDown();
 		});
 
 	});

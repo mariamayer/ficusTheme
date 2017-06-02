@@ -63,6 +63,7 @@ html,.home,.blog,.single-nota{
 	font-family: 'Van Condensed';
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -551,6 +552,11 @@ a:active {
 		font-size:16px;
 		text-transform: uppercase;
 }
+.header .navbar-default .widget{
+    padding-top:15px;
+		font-size:16px;
+		text-transform: uppercase;
+}
 .header .navbar-default .navbar-nav>li>a:hover{
     color: #fff;
 		font-weight: bolder;
@@ -705,8 +711,20 @@ line-height: 24px;
 
 .quehacemos {
 text-align: center;
+width: 80%;
+height: 250px;
+overflow-x: scroll;
+overflow-y: hidden;
 }
-
+#next{
+  position: absolute;
+  z-index: 10;
+  font-size: 60px;
+  color: #3c3d33;
+  right: 5%;
+  top: 10%;
+  display: none;
+}
 #servicio{
 	background: #c2d72e;
 	position: relative;
@@ -722,18 +740,19 @@ list-style: none;
 margin:1em;
 padding: 0;
 }
-
+.hacemos:first-child{
+  border-left: 3px dashed black;
+}
 .hacemos {
-	width: 20%;
 	display: inline-block;
-	border-left: 3px dashed black;
+  width:25%;
+  float: left;
+  left: -15px;
+	border-right: 3px dashed black;
 	height:60px;
 	position: relative;
 	margin:20px 0 100px 0;
 	background-color: #c2d72e;
-}
-.hacemos.last{
-	border-right: 3px dashed black;
 }
 .hacemos .ti-servicio{
 	display: block;
@@ -758,7 +777,7 @@ margin:0;
 
 }
 .tecno {
-width: 220px;
+width: 20%;
 text-align: center;
 display: inline-block;
 vertical-align: top;
@@ -880,7 +899,7 @@ padding: 40px 0px 20px 0px;
 #proyectos .container-fluid{
     padding:0px 50px;
 }
-#proyectos #next{
+#proyectos #down{
     position: absolute;
     cursor: pointer;
     bottom:6%;
@@ -1258,6 +1277,9 @@ font-size: 32px;
     padding:0;
   }
   .hacemos{
+    width:100%;
+  }
+  .tecno {
     width:100%;
   }
 }

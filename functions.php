@@ -117,7 +117,7 @@ function ficus_scripts() {
 
 	wp_enqueue_script( 'ficus-slick', get_template_directory_uri() . '/js/slick.min.js', array(), '1.0.3', true );
 
-	wp_enqueue_script( 'ficus-main', get_template_directory_uri() . '/js/main.js', array(), '1.0.8', true );
+	wp_enqueue_script( 'ficus-main', get_template_directory_uri() . '/js/main.js', array(), '1.1.0', true );
 
 	wp_enqueue_script( 'ficus-boostsrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array(), true );
 
@@ -182,7 +182,7 @@ function create_posttype_blog() {
       'public' => true,
       'has_archive' => true,
       'rewrite' => array('slug' => 'nota'),
-			'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt')
+			'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt','custom-fields')
     )
   );
 }
@@ -203,7 +203,7 @@ function create_posttype_proyecto() {
       'public' => true,
       'has_archive' => true,
       'rewrite' => array('slug' => 'producto'),
-			'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt'),
+			'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt','custom-fields'),
 			'taxonomies' => array('post_tag')
     )
   );
