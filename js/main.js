@@ -65,8 +65,7 @@
 			var content=$(this).data("content");
 			var gallery=$(this).data("gallery");
 			var tags=$(this).data("tags");
-			var excerpt=$(this).data("content");
-			$(".muestra .contenido").html(content);
+			$(".muestra .contenido-proyecto").html(content);
 			$( '.muestra .rslides li' ).each(function( index ) {
 				$(this).children().remove();
 				$(this).append('<img src="'+gallery[index]+'">');
@@ -98,21 +97,10 @@
 		function stopNext(){
 		    $('.quehacemos').stop();
 		}
-		function loopDown(){
-    	$('#proyectos .proyectos').stop().animate({scrollTop:'+=20'}, 'fast', 'linear', loopDown);
-		}
-		function stopDown(){
-		    $('#proyectos .proyectos').stop();
-		}
 		$('#next').hover(function () {
 		   loopNext();
 		},function () {
 		   stopNext();
-		});
-		$('#down').hover(function () {
-		   loopDown();
-		},function () {
-		   stopDown();
 		});
 
 	});

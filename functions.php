@@ -117,7 +117,7 @@ function ficus_scripts() {
 
 	wp_enqueue_script( 'ficus-slick', get_template_directory_uri() . '/js/slick.min.js', array(), '1.0.3', true );
 
-	wp_enqueue_script( 'ficus-main', get_template_directory_uri() . '/js/main.js', array(), '1.1.0', true );
+	wp_enqueue_script( 'ficus-main', get_template_directory_uri() . '/js/main.js', array(), '1.1.2', true );
 
 	wp_enqueue_script( 'ficus-boostsrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array(), true );
 
