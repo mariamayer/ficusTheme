@@ -30,14 +30,25 @@
 		});
 
 		//Categorias
+		var webWidth=$(window).width()
 		var containerWidth=$( ".quehacemos" ).width();
 		var liWidth=containerWidth/4;
 		var cant=$( ".hacemos" ).length;
-		if(cant>4){
+		if(cant>4 && webWidth>680){
 			$('#next').fadeIn(1000);
 			var width=cant*liWidth;
 			$(".servicios").css('width',width);
 			$(".hacemos").css('width',liWidth);
+		}
+		//Etiquetas
+		var tecnoWidth=$( ".tecnologias" ).width();
+		var tecnoLiWidth=tecnoWidth/5;
+		var cant=$( ".tecno" ).length;
+		if(cant>5 && webWidth>680){
+			$('#prev').fadeIn(1000);
+			var width=cant*tecnoLiWidth;
+			$(".usamos").css('width',width);
+			$(".tecno").css('width',tecnoLiWidth);
 		}
 
 		//Sliders
@@ -90,7 +101,7 @@
 			}
 		});
 
-		//Flecha que scrollea proyectos
+		//Flecha que scrollea
 		function loopNext(){
     	$('.quehacemos').stop().animate({scrollLeft:'+=20'}, 'fast', 'linear', loopNext);
 		}
@@ -101,6 +112,17 @@
 		   loopNext();
 		},function () {
 		   stopNext();
+		});
+		function loopPrev(){
+    	$('.tecnologias').stop().animate({scrollLeft:'+=20'}, 'fast', 'linear', loopPrev);
+		}
+		function stopPrev(){
+		    $('.tecnologias').stop();
+		}
+		$('#prev').hover(function () {
+		   loopPrev();
+		},function () {
+		   stopPrev();
 		});
 
 	});

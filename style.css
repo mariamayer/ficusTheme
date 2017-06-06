@@ -59,7 +59,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
     font-family: 'Unicorn Flakes';
     src: url('fonts/Unicorn Flakes.ttf');
 }
-html,.home,.blog,.single-nota{
+html,.home,.page-template-blog,.single-nota{
 	font-family: 'Van Condensed';
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
@@ -731,15 +731,17 @@ overflow-y: hidden;
   top: 10%;
   display: none;
 }
+#prev{
+  position: absolute;
+  z-index: 10;
+  font-size: 60px;
+  color: #fff;
+  left: 3%;
+  display: none;
+}
 #servicio{
 	background: #c2d72e;
 	position: relative;
-}
-#servicio .line{
-	position: absolute;
-	height: 100%;
-	border-right: none;
-	left: 5px;
 }
 .servicios {
 list-style: none;
@@ -770,16 +772,23 @@ padding: 0;
 	bottom:-100px;
 	width:100%;
 }
-
+#tecnologias{
+  background: #333333;
+  padding:2em 0;
+}
 .tecnologias {
-background: #333333;
-text-align: center;
+  width:90%;
+  margin:auto;
+  text-align: center;
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 
 .usamos {
 list-style: none;
-padding: 2em;
+padding:0;
 margin:0;
+width:100%;
 
 }
 .tecno {
@@ -1250,12 +1259,8 @@ font-size: 14px;
 .arrow-left{
   right:0
 }
-.nota{
-  min-height:100vh;
-  font-family:
-}
 .nota h1{
-  margin-top:150px;
+  margin-top:100px;
   margin-bottom:50px;
 }
 .nota p{
@@ -1263,6 +1268,36 @@ font-size: 14px;
   margin: auto;
   text-align: left;
   line-height: 28px;
+}
+
+.single-nota #comments,.single-nota .nav-links{
+  width:50%;
+  margin:auto;
+}
+.single-nota .nav-links .nav-previous,.single-nota .nav-links .nav-next{
+  width:50%;
+  margin:30px 0;
+  display:inline-block;
+}
+.single-nota .nav-links .nav-previous{
+  text-align: left;
+}
+.single-nota .nav-links .nav-next{
+  text-align: right;
+}
+.single-nota .submit{
+  border: 2px solid #333333;
+  font-family: 'Van Condensed Bold';
+  color: #333;
+  padding: 4px 4px;
+  background-color: #c2d72e;
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  margin: 20px 0px 40px;
+  font-size: 14px ;
 }
 @media (max-width: 600px) {
   .central{
@@ -1296,5 +1331,53 @@ font-size: 14px;
   }
   .tecno {
     width:100%;
+  }
+  .home .intro .valores.text-left{
+    margin-top:0;
+  }
+  .home .intro .valores.linea{
+    margin-top:100px;
+    border:0;
+  }
+  .valor .dot{
+    display: none;
+  }
+  .home .intro .valores{
+    text-align: center;
+  }
+  .quehacemos{
+    height:auto;
+  }
+  .hacemos:first-child{
+    border:0;
+  }
+  .hacemos{
+    left:0;
+    height:40px;
+  }
+  .hacemos img{
+    width: auto;
+    height: 65px;
+  }
+  .hacemos .ti-servicio{
+    font-size: 25px;
+    bottom:-85px;
+  }
+  .tecno{
+    margin: 5px 0;
+  }
+  #trabajamos{
+    height:auto;
+  }
+  #proyectos .proyectos{
+    border:0;
+    height:400px;
+  }
+  .como-trabajamos{
+    text-align: center !important;
+    margin:20px;
+  }
+  .descripcion-producto{
+    max-width: 100%;
   }
 }
