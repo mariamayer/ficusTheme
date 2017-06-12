@@ -7,7 +7,7 @@ get_header(); ?>
 
 <section id="blog content-section">
 	<div class="ejemplos head-blog">
-	<h1 class="blog-header">BLOG-------<span style="color:#333333">● </span></h1>
+	<h1 class="encabezado-blog">BLOG</h1>
 	</div>
 	<div class="container-fluid">
 		<div class="col-md-6 col-md-offset-3 ">

@@ -9,7 +9,13 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div class="ejemplos head-blog">
+	<h1 class="encabezado-blog">
+		BLOG FIQUS
+	</h1>
+	</div>
+
+	<div id="primary" class="content-area text-left">
 		<main id="main" class="site-main" role="main">
 
 		<?php
@@ -17,7 +23,7 @@ get_header(); ?>
 
 			get_template_part( 'template-parts/content', get_post_format() );
 
-			the_date('Y-m-d', '<p>', '</p>');
+			the_date('Y-m-d', '</p>');
 			
 			// Previous/next post navigation.
 			the_post_navigation( array(

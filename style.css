@@ -45,15 +45,15 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 
 @font-face {
     font-family: 'Van Condensed';
-    src: url('fonts/Van Condensed-regular.otf');
+    src: url('fonts/Van Condensed-Regular.otf');
 }
 @font-face {
     font-family: 'Van Condensed Light';
-    src: url('fonts/Van Condensed-light.otf');
+    src: url('fonts/Van Condensed-Light.otf');
 }
 @font-face {
     font-family: 'Van Condensed Bold';
-    src: url('fonts/Van Condensed-bold.otf');
+    src: url('fonts/Van Condensed-Bold.otf');
 }
 @font-face {
     font-family: 'Unicorn Flakes';
@@ -592,7 +592,7 @@ text-align: center
 .central {
 width: 500px;
 margin: 0 auto;
-margin-top: 10em;
+margin-top: 12em;
 position: relative;
 }
 #intro{
@@ -719,7 +719,7 @@ line-height: 24px;
 text-align: center;
 width: 80%;
 height: 250px;
-overflow-x: scroll;
+overflow-x: hidden;
 overflow-y: hidden;
 }
 #next{
@@ -780,7 +780,7 @@ padding: 0;
   width:90%;
   margin:auto;
   text-align: center;
-  overflow-x: scroll;
+  overflow-x: hidden;
   overflow-y: hidden;
 }
 
@@ -813,7 +813,7 @@ vertical-align: top;
 
 .feedback {
 	overflow: inherit !important;
-	font-size: 18px !important;
+	font-size: 22px !important;
 }
 
 .lineas {
@@ -826,17 +826,17 @@ margin-top: 5em;
 margin-bottom: 5em;
 }
 .esquema .animateme{
-  top: 37%;
+  top: 35%;
   position: absolute;
   left: 93%;
   width: 200px;
 }
 .final {
-font-size: 18px;
+font-size: 22px;
 display: inline-block;
 font-family: 'Van Condensed Bold';
 color:#fff;
-padding: 8px 8px;
+padding: 8px 12px;
 background-color: #333333;
 position: relative;
 overflow: hidden;
@@ -846,11 +846,11 @@ margin-bottom: 2em;
 }
 
 .mantenimiento {
-font-size: 18px;
+font-size: 22px;
 display: inline-block;
 font-family: 'Van Condensed Bold';
 color:#333333;
-padding: 8px 8px;
+padding: 8px 12px;
 background-color: #fff;
 border: 3px dashed #333333;
 position: relative;
@@ -896,7 +896,7 @@ padding: 40px 0px 20px 0px;
   background:url(../fiqustheme/img/trabajamos.png) no-repeat;
   background-size:100%;
   background-position:bottom center;
-  height:770px;
+  height:820px;
 }
 #proyectos{
   position: relative;
@@ -906,7 +906,8 @@ padding: 40px 0px 20px 0px;
 }
 #proyectos .proyectos{
     height: 38em;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
     position: relative;
     padding: 30px 30px;
     border-right: 3px dashed #333333;
@@ -942,7 +943,7 @@ padding: 40px 0px 20px 0px;
 }
 
 .grilla {
-	min-height: 10em;
+	min-height: 11em;
 	background: #333333;
 	margin-bottom: 2em;
 	padding: 0.5em;
@@ -1123,6 +1124,7 @@ margin-bottom: 20px;
     line-height: 25px;
 }
 
+
 .enviar{
 display: inline-block;
 border: 2px solid #333333;
@@ -1171,7 +1173,10 @@ font-size: 32px;
     margin-bottom: 20px;
     margin-top: 20px;
 }
-}
+
+  .extras {
+   text-align: center;
+  }
 
 
 .img-container img{
@@ -1259,20 +1264,39 @@ font-size: 14px;
 .arrow-left{
   right:0
 }
+
 .nota h1{
   margin-top:100px;
   margin-bottom:50px;
+  max-width: 700px;
+margin-left: auto;
+margin-right: auto;
 }
 .nota p{
-  width: 60%;
+  width: 80%;
   margin: auto;
   text-align: left;
-  line-height: 28px;
+  line-height: 24px;
+  font-size: 16px;
+}
+
+.encabezado-blog {
+text-align: left;
+padding-left: 25%;
+font-size: 40px;
+margin-top: 50px !important;
 }
 
 .single-nota #comments,.single-nota .nav-links{
-  width:50%;
-  margin:auto;
+ width:50%;
+margin-left: auto;
+margin-right: auto;
+ margin-top:100px;
+ margin-bottom:50px;
+}
+
+.screen-reader-text {
+display: none !important;
 }
 .single-nota .nav-links .nav-previous,.single-nota .nav-links .nav-next{
   width:50%;
@@ -1379,5 +1403,13 @@ font-size: 14px;
   }
   .descripcion-producto{
     max-width: 100%;
+  }
+
+  .noticia{
+    padding-bottom: 80px;
+  }
+
+  .extras {
+    width: 100%;
   }
 }

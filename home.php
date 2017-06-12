@@ -55,19 +55,25 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 		</div>
 		<div class="valores col-md-3 col-md-offset-3 linea gris">
 			<div class="scrollme">
-				<h2 class="boton animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-300"> Valores </h2>
+				<h2 class="boton animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-300"> <?php echo __('[:en]Values[:es]Valores'); ?> </h2>
 			</div>
 			 <ul class="valor text-right">
-				<li class="scrollme"><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-300">Distribución de las ganancias</div><span class="dot right">&#x25CF;</span></li>
-				<li class="scrollme"><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-300">Compromiso con la comunidad</div><span class="dot right">&#x25CF;</span></li>
+				<li class="scrollme"><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-300">
+					<?php echo __('[:en]Income distribution[:es]Distribución de las ganancias'); ?></div><span class="dot right">&#x25CF;</span></li>
+				<li class="scrollme"><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-300"><?php echo __('[:en]Community involvement [:es]Compromiso con la comunidad'); ?></div><span class="dot right">&#x25CF;</span></li>
 
 			</ul>
 		</div>
 		<div class="valores col-md-3 text-left">
 			 <ul class="valor">
-				<li class="scrollme"><span class="dot left">&#x25CF;</span><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="300">Horizontalidad</div></li>
-				<li class="scrollme"><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="300">Participación en la toma de decisiones </div></li>
-				<li class="scrollme"><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="300">Ayuda mutua</div></li>
+				<li class="scrollme"><span class="dot left">&#x25CF;</span><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="300"><?php echo __('[:en]Horizontality[:es]Horizontalidad'); ?></div></li>
+
+
+
+				<li class="scrollme"><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="300">
+					<?php echo __('[:en]Decision making [:es]Participación en la toma de decisiones '); ?></div></li>
+				<li class="scrollme"><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="300">
+					<?php echo __('[:en]Mutual help [:es]Ayuda mutua '); ?></div></li>
 
 			</ul>
 		</div>
@@ -134,18 +140,19 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 <section id="trabajamos" class="content-section">
 		<div class="container centrado">
 			<div class="text-right como-trabajamos scrollme">
-			<div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-300"><span class="lineas ">
-				<h2 class="boton feedback">
-					<?php echo __('[:en]How we work[:es]Cómo trabajamos'); ?>
-			 	</h2><div class="hidden-xs">
-			 		---&#x25CF;
-			 	</div></span></div>
+			<div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-300">
+				<span class="lineas ">
+					<h2 class="boton feedback">
+						<?php echo __('[:en]How we work[:es]Cómo trabajamos'); ?>
+				 	</h2><span class="hidden-xs">---&#x25CF;</span>
+				 </span>
+			</div>
 			</div>
 
 			<div class="col-md-8 col-md-offset-2 centrado esquema">
 			<img src="<?php echo get_template_directory_uri(); ?>/img/<?php echo __('[:en]trabajamos_eng.gif[:es]trabajamos.gif'); ?>" alt="Esquema de trabajo">
 				<div class="scrollme">
-				<div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="300"><span class="lineas">---<h2 class="boton feedback"> Feedback </h2> </span></div>
+				<div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0.5" data-translatex="300"><span class="lineas">---<h2 class="boton feedback"> Feedback </h2> </span></div>
 				</div>
 			</div>
 
@@ -154,7 +161,7 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 				<span class="final">
 					<?php echo __('[:en]Final Product[:es]Producto Final'); ?>
 				</span> <br>
-				<div class="animateme" data-when="enter" data-from="1" data-to="0" data-opacity="0" data-translatey="200">
+				<div class="animateme" data-when="enter" data-from="1" data-to="0" data-opacity="0" data-translatey="100">
 				<span class="mantenimiento">
 					<?php echo __('[:en]New Functionalities[:es]Nuevas Funcionalidades'); ?>
 					<br>
@@ -324,7 +331,8 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 	<div class="ejemplos head-blog scrollme">
 	<div class="animateme" data-when="enter" data-from="1" data-to="0" data-opacity="10" data-translatex="-1000">
 	<h1 class="blog-header">
-		<a href="/blog" class="link-blanco" ><?php echo __('[:en]VISIT OUR BLOG[:es]VISITA NUESTRO BLOG'); ?> <div class="hidden-xs">-------<span style="color:#333333">● </span></div></a> </h1>
+		<a href="/blog" class="link-blanco" ><?php echo __('[:en]VISIT OUR BLOG[:es]VISITA NUESTRO BLOG'); ?> 
+			<span class="hidden-xs">-------<span style="color:#333333">● </span></span></a> </h1>
 	</div>
 
 	</div>
@@ -349,22 +357,22 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 
 <section id="contactos" class="content-section">
 	<div class="ejemplos">
-	<h1 class="contacto-header"> <?php echo __('[:en]CONTACT[:es]CONTACTO'); ?><div class="hidden-xs">
-		-------<span style="color:#c2d72e">● </span></div></h1>
+	<h1 class="contacto-header"> <?php echo __('[:en]CONTACT[:es]CONTACTO'); ?><span class="hidden-xs">
+		-------<span style="color:#c2d72e">● </span></span></h1>
 	</div>
 	<div class="container-fluid">
 		<div class="col-md-10 col-md-offset-1">
 				<div class="noticia col-md-6 text-left">
 					<?php
 					if (qtranxf_getLanguage() == 'en') {
-						echo do_shortcode('[contact-form-7 id="77" title="Formulario Ingles"]');
+						echo do_shortcode('[contact-form-7 id="79" title="Formulario Ingles"]');
 					} else{
-						echo do_shortcode('[contact-form-7 id="76" title="Formulario español"]');
+						echo do_shortcode('[contact-form-7 id="78" title="Formulario español"]');
 					}
 					 ?>
 						<ul class="horizontal">
 							<li class="social"><img src="<?php echo get_template_directory_uri(); ?>/img/fiquscontacto.png"></li>
-							<li class="social"> <a mailto="info@fiqus.com">info@fiqus.com</a> </br> +54 9 11 4568 9390  </li>
+							<li class="social"> <a mailto="info@fiqus.com">info@fiqus.com</a> </br> +54 9 11 4568 9390 <br> </li>
 						</ul>
 				</div>
 
