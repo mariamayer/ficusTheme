@@ -538,6 +538,13 @@ a:active {
 /*--------------------------------------------------------------
 ## Styles Ficus
 --------------------------------------------------------------*/
+:target:before {
+content:"";
+display:block;
+height:45px; /* fixed header height*/
+margin:-45px 0 0; /* negative fixed header height */
+}
+
 .header .navbar-default {
     background-color: #333333;
     border:0;
@@ -592,7 +599,7 @@ text-align: center
 .central {
 width: 500px;
 margin: 0 auto;
-margin-top: 12em;
+margin-top: 10em;
 position: relative;
 }
 #intro{
@@ -816,6 +823,10 @@ vertical-align: top;
 	font-size: 22px !important;
 }
 
+.bgrande {	
+	visibility: visible;
+}
+
 .lineas {
 	font-size: 32px;
 	vertical-align: -6px;
@@ -872,12 +883,27 @@ border-top: 2px solid #333;
 	margin-right: 49.15%;
 }
 
+.feed {
+	visibility: hidden;
+}
+
+
 .ejemplos {
 background: #333333;
 text-align: center;
 color: #ffffff;
 padding: 40px 0px 20px 0px;
 }
+
+.subrayado {
+border-bottom: 2px solid green;
+}
+.subrayado {
+    position: relative;
+    margin: 0 auto;
+    width: 40px;
+    height: 0;
+    margin-top: 10px; }
 
 .head-blog{
 background: #c2d72e;
@@ -891,11 +917,13 @@ padding: 40px 0px 20px 0px;
   margin-top:0
 
 }
+
+
 #trabajamos{
   position: relative;
   background:url(../fiqustheme/img/trabajamos.png) no-repeat;
-  background-size:100%;
-  background-position:bottom center;
+  background-size: cover;
+  background-position:top center;
   height:820px;
 }
 #proyectos{
@@ -1109,6 +1137,12 @@ margin-bottom: 30px;
 	padding-left: 20px;
 }
 
+#contactos {
+background: #333;
+color: white;
+padding-bottom: 20px;
+}
+
 .mapas {
 	padding: 20px;
 }
@@ -1143,7 +1177,7 @@ font-size: 14px !important;
 
 
 .mensaje {
-	height: 180px;
+	height: 185px;
 }
  .horizontal {
  		list-style: none;
@@ -1154,14 +1188,40 @@ font-size: 14px !important;
  .social {
  	 display:inline-block;
  	 float:left;
- 	 margin-right: 20px;
+ 	 margin: 0px 20px;
+
  }
+
+ .map {
+	width:100%;
+}
+
+
+.map-wrap {
+	position:relative; 
+	margin-bottom: 20px;
+}
+	
+.overlay {
+	width:100%;
+	min-height:300px; 
+	position:absolute; 
+	top:0;
+}
+
 
 
 .footer{
 	background:#F2F2F2;
 	padding:10px;
 }
+
+
+
+.pull-right {
+	margin-left: 10px !important;
+}
+
 
 .titulo-nota {
 font-size: 32px;
@@ -1323,6 +1383,40 @@ display: none !important;
   margin: 20px 0px 40px;
   font-size: 14px ;
 }
+
+
+@media (max-width: 1170px) {
+	.home .intro .valores.text-left {
+    margin-top:0 ;
+  }
+
+  .home .intro .valores.linea{
+    margin-top:100px;
+    border:0;
+  }
+  .valor .dot{
+    display: none;
+  }
+  .home .intro .valores{
+    text-align: center;
+  }
+    .feed{
+	visibility: visible;
+	margin-bottom: 20px;
+	}
+
+.bgrande {	
+	display: none;
+}
+
+
+  .como-trabajamos{
+    text-align: center !important;
+    margin:20px;
+  }
+
+}
+
 @media (max-width: 600px) {
   .central{
     width:90%;
@@ -1369,6 +1463,7 @@ display: none !important;
   .home .intro .valores{
     text-align: center;
   }
+
   .quehacemos{
     height:auto;
   }
@@ -1393,6 +1488,9 @@ display: none !important;
   #trabajamos{
     height:auto;
   }
+
+
+
   #proyectos .proyectos{
     border:0;
     height:400px;
@@ -1412,4 +1510,14 @@ display: none !important;
   .extras {
     width: 100%;
   }
+
+  .feed {
+	visibility: visible;
+	margin-top: 20px;
+	}
+.bgrande {	
+	display: none;
+}
+
+
 }

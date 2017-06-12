@@ -38,7 +38,7 @@
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav superior">
 		        <li><a href="#intro"><?php echo __('[:en]Home[:es]Intro'); ?></a></li>
-		        <li><a href="#servicios"><?php echo __('[:en]Services[:es]Servicios'); ?></a></li>
+		        <li><a href="#servicio"><?php echo __('[:en]Services[:es]Servicios'); ?></a></li>
 						<li><a href="#tecnologias"><?php echo __('[:en]Technologies[:es]Tecnologías'); ?></a></li>
 						<li><a href="#proyectos"><?php echo __('[:en]Projects[:es]Proyectos'); ?></a></li>
 						<li><a href="#productos"><?php echo __('[:en]Products[:es]Productos'); ?></a></li>
