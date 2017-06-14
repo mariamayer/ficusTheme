@@ -59,6 +59,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
     font-family: 'Unicorn Flakes';
     src: url('fonts/Unicorn Flakes.ttf');
 }
+
+ @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
 html,.home,.page-template-blog,.single-nota{
 	font-family: 'Van Condensed';
 	-webkit-text-size-adjust: 100%;
@@ -128,7 +132,7 @@ dfn {
 }
 
 h1 {
-	font-size: 1.5em;
+	font-size: 2em;
 	margin: 0.67em 0;
 }
 
@@ -284,8 +288,8 @@ textarea {
 	color: #333333;
 	font-family: sans-serif;
 	font-size: 16px;
-	font-size: 1rem;
-	line-height: 1.5;
+	font-size: 1.2rem;
+	line-height: 1.7;
 }
 
 h1,
@@ -439,7 +443,7 @@ table {
 	border-radius: 3px;
 	background: #e6e6e6;
 	color: rgba(0, 0, 0, .8);
-	font-size: 12px;
+	font-size: 14px;
 	font-size: 0.75rem;
 	line-height: 1;
 	padding: .6em 1em .4em;
@@ -524,6 +528,8 @@ a:focus,
 a:active {
 	color: #333333;
 	cursor: pointer;
+	text-decoration: none;
+
 }
 
 a:focus {
@@ -574,9 +580,7 @@ margin:-45px 0 0; /* negative fixed header height */
 
 }
 
-.centrado {
-text-align: center
-}
+
 .intro .logo.gris{
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
    filter: grayscale(100%);
@@ -597,7 +601,7 @@ text-align: center
     }
 
 .central {
-width: 500px;
+width: 600px;
 margin: 0 auto;
 margin-top: 10em;
 position: relative;
@@ -607,7 +611,7 @@ position: relative;
 }
 .fiqus {
     color: #c2d72e;
-    font-size: 46px;
+    font-size: 3.8em;
     text-align: center;
     text-transform: uppercase;
 }
@@ -709,9 +713,9 @@ line-height: 24px;
 }
 .somos {
   color:#fff;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 28px;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 34px;
   text-align: justify;
 }
 
@@ -719,7 +723,7 @@ line-height: 24px;
 .enterate {
 	 vertical-align: -16px;
 	 font-size: 14px;
-	 padding: 4px 6px;
+	 padding: 1px 10px;
 }
 
 .quehacemos {
@@ -809,7 +813,7 @@ vertical-align: top;
 	display: block;
 	color:#fff;
 	font-family: 'Van Condensed Light';
-	font-size: 12px;
+	font-size: 16px;
 	margin-top:10px;
 }
 
@@ -909,7 +913,7 @@ border-bottom: 2px solid green;
 background: #c2d72e;
 text-align: center;
 color: #ffffff;
-margin-bottom: 2em;
+margin-top: 2em;
 padding: 40px 0px 20px 0px;
 }
 
@@ -992,7 +996,7 @@ margin: 0px;
 }
 
 .tag {
-font-size: 10px;
+font-size: 12px;
 display: inline-block;
 font-family: 'Van Condensed Bold';
 color:#333333;
@@ -1060,7 +1064,7 @@ margin: 2em;
 
 .novedad {
 	font-family: 'Van Condensed Bold';
-	font-size: 22px;
+	font-size: 24px;
 	padding: 4px 4px;
 	text-decoration: none !important;
 	text-transform: uppercase;
@@ -1077,7 +1081,7 @@ margin: 2em;
 .descripcion-producto {
 	margin-bottom: 10px;
 	max-width: 80%;
-	font-size: 16px;
+	font-size: 17px;
 	margin-bottom: 20px;
 }
 
@@ -1087,7 +1091,8 @@ margin: 2em;
   margin:auto;
 }
 .contenido {
-	font-size: 16px;
+	font-size: 18px;
+	line-height: 1.5;
 	text-align: justify;
 	border-right: 3px black;
 	color:#333333;
@@ -1115,8 +1120,13 @@ margin-bottom: 30px;
 	border-right: 3px;
 }
 
+.formulario {
+	padding: 20px;
+	border-right: 3px;
+
+}
 .leermas{
-    font-size: 12px;
+    font-size: 14px;
     display: inline-block;
     font-family: 'Van Condensed Bold';
     color: #fff;
@@ -1138,9 +1148,9 @@ margin-bottom: 30px;
 }
 
 #contactos {
-background: #333;
-color: white;
+color: #333333;
 padding-bottom: 20px;
+font-size: 1.2em;
 }
 
 .mapas {
@@ -1181,7 +1191,7 @@ font-size: 14px !important;
 }
  .horizontal {
  		list-style: none;
-		margin: 0;
+		margin: 0 0 50px;
 		padding: 0;
  }
 
@@ -1247,7 +1257,7 @@ font-size: 32px;
   width: 90%;
   margin: auto;
   background: url(../ficus/img/fiqus-19.png) no-repeat;
-  padding: 3% 12% 6%;
+  padding: 3%;
   background-size: 100% 100%;
   position: relative;
   height: 100%;
@@ -1303,6 +1313,8 @@ font-size: 14px;
   width: 100%;
   border: 0;
   }
+
+
 .slick-arrow{
   position: absolute;
   top: 50%;
@@ -1332,13 +1344,25 @@ font-size: 14px;
 margin-left: auto;
 margin-right: auto;
 }
+
 .nota p{
-  width: 80%;
+  max-width: 740px;
+	padding: 0 20px 10px 20px;
   margin: auto;
   text-align: left;
-  line-height: 24px;
-  font-size: 16px;
+  line-height: 1.5;
+	font-family: 'Roboto', sans-serif;
+  font-size: 18px;
 }
+
+
+.single-nota .attachment-post-thumbnail {
+	display: block;
+    margin-left: auto;
+    margin-right: auto }
+}
+
+
 
 .encabezado-blog {
 text-align: left;
@@ -1348,32 +1372,87 @@ margin-top: 50px !important;
 }
 
 .single-nota #comments,.single-nota .nav-links{
- width:50%;
+max-width: 740px;
+padding-left: 20px;
+padding-right: 20px;
 margin-left: auto;
 margin-right: auto;
- margin-top:100px;
- margin-bottom:50px;
+
+}
+
+
+
+.single-nota .comment-content{
+	font-size: 18px;
+
+}
+
+.single-nota .comment-metadata{
+	font-size: 14px;
+}
+
+.single-nota .post-navigation {
+	background: #f2f2f2;
+	padding: 20px;
+}
+
+.single-nota .reply {
+	font-size: 12px;
+    display: inline-block;
+    color: #fff;
+    padding: 4px 8px;
+    background-color: #f1f1f1;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    margin-bottom: 20px;
 }
 
 .screen-reader-text {
-display: none !important;
+display: none;
 }
-.single-nota .nav-links .nav-previous,.single-nota .nav-links .nav-next{
-  width:50%;
-  margin:30px 0;
-  display:inline-block;
+
+.single-nota .nav-links .nav-previous,.single-nota .nav-links .nav-next{	
+	max-width: 740px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	display:inline-block;
+	font-size: 16px;
 }
+
 .single-nota .nav-links .nav-previous{
   text-align: left;
 }
+
+.single-nota .nav-links .nav-previous:before{
+  content:'\2329     ';
+  color:  #c2d72e;
+  font-size: 16px;
+    vertical-align: -2px;
+}
+
+
+
 .single-nota .nav-links .nav-next{
   text-align: right;
+
 }
+
+.single-nota .nav-links .nav-next:after{
+  content:'     \232A';
+  color:  #c2d72e;
+  font-size: 16px;
+  vertical-align: -2px;
+
+}
+
+
 .single-nota .submit{
   border: 2px solid #333333;
   font-family: 'Van Condensed Bold';
   color: #333;
-  padding: 4px 4px;
+  padding: 4px 10px;
   background-color: #c2d72e;
   position: relative;
   overflow: hidden;
@@ -1385,6 +1464,30 @@ display: none !important;
 }
 
 
+
+.single-nota .vcard img.photo {
+		display: none;
+	}
+
+.single-nota.vcard img.avatar {
+	display: none;
+}
+
+.single-nota .comment-list {
+	text-align: left;
+	padding-left: 0px;
+	margin-left: 0px;
+	 border-bottom: 3px solid #333333;
+	     padding-bottom: 20px;
+}
+
+.single-nota .comment-list li{
+	list-style: none !important;
+}
+
+
+
+
 @media (max-width: 1170px) {
 	.home .intro .valores.text-left {
     margin-top:0 ;
@@ -1392,6 +1495,7 @@ display: none !important;
 
   .home .intro .valores.linea{
     margin-top:100px;
+       text-align: center;
     border:0;
   }
   .valor .dot{
@@ -1399,6 +1503,7 @@ display: none !important;
   }
   .home .intro .valores{
     text-align: center;
+    margin-bottom: 0;
   }
     .feed{
 	visibility: visible;

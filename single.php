@@ -17,6 +17,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area text-left">
 		<main id="main" class="site-main" role="main">
+		<?php the_post_thumbnail(); ?>
 
 		<?php
 		while ( have_posts() ) : the_post();
