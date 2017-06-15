@@ -37,21 +37,23 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 
 <section id="intro" class="content-section">
 	<div class="intro container">
-		<div class="central text-center scrollme">
+		<div class="central text-center">
 			<img class="logo gris" src="<?php echo get_template_directory_uri(); ?>/img/logo-fiqus.png">
-			<div>
+			<div class="scrollme">
 				<h1 class="fiqus animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatey="40"><?php echo __('[:en]Software Cooperative[:es]Cooperativa de Software'); ?></h1>
 			</div>
+			<div class="scrollme">
 			<p class="somos animateme" data-when="enter" data-from="1" data-to="0" data-opacity="0" data-translatey="150" data-easing="easeout">
 				<?php echo __('[:en]'.$somos_en.'[:es]'.$somos_es); ?>
 				<span>
 					<a href="#nosotros" class="boton enterate"><?php echo __('[:en]Learn More[:es]Enterate de más'); ?></a>
 				</span>
  			</p>
-			<div class="nosotros col-md-12 text-left">
-				<a class="close" href="#">x</a>
-				<?php echo __('[:en]'.$nosotros_en.'[:es]'.$nosotros_es); ?>
-			</div>
+		</div>
+		</div>
+		<div class="nosotros text-left">
+			<a class="close" href="#">x</a>
+			<?php echo __('[:en]'.$nosotros_en.'[:es]'.$nosotros_es); ?>
 		</div>
 		<div class="valores col-md-3 col-md-offset-3 col-sm-6 col-sm-offset-3  linea gris text-right">
 			<div class="scrollme">
@@ -82,6 +84,7 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 </section>
 
 <section id="servicio" class="content-section">
+	<div id="prevHacemos"><</div>
 	<div class="quehacemos container-fluid">
 			<ul class="servicios">
 				<?php
@@ -103,11 +106,11 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 				?>
 			</ul>
 	</div> <!--end class que-hacemos-->
-	<div id="next">></div>
+	<div id="nextHacemos">></div>
 </section>
 
 <section id="tecnologias" class="content-section">
-	<div id="prev"><</div>
+	<div id="prevTecno"><</div>
 		<div class="tecnologias container-fluid">
 			<ul class="usamos">
 				<?php
@@ -135,6 +138,7 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 				?>
 		  </ul>
 		</div><!--end  que-hacemos-->
+		<div id="nextTecno">></div>
 </section><!--end seccion tecnologias-->
 
 <section id="trabajamos" class="content-section">
@@ -338,7 +342,7 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 	<div class="ejemplos head-blog scrollme">
 	<div class="animateme" data-when="enter" data-from="1" data-to="0" data-opacity="10" data-translatex="-1000">
 	<h1 class="blog-header">
-		<a href="/blog" class="link-blanco" ><?php echo __('[:en]VISIT OUR BLOG[:es]VISITA NUESTRO BLOG'); ?> 
+		<a href="/blog" class="link-blanco" ><?php echo __('[:en]VISIT OUR BLOG[:es]VISITA NUESTRO BLOG'); ?>
 			<span class="hidden-xs">-------<span style="color:#333333">● </span></span></a> </h1>
 	</div>
 
@@ -391,7 +395,7 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 							</p>
 
 							<div class="map-wrap">
-    							<div class="overlay" onClick="style.pointerEvents='none'"></div>	
+    							<div class="overlay" onClick="style.pointerEvents='none'"></div>
 							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5566.594087921657!2d-58.48568642663519!3d-34.61578537097645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9e7cdd9539d%3A0x8810b580f342f227!2sCuenca+1554%2C+C1416BCN+CABA%2C+Argentina!5e1!3m2!1ses-419!2sar!4v1497209225542" width="100%" height="240" frameborder="0" style="border:0" allowfullscreen></iframe>
 
 							</div>

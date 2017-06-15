@@ -24,8 +24,7 @@ get_header(); ?>
 
 			get_template_part( 'template-parts/content', get_post_format() );
 
-			the_date('Y-m-d', '</p>');
-			
+
 			// Previous/next post navigation.
 			the_post_navigation( array(
 					'<span class="post-title">%title</span>',

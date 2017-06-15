@@ -35,7 +35,8 @@
 		var liWidth=containerWidth/4;
 		var cant=$( ".hacemos" ).length;
 		if(cant>4 && webWidth>680){
-			$('#next').fadeIn(1000);
+			$('#nextHacemos').fadeIn(1000);
+			$('#prevHacemos').fadeIn(1000);
 			var width=cant*liWidth;
 			$(".servicios").css('width',width);
 			$(".hacemos").css('width',liWidth);
@@ -45,7 +46,8 @@
 		var tecnoLiWidth=tecnoWidth/5;
 		var cant=$( ".tecno" ).length;
 		if(cant>5 && webWidth>680){
-			$('#prev').fadeIn(1000);
+			$('#prevTecno').fadeIn(1000);
+			$('#nextTecno').fadeIn(1000);
 			var width=cant*tecnoLiWidth;
 			$(".usamos").css('width',width);
 			$(".tecno").css('width',tecnoLiWidth);
@@ -56,10 +58,11 @@
 			$(".rslides").responsiveSlides({
 					  auto:true,
 						speed: 500,
+						pager:true,
 					});
 	  });
 		$('.slick').slick({
-	    dots: false,
+			dots:true,
 			nextArrow: '<i class="arrow-right"><</i>',
   		prevArrow: '<i class="arrow-left">></i>',
 
@@ -102,25 +105,41 @@
 		});
 
 		//Flecha que scrollea
-		function loopNext(){
-    	$('.quehacemos').stop().animate({scrollLeft:'+=20'}, 'fast', 'linear', loopNext);
+		function loopNextHacemos(){
+    	$('.quehacemos').stop().animate({scrollLeft:'+=100'}, '1000', 'linear', loopNextHacemos);
 		}
 		function stopNext(){
 		    $('.quehacemos').stop();
 		}
-		$('#next').hover(function () {
-		   loopNext();
+		$('#nextHacemos').hover(function () {
+		   loopNextHacemos();
 		},function () {
 		   stopNext();
 		});
-		function loopPrev(){
-    	$('.tecnologias').stop().animate({scrollLeft:'+=20'}, 'fast', 'linear', loopPrev);
+		function loopPrevHacemos(){
+    	$('.quehacemos').stop().animate({scrollLeft:'-=100'}, '1000', 'linear', loopPrevHacemos);
+		}
+		$('#prevHacemos').hover(function () {
+		   loopPrevHacemos();
+		},function () {
+		   stopNext();
+		});
+		function loopPrevTecno(){
+    	$('.tecnologias').stop().animate({scrollLeft:'-=100'}, '1000', 'linear', loopPrevTecno);
+		}
+		function loopNextTecno(){
+    	$('.tecnologias').stop().animate({scrollLeft:'+=100'}, '1000', 'linear', loopNextTecno);
 		}
 		function stopPrev(){
 		    $('.tecnologias').stop();
 		}
-		$('#prev').hover(function () {
-		   loopPrev();
+		$('#prevTecno').hover(function () {
+		   loopPrevTecno();
+		},function () {
+		   stopPrev();
+		});
+		$('#nextTecno').hover(function () {
+		   loopNextTecno();
 		},function () {
 		   stopPrev();
 		});

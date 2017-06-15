@@ -661,12 +661,12 @@ h2.boton.animateme {
 background: #fff;
 color: #666;
 position: absolute !important;
-right:0;
 display: none;
-top: 60%;
-height: 350px;
-overflow: scroll;
-padding:5px;
+top: 58%;
+height:auto;
+padding:15px;
+left:22.5%;
+width:55%;
 }
 .intro .nosotros .close{
   color:#666;
@@ -711,14 +711,17 @@ line-height: 24px;
 .dot.left{
   left:-10px;
 }
+.fiqus{
+  opacity: 0;
+}
 .somos {
   color:#fff;
   font-size: 22px;
   font-weight: 300;
   line-height: 34px;
   text-align: justify;
+  opacity: 0;
 }
-
 
 .enterate {
 	 vertical-align: -16px;
@@ -733,22 +736,37 @@ height: 250px;
 overflow-x: hidden;
 overflow-y: hidden;
 }
-#next{
+#nextHacemos,#prevHacemos{
   position: absolute;
   z-index: 10;
   font-size: 60px;
   color: #3c3d33;
-  right: 5%;
   top: 10%;
   display: none;
 }
-#prev{
+#prevHacemos{
+  left:5%
+}
+#nextHacemos{
+  right:5%
+}
+#nextTecno{
+  left:5%;
+  text-align: right;
+}
+#prevTecno,#nextTecno{
   position: absolute;
   z-index: 10;
+  top:15%;
   font-size: 60px;
   color: #fff;
-  left: 3%;
   display: none;
+}
+#prevTecno{
+  left: 3%;
+}
+#nextTecno{
+  right:3%;
 }
 #servicio{
 	background: #c2d72e;
@@ -786,6 +804,7 @@ padding: 0;
 #tecnologias{
   background: #333333;
   padding:2em 0;
+  position: relative;
 }
 .tecnologias {
   width:90%;
@@ -827,7 +846,7 @@ vertical-align: top;
 	font-size: 22px !important;
 }
 
-.bgrande {	
+.bgrande {
 	visibility: visible;
 }
 
@@ -1208,14 +1227,14 @@ font-size: 14px !important;
 
 
 .map-wrap {
-	position:relative; 
+	position:relative;
 	margin-bottom: 20px;
 }
-	
+
 .overlay {
 	width:100%;
-	min-height:300px; 
-	position:absolute; 
+	min-height:300px;
+	position:absolute;
 	top:0;
 }
 
@@ -1313,8 +1332,29 @@ font-size: 14px;
   width: 100%;
   border: 0;
   }
-
-
+.rslides_tabs{
+  margin:0;
+  padding:10px;
+}
+.rslides_tabs li{
+  display: inline-block;
+  padding:10px;
+}
+.rslides_tabs li a{
+  text-indent: -9999px;
+    overflow: hidden;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    background: #ccc;
+    background: rgba(0,0,0, .2);
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+}
+.rslides_tabs .rslides_here a{
+  background:#000;
+}
 .slick-arrow{
   position: absolute;
   top: 50%;
@@ -1411,7 +1451,7 @@ margin-right: auto;
 display: none;
 }
 
-.single-nota .nav-links .nav-previous,.single-nota .nav-links .nav-next{	
+.single-nota .nav-links .nav-previous,.single-nota .nav-links .nav-next{
 	max-width: 740px;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -1510,7 +1550,7 @@ display: none;
 	margin-bottom: 20px;
 	}
 
-.bgrande {	
+.bgrande {
 	display: none;
 }
 
@@ -1620,7 +1660,7 @@ display: none;
 	visibility: visible;
 	margin-top: 20px;
 	}
-.bgrande {	
+.bgrande {
 	display: none;
 }
 
