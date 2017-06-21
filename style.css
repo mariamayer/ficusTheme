@@ -484,7 +484,7 @@ input[type="datetime-local"],
 input[type="color"],
 textarea {
 	color: #333;
-	border: 1px solid #f1f1f1;
+	border: 1px solid #d1d1d1;
 	padding: 3px;
 	background: #f2f2f2;
 }
@@ -581,16 +581,22 @@ margin:-45px 0 0; /* negative fixed header height */
 }
 
 
+
 .intro .logo.gris{
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
    filter: grayscale(100%);
    -webkit-transition: all 1s; /* For Safari 3.1 to 6.0 */
    transition: all 1s;
+
 }
+
+
 .intro .logo{
    -webkit-transition: all 1s; /* For Safari 3.1 to 6.0 */
    transition: all 1s;
 }
+
+
 
 .container {
     max-width: 1170px;
@@ -605,16 +611,25 @@ width: 600px;
 margin: 0 auto;
 margin-top: 10em;
 position: relative;
+z-index: 2;
 }
+
+
 #intro{
-  background:#333333;
+height: 800px;
 }
+
 .fiqus {
     color: #c2d72e;
     font-size: 3.8em;
     text-align: center;
     text-transform: uppercase;
+
 }
+
+
+
+
 .intro .valores .valor li{
 	text-transform: uppercase;
   position: relative;
@@ -637,8 +652,41 @@ position: relative;
   -webkit-transition: all 1s; /* For Safari 3.1 to 6.0 */
   transition: all 1s;
 }
+
+.bg-video {
+ position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+ background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+  transition: 1s opacity;
+
+}
+
+.polina { 
+  font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
+  font-weight:100; 
+  background: rgba(0,0,0,0.3);
+  color: white;
+  padding: 2rem;
+  width: 33%;
+  margin:2rem;
+  float: right;
+  font-size: 1.2rem;
+
+     position: relative;
+}
+
+
+
+
 .boton{
-font-size: 20px;
+font-size: 22px;
 display: inline-block;
 border: 2px solid #333333;
 font-family: 'Van Condensed Bold';
@@ -650,6 +698,10 @@ overflow: hidden;
 border-radius: 2px;
 text-decoration: none !important;
 text-transform: uppercase;
+}
+
+.boton:hover {
+    color: #FFF;
 }
 
 h2.boton.animateme {
@@ -841,9 +893,32 @@ vertical-align: top;
     margin-right: 49.15%;
 }
 
+#subido{
+   vertical-align: -20px;
+}
+
+
 .feedback {
 	overflow: inherit !important;
 	font-size: 22px !important;
+	-webkit-animation-name: titilar; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+     -webkit-animation-iteration-count: infinite;
+    animation-name: titilar;
+    animation-duration: 1s;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes titilar {
+    from {background-color: #c2d72e;}
+    to {background-color: #f1f1f1;}
+}
+
+/* Standard syntax */
+@keyframes titilar {
+    from {background-color: #c2d72e;}
+    to {background-color: #f1f1f1;}
+
 }
 
 .bgrande {
@@ -859,6 +934,10 @@ vertical-align: top;
 margin-top: 5em;
 margin-bottom: 5em;
 }
+
+
+
+
 .esquema .animateme{
   top: 35%;
   position: absolute;
@@ -876,8 +955,9 @@ position: relative;
 overflow: hidden;
 text-decoration: none !important;
 text-transform: uppercase;
-margin-bottom: 2em;
-}
+margin-bottom: 2em; }
+    
+
 
 .mantenimiento {
 font-size: 22px;
@@ -892,7 +972,15 @@ overflow: hidden;
 text-decoration: none !important;
 text-transform: uppercase;
 margin-bottom: 3em;
+-webkit-transition: background-color 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: background-color 0.5s;
 }
+
+.mantenimiento:hover {
+   background-color: #c2d72e;
+}
+
+
 
 .separacion {
 margin-top: 5px;
@@ -903,37 +991,69 @@ border-top: 2px solid #333;
 
 .producto-final {
 	margin-top: 80px;
-	margin-right: 49.15%;
+	margin-right: 49.15%; 
 }
+
+
 
 .feed {
 	visibility: hidden;
 }
 
 
+
+
+
+
 .ejemplos {
-background: #333333;
 text-align: center;
-color: #ffffff;
+color: #333333;
 padding: 40px 0px 20px 0px;
+border-top: 10px solid #333333;
+font-family: 'Van Condensed Bold';
 }
 
-.subrayado {
-border-bottom: 2px solid green;
-}
+
 .subrayado {
     position: relative;
     margin: 0 auto;
     width: 40px;
     height: 0;
-    margin-top: 10px; }
+    border-bottom: 5px solid #333333;
+
+  }
+
+.subrayadoverde {
+    position: relative;
+    margin: 0 auto;
+    width: 40px;
+    height: 0;
+    border-bottom: 5px solid #c2d72e;
+
+  }
+
+.notes {
+	font-family: 'Unicorn Flakes';
+	font-size: 24px;
+	 background: transparent url(../fiqustheme/img/brush-03.png) no-repeat  center;
+}
+
+ #notaverde {
+ background: transparent url(../fiqustheme/img/brushg-03.png) no-repeat  left;
+ text-align: left;
+ color: #c2d72e;
+ margin-left: 10%;
+ }
+
+ .ir-blog {
+ 	text-align: left !important;
+ }
 
 .head-blog{
-background: #c2d72e;
 text-align: center;
-color: #ffffff;
-margin-top: 2em;
+color: #c2d72e;
 padding: 40px 0px 20px 0px;
+border-top: 10px solid #c2d72e !important;
 }
 
 .ejemplos h1{
@@ -944,6 +1064,7 @@ padding: 40px 0px 20px 0px;
 
 #trabajamos{
   position: relative;
+  background-color: #ffffff;
   background:url(../fiqustheme/img/trabajamos.png) no-repeat;
   background-size: cover;
   background-position:top center;
@@ -951,17 +1072,16 @@ padding: 40px 0px 20px 0px;
 }
 #proyectos{
   position: relative;
-  background:url(../fiqustheme/img/bg-proyectos.png) no-repeat;
+ background-color: #ffffff;
   background-size:100% 100%;
   background-position:0 20px;
 }
 #proyectos .proyectos{
-    height: 38em;
+
     overflow-y: scroll;
     overflow-x: hidden;
     position: relative;
     padding: 30px 30px;
-    border-right: 3px dashed #333333;
 }
 #proyectos .container-fluid{
     padding:0px 50px;
@@ -991,6 +1111,16 @@ padding: 40px 0px 20px 0px;
   text-transform: uppercase;
   margin-left: 5px;
   cursor:pointer;
+  box-shadow: inset 0 0 0 0 #f1f1f1;
+  	-webkit-transition: all ease 0.8s;
+	-moz-transition: all ease 0.8s;
+	transition: all ease 0.8s;
+}
+
+
+.selector:hover { 
+    color: #ffffff;
+    box-shadow: inset 0 100px 0 0 #c2d72e;
 }
 
 .grilla {
@@ -1072,14 +1202,11 @@ margin: 2em;
 }
 
 .blog-header{
-	text-align: right;
+
 	padding-right: 20px;
 }
 
-.contacto-header{
-	text-align: left;
-	padding-left: 10%;
-}
+
 
 .novedad {
 	font-family: 'Van Condensed Bold';
@@ -1104,6 +1231,9 @@ margin: 2em;
 	margin-bottom: 20px;
 }
 
+.slick-dots li button::before {
+    color: #333333;
+    font-size: 10px !important; }
 
 .muestra .contenido{
   width:80%;
@@ -1120,7 +1250,8 @@ margin: 2em;
 
 
 .blog-seccion {
-margin-bottom: 30px;
+padding-bottom: 30px;
+background: #ffffff;
 }
 
 .link-blanco {
@@ -1155,21 +1286,32 @@ margin-bottom: 30px;
     overflow: hidden;
     text-decoration: none !important;
     text-transform: uppercase;
+    box-shadow: inset 0 0 0 0 #f1f1f1;
+	-webkit-transition: all ease 0.8s;
+	-moz-transition: all ease 0.8s;
+	transition: all ease 0.8s;
 }
 
-.leermas a:hover, a:active {
-    color: #c2d72e !important;
+
+.leermas:hover { 
+    color: #c2d72e;
+    box-shadow: inset 0 100px 0 0 #f1f1f1;
+
 }
+
+
 
 .contacto{
 	text-align: left;
 	padding-left: 20px;
+
 }
 
 #contactos {
 color: #333333;
 padding-bottom: 20px;
 font-size: 1.2em;
+	background: #ffffff;
 }
 
 .mapas {
@@ -1193,7 +1335,7 @@ display: inline-block;
 border: 2px solid #333333;
 font-family: 'Van Condensed Bold';
 color: #333;
-padding: 4px 4px;
+padding: 4px 10px;
 background-color: #c2d72e;
 position: relative;
 overflow: hidden;
@@ -1201,17 +1343,36 @@ border-radius: 2px;
 text-decoration: none !important;
 text-transform: uppercase;
 margin: 20px 0px 40px;
-font-size: 14px !important;
+font-size: 18px !important;
+box-shadow: inset 0 0 0 0 #f1f1f1;
+	-webkit-transition: all ease 0.4s;
+	-moz-transition: all ease 0.4s;
+	transition: all ease 0.4s;
 }
+
+
+.enviar:hover { 
+    color: #333333;
+    box-shadow: inset 0 100px 0 0 #f1f1f1;
+}
+
 
 
 .mensaje {
-	height: 185px;
+	height: 190px;
 }
  .horizontal {
  		list-style: none;
-		margin: 0 0 50px;
 		padding: 0;
+ }
+
+.telefono {
+	margin: 10px 0px 50px 0px; 
+}
+
+
+ .redes {
+ 	margin: 0 0 50px;
  }
 
  .social {
@@ -1501,6 +1662,16 @@ display: none;
   text-transform: uppercase;
   margin: 20px 0px 40px;
   font-size: 14px ;
+  box-shadow: inset 0 0 0 0 #f1f1f1;
+	-webkit-transition: all ease 0.4s;
+	-moz-transition: all ease 0.4s;
+	transition: all ease 0.4s;
+}
+
+
+.single-nota .submit:hover { 
+    color: #333333;
+    box-shadow: inset 0 100px 0 0 #f1f1f1;
 }
 
 

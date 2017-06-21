@@ -35,21 +35,30 @@ $somos_es='Somos una empresa <span style="color:#c2d72e">cooperativa </span> esp
 $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company specialized in software, founded in 2011 by systems engineers and <span style="color:#c2d72e">programming</span> specialists with clients in the national and international market that seeks an <span style="color:#c2d72e">integral development</span> of its partners that is reflected in the <span style="color:#c2d72e">quality</span> of the services offered<span class="hidden-xs">-------</span><span class="hidden-xs" style="color:#c2d72e">●</span>';
 ?>
 
+
 <section id="intro" class="content-section">
-	<div class="intro container">
+<div class="intro">
+	    <div class="bg-video">
+        	<video autoplay loop>
+            	<source type="video/webm" src="<?php echo get_template_directory_uri(); ?>/img/videofiqus.webm" />
+            	<source type="video/mp4" src="<?php echo get_template_directory_uri(); ?>/img/videofiqus.mp4" />
+
+          	</video>
+		</div>
+
 		<div class="central text-center">
 			<img class="logo gris" src="<?php echo get_template_directory_uri(); ?>/img/logo-fiqus.png">
 			<div class="scrollme">
 				<h1 class="fiqus animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatey="40"><?php echo __('[:en]Software Cooperative[:es]Cooperativa de Software'); ?></h1>
 			</div>
 			<div class="scrollme">
-			<p class="somos animateme" data-when="enter" data-from="1" data-to="0" data-opacity="0" data-translatey="150" data-easing="easeout">
+			<p class="somos animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatey="100">
 				<?php echo __('[:en]'.$somos_en.'[:es]'.$somos_es); ?>
 				<span>
 					<a href="#nosotros" class="boton enterate"><?php echo __('[:en]Learn More[:es]Enterate de más'); ?></a>
 				</span>
  			</p>
-		</div>
+			</div>
 		</div>
 		<div class="nosotros text-left">
 			<a class="close" href="#">x</a>
@@ -57,7 +66,7 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 		</div>
 		<div class="valores col-md-3 col-md-offset-3 col-sm-6 col-sm-offset-3  linea gris text-right">
 			<div class="scrollme">
-				<h2 class="boton animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-300" > <?php echo __('[:en]Values[:es]Valores'); ?> </h2>
+				<h2 class="boton animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-150" > <?php echo __('[:en]Values[:es]Valores'); ?> </h2>
 			</div>
 			 <ul class="valor  text-right">
 				<li class="scrollme"><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-300">
@@ -79,11 +88,13 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 
 			</ul>
 		</div>
+
 	</div> <!--end class intro-->
 
 </section>
 
 <section id="servicio" class="content-section">
+
 	<div id="prevHacemos"><</div>
 	<div class="quehacemos container-fluid">
 			<ul class="servicios">
@@ -145,8 +156,8 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 		<div class="container centrado">
 			<div class="text-right como-trabajamos scrollme">
 			<div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-300">
-				<span class="lineas ">
-					<h2 class="boton feedback">
+				<span class="lineas">
+					<h2 class="boton" id="subido">
 						<?php echo __('[:en]How we work[:es]Cómo trabajamos'); ?>
 				 	</h2><span class="hidden-xs hidden-md hidden-sm">---&#x25CF;</span>
 				 </span>
@@ -186,12 +197,18 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 <section id="proyectos" class="content-section">
 		<div class="ejemplos">
 		<h1><?php echo __('[:en]PROJECTS[:es]PROYECTOS'); ?></h1>
+
+			<div class="animateme" data-when="enter" data-from="1" data-to="0" data-opacity="1" data-translatey="-50">
+				<h2 class="notes" id="largo">
+				<?php echo __('[:en]our work [:es]algunos trabajos'); ?>
+				 </h2>
+		</div>	 
 		</div>
-		<div class="subrayado"></div>
+
 		<div class="container-fluid">
 			<div class="col-md-10 col-md-offset-1">
 
-				<div class="col-md-6 text-left proyectos">
+				<div class="col-md-10  col-md-offset-1 text-left proyectos">
 					<div>
 						<ul class="servicios">
 							<?php
@@ -258,7 +275,7 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 						<?php endwhile; endif; ?>
 
 				</div>
-					<div class="col-md-6 muestra">
+					<div class="col-md-10 col-md-offset-1muestra">
 						<ul class="rslides">
 							<?php
 							$ids = explode( ",", $gallery['ids'] );
@@ -284,7 +301,12 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 <section id="productos" class="content-section">
 	<div class="ejemplos">
 	<h1><?php echo __('[:en]OUR PRODUCTS[:es]NUESTROS PRODUCTOS'); ?></h1>
+		<div class="subrayado" >
+		</div>	 
+
 	</div>
+
+
 	<div class="container-fluid">
 		<div class="col-md-10 col-md-offset-1 slider">
 			<div class="slick">
@@ -339,13 +361,13 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 
 <section id="blog content-section" class="blog-seccion">
 
-	<div class="ejemplos head-blog scrollme">
-	<div class="animateme" data-when="enter" data-from="1" data-to="0" data-opacity="10" data-translatex="-1000">
-	<h1 class="blog-header">
-		<a href="/blog" class="link-blanco" ><?php echo __('[:en]VISIT OUR BLOG[:es]VISITA NUESTRO BLOG'); ?>
-			<span class="hidden-xs">-------<span style="color:#333333">● </span></span></a> </h1>
+	<div class="ejemplos head-blog">
+			<h1 class="blog-header">
+			<a href="/blog"><?php echo __('[:en]VISIT OUR BLOG[:es]VISITA NUESTRO BLOG'); ?>
+			 </a> </h1> 
+	
 	</div>
-
+	
 	</div>
 	<div class="container-fluid">
 		<div class="col-md-12 col-md-offset-1 ">
@@ -362,18 +384,41 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 			    endif;
 			    wp_reset_postdata(); ?>
 		</div>
+		
 	</div>
+	<div class="scrollme">
+	<div class="animateme ir-blog" data-when="exit" data-from="1" data-to="0" data-opacity="1" data-translatex="-100">
+				<h3 class="notes" id="notaverde">
+				<?php echo __('[:en]<span class="hidden-xs">  ----- </span>VISIT OUR BLOG [:es]<span class="hidden-xs">-------</span><span class="hidden-xs" style="color:#c2d72e">●</span>ir al blog'); ?>
+				 </h3>
+		</div>		
+	</div>	
 </section>
 
 
 <section id="contactos" class="content-section">
-	<div class="ejemplos">
-	<h1 class="contacto-header"> <?php echo __('[:en]CONTACT[:es]CONTACTO'); ?><span class="hidden-xs">
-		-------<span style="color:#c2d72e">● </span></span></h1>
+	<div class="ejemplos scrollme">
+	<h1> <?php echo __('[:en]CONTACT[:es]CONTACTO'); ?></h1>
+	<div class="animateme" data-when="enter" data-from="1" data-to="0" data-opacity="1" data-translatey="-50">
+			<h2 class="notes">
+			<?php echo __('[:en]llamanos [:es]llamanos'); ?>
+			 </h2>
+	</div>	 
+
 	</div>
+
 	<div class="container-fluid">
 		<div class="col-md-10 col-md-offset-1">
-				<div class="formulario col-md-6 text-left">
+			
+			<div class="col-md-6 text-left">
+				<ul class="horizontal telefono">
+					<li class="social"><img src="<?php echo get_template_directory_uri(); ?>/img/fiquscontacto.png"></li>
+					<li class="social"> <a mailto="info@fiqus.com">info@fiqus.com</a> </br> 0810 220 0046 <br> </li>
+				</ul>
+				<div class="formulario col-md-12 text-left">
+
+
+
 					<?php
 					if (qtranxf_getLanguage() == 'en') {
 						echo do_shortcode('[contact-form-7 id="79" title="Formulario Ingles"]');
@@ -381,45 +426,43 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 						echo do_shortcode('[contact-form-7 id="78" title="Formulario español"]');
 					}
 					 ?>
-						<ul class="horizontal">
-							<li class="social"><img src="<?php echo get_template_directory_uri(); ?>/img/fiquscontacto.png"></li>
-							<li class="social"> <a mailto="info@fiqus.com">info@fiqus.com</a> </br> 0810 220 0046 <br> </li>
-						</ul>
+				<img src="<?php echo get_template_directory_uri(); ?>/img/robot.png">
+
+				</div>
 				</div>
 
 
 				<div class="col-md-6 mapas">
 							<div class="col-md-6">
 							<p class=" text-left">Cuenca 1554 Oficina "P" <br>
-								Buenos Aires, Argentina<br>
+								Ciudad de Buenos Aires, Argentina<br>
 							</p>
 
 							<div class="map-wrap">
     							<div class="overlay" onClick="style.pointerEvents='none'"></div>
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5566.594087921657!2d-58.48568642663519!3d-34.61578537097645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9e7cdd9539d%3A0x8810b580f342f227!2sCuenca+1554%2C+C1416BCN+CABA%2C+Argentina!5e1!3m2!1ses-419!2sar!4v1497209225542" width="100%" height="240" frameborder="0" style="border:0" allowfullscreen></iframe>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5566.594087921657!2d-58.48568642663519!3d-34.61578537097645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9e7cdd9539d%3A0x8810b580f342f227!2sCuenca+1554%2C+C1416BCN+CABA%2C+Argentina!5e1!3m2!1ses-419!2sar!4v1497209225542" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
 
 							</div>
 
 							</div>
 							<div class="col-md-6">
 							<p class="text-left"> Av. Arrayanes 66, Local 7 <br>
-								Villa La Angostura, Argentina <br>
+								Villa La Angostura, Neuquén, Argentina <br>
 							</p>
 
 							<div class="map-wrap">
     							<div class="overlay" onClick="style.pointerEvents='none'"></div>
-							<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m11!1m3!1d20930.446152692115!2d-71.64706195974132!3d-40.76135631791441!2m2!1f0!2f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9610bf68e258aae1%3A0x7c306be0fbc05418!2sAv.+Arrayanes%2C+Villa+La+Angostura%2C+Neuqu%C3%A9n%2C+Argentina!5e1!3m2!1ses-419!2sar!4v1497209124435" width="100%" height="240" frameborder="0" style="border:0" allowfullscreen></iframe>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m11!1m3!1d20930.446152692115!2d-71.64706195974132!3d-40.76135631791441!2m2!1f0!2f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9610bf68e258aae1%3A0x7c306be0fbc05418!2sAv.+Arrayanes%2C+Villa+La+Angostura%2C+Neuqu%C3%A9n%2C+Argentina!5e1!3m2!1ses-419!2sar!4v1497209124435" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
 							</div>
 							</div>
 							<div class="col-md-12">
-								<ul class="horizontal">
+								<ul class="horizontal redes">
 									<li class="social"><a href="https://www.facebook.com/fiquscoop" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/fb-fiqus.png" alt="Facebook"></a></li>
 									<li class="social"><a href="https://twitter.com/fiquscoop" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/tw-fiqus.png" alt="Twitter"></a></li>
 									<li class="social"><a href="https://plus.google.com/u/0/112462059414887056058/posts" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/gp-fiqus.png" alt="Google Plus"></a></li>
 									<li class="social"><a href="https://github.com/fiqus" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/git-fiqus.png" alt="Github"></a></li>
 								</ul>
 							</div>
-
 
 				</div>
 		</div>
