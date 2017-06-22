@@ -40,14 +40,14 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 <div class="intro">
 	    <div class="bg-video">
         	<video autoplay loop>
-            	<source type="video/webm" src="<?php echo get_template_directory_uri(); ?>/img/videofiqus.webm" />
             	<source type="video/mp4" src="<?php echo get_template_directory_uri(); ?>/img/videofiqus.mp4" />
+            	<source type="video/webm" src="<?php echo get_template_directory_uri(); ?>/img/videofiqus.webm" />
 
           	</video>
 		</div>
 
 		<div class="central text-center">
-			<img class="logo gris" src="<?php echo get_template_directory_uri(); ?>/img/logo-fiqus.png">
+			<img class="logo gris" src="<?php echo get_template_directory_uri(); ?>/img/fiqus_logo.gif">
 			<div class="scrollme">
 				<h1 class="fiqus animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatey="40"><?php echo __('[:en]Software Cooperative[:es]Cooperativa de Software'); ?></h1>
 			</div>
@@ -184,10 +184,10 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 				</span> <br>
 				<div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="1" data-translatex="-300">
 				<span class="mantenimiento">
-					<?php echo __('[:en]New Functionalities[:es]Nuevas Funcionalidades'); ?>
+					<?php echo __('[:en]New Functionalities[:es]Nuevas Funcionalidades '); ?>
 					<br>
 					<hr class="separacion">
-					<?php echo __('[:en]Maintenance[:es]Mantenimiento'); ?>
+					<?php echo __('[:en]Maintenance <span class="extra"> OPCIONAL </span>[:es]Mantenimiento <span class="extra"> OPCIONALES </span>'); ?>
 				</span>
 				</div>
 			</div>
@@ -195,7 +195,7 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 </section><!--end seccion como trabajamos-->
 
 <section id="proyectos" class="content-section">
-		<div class="ejemplos">
+		<div class="ejemplos scrollme">
 		<h1><?php echo __('[:en]PROJECTS[:es]PROYECTOS'); ?></h1>
 
 			<div class="animateme" data-when="enter" data-from="1" data-to="0" data-opacity="1" data-translatey="-50">
@@ -389,7 +389,7 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 	<div class="scrollme">
 	<div class="animateme ir-blog" data-when="exit" data-from="1" data-to="0" data-opacity="1" data-translatex="-100">
 				<h3 class="notes" id="notaverde">
-				<?php echo __('[:en]<span class="hidden-xs">  ----- </span>VISIT OUR BLOG [:es]<span class="hidden-xs">-------</span><span class="hidden-xs" style="color:#c2d72e">●</span>ir al blog'); ?>
+				<?php echo __('[:en]<span class="hidden-xs">  ----- </span>VISIT OUR BLOG [:es]<span class="hidden-xs">-------</span>ir al blog'); ?>
 				 </h3>
 		</div>		
 	</div>	
