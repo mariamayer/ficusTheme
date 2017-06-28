@@ -64,27 +64,26 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 			<a class="close" href="#">x</a>
 			<?php echo __('[:en]'.$nosotros_en.'[:es]'.$nosotros_es); ?>
 		</div>
-		<div class="valores col-md-3 col-md-offset-3 col-sm-6 col-sm-offset-3  linea gris text-right">
+		<div class="valores col-md-3 col-md-offset-3 col-sm-6 col-sm-offset-3  linea gris " >
 			<div class="scrollme">
 				<h2 class="boton animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-150" > <?php echo __('[:en]Values[:es]Valores'); ?> </h2>
 			</div>
-			 <ul class="valor  text-right">
+			 <ul class="valor valorderecha">
 				<li class="scrollme"><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-300">
 					<?php echo __('[:en]Income distribution[:es]Distribución de las ganancias'); ?></div><span class="dot right">&#x25CF;</span></li>
-				<li class="scrollme"><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-300"><?php echo __('[:en]Community involvement [:es]Compromiso con la comunidad'); ?></div><span class="dot right">&#x25CF;</span></li>
+				<li class="scrollme"><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="-300">
+					<?php echo __('[:en]Community involvement [:es]Compromiso con la comunidad'); ?></div><span class="dot right">&#x25CF;</span></li>
 
 			</ul>
 		</div>
 		<div class="valores col-md-3 col-sm-12  text-left">
 			 <ul class="valor">
-				<li class="scrollme"><span class="dot left">&#x25CF;</span><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="300"><?php echo __('[:en]Horizontality[:es]Horizontalidad'); ?></div></li>
-
-
-
+				<li class="scrollme"><span class="dot left">&#x25CF;</span><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="300">
+					<?php echo __('[:en]Horizontality[:es]Horizontalidad'); ?></div></li>
 				<li class="scrollme"><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="300">
-					<?php echo __('[:en]Decision making [:es]Participación en la toma de decisiones '); ?></div></li>
+					<?php echo __('[:en]Mutual help  [:es]Ayuda mutua '); ?></div><span class="dot left">&#x25CF;</span></li>
 				<li class="scrollme"><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="300">
-					<?php echo __('[:en]Mutual help [:es]Ayuda mutua '); ?></div></li>
+					<?php echo __('[:en]Decision making [:es]Participación en la toma de decisiones '); ?></div><span class="dot left">&#x25CF;</span></li>
 
 			</ul>
 		</div>
@@ -193,12 +192,126 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 			</div>
 		</div>
 </section><!--end seccion como trabajamos-->
+<section id="proyectos" class="content-section">
+		<div class="ejemplos scrollme">
+		<h1><?php echo __('[:en]PROJECTS[:es]PROYECTOS'); ?></h1>
+
+			<div class="animateme" data-when="enter" data-from="1" data-to="0.5" data-opacity="0" data-translatey="-50">
+				<h2 class="notes" id="largo">
+				<?php echo __('[:en]our work [:es]algunos trabajos'); ?>
+				 </h2>
+		</div>	 
+		</div>
+
+		<div class="container-fluid">
+			<div class="col-md-10 col-md-offset-1 preview">
+					<div>
+						<ul class="servicios">
+							<?php
+							$categories = get_categories( array(
+							    'orderby' => 'name',
+							    'parent'  => 0
+							) );
+							foreach ( $categories as $category ) {
+								echo '<li class="selector" data-cat="'.$category->slug.'"> '.$category->name.'</li>';
+							}
+							?>
+						<li class="selector" data-cat="todos"> Todos </li>
+						</ul>
+					</div>
+			</div>		
+		<div class="col-md-10 col-md-offset-1">
+
+			<div class="col-md-4 proy-preview">
+				<a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                        <div class="proy-hover">
+                            <div class="proy-info">
+                            	<p>Desarrollos a medida</p>
+                            	<h3>BETTEREZ</h3>
+                               
+                            </div>
+                        </div>				
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/portfolio-51.jpg"></li>
+                 </a>
+            </div>     
+
+
+			<div class="col-md-4 proy-preview">
+				<a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                        <div class="proy-hover">
+                            <div class="proy-info">
+                            	<p>Desarrollos a medida</p>
+                            	<h3>BETTEREZ</h3>
+                            </div>
+                        </div>			
+				
+				<img src="<?php echo get_template_directory_uri(); ?>/img/portfolio-52.jpg"></li>
+                 </a>
+            </div>   
+
+			<div class="col-md-4 proy-preview">
+				<a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                        <div class="proy-hover">
+                            <div class="proy-info">
+                            	<p>Desarrollos a medida</p>
+                            	<h3>BETTEREZ</h3>
+                            </div>
+                        </div>				
+			
+				<img src="<?php echo get_template_directory_uri(); ?>/img/portfolio-53.jpg"></li>
+                 </a>
+            </div>  
+
+		</div>
+
+		<div class="col-md-10 col-md-offset-1">
+			<div class="col-md-4 proy-preview">
+				<a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                        <div class="proy-hover">
+                            <div class="proy-info">
+                            	<p>Desarrollos a medida</p>
+                            	<h3>BETTEREZ</h3>
+                            </div>
+                        </div>
+				<img src="<?php echo get_template_directory_uri(); ?>/img/portfolio-54.jpg"></li>
+                 </a>
+            </div>  			
+
+			<div class="col-md-4 proy-preview">
+				<a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                        <div class="proy-hover">
+                            <div class="proy-info">
+                            	<p>Desarrollos a medida</p>
+                            	<h3>BETTEREZ</h3>
+                            </div>
+                        </div>				
+				<img src="<?php echo get_template_directory_uri(); ?>/img/portfolio-54.jpg"></li>
+                 </a>
+            </div>  			
+
+			<div class="col-md-4 proy-preview">
+				<a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                        <div class="proy-hover">
+                            <div class="proy-info">
+                            	<p>Desarrollos a medida</p>
+                            	<h3>BETTEREZ</h3>
+                            </div>
+                        </div>
+				<img src="<?php echo get_template_directory_uri(); ?>/img/portfolio-54.jpg"></li>
+                 </a>
+            </div>  			
+		</div>
+	</div>
+</section><!--end seccion proyectos-->
+
+
+
 
 <section id="proyectos" class="content-section">
 		<div class="ejemplos scrollme">
 		<h1><?php echo __('[:en]PROJECTS[:es]PROYECTOS'); ?></h1>
 
-			<div class="animateme" data-when="enter" data-from="1" data-to="0" data-opacity="1" data-translatey="-50">
+			<div class="animateme" data-when="enter" data-from="1" data-to="0.5" data-opacity="0" data-translatey="-50">
 				<h2 class="notes" id="largo">
 				<?php echo __('[:en]our work [:es]algunos trabajos'); ?>
 				 </h2>
@@ -208,7 +321,7 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 		<div class="container-fluid">
 			<div class="col-md-10 col-md-offset-1">
 
-				<div class="col-md-10  col-md-offset-1 text-left proyectos">
+				<div class="col-md-10  col-md-offset-1 proyectos">
 					<div>
 						<ul class="servicios">
 							<?php
@@ -226,7 +339,7 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 					<?php $i=1; ?>
 					<?php query_posts('posts_per_page=-1'); ?>
 					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-						<div class="col-md-6">
+						<div class="col-md-4">
 							<?php if($i==1){
 								$content = strip_shortcodes(get_the_content());
 								$gallery = get_post_gallery( get_the_ID(), false );
@@ -375,7 +488,7 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 			    $loop = new WP_Query( array( 'post_type' => 'nota', 'posts_per_page' => '4') );
 			    if ( $loop->have_posts() ) :
 			        while ( $loop->have_posts() ) : $loop->the_post(); ?>
-								<div class="noticia col-md-5 text-left prod-descripcion">
+								<div class="noticia col-md-3 text-left prod-descripcion">
 									<h2 class="novedad"><?php echo get_the_title(); ?></h2>
 									<p class="contenido"><?php echo get_the_excerpt(); ?></p>
 									<span><a href="<?php echo get_the_permalink(); ?>" class="leermas"><?php echo __('[:en]Read More[:es]Leer más'); ?></a> </span>
@@ -399,7 +512,7 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 <section id="contactos" class="content-section">
 	<div class="ejemplos scrollme">
 	<h1> <?php echo __('[:en]CONTACT[:es]CONTACTO'); ?></h1>
-	<div class="animateme" data-when="enter" data-from="1" data-to="0" data-opacity="1" data-translatey="-50">
+	<div class="animateme" data-when="enter" data-from="1" data-to="0.5" data-opacity="0" data-translatey="-50">
 			<h2 class="notes">
 			<?php echo __('[:en]llamanos [:es]llamanos'); ?>
 			 </h2>
