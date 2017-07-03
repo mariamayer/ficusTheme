@@ -30,7 +30,7 @@
 		});
 
 		//Categorias
-		var webWidth=$(window).width()
+		var webWidth=$(window).width();
 		var containerWidth=$( ".quehacemos" ).width();
 		var liWidth=containerWidth/4;
 		var cant=$( ".hacemos" ).length;
@@ -73,34 +73,42 @@
 		$("#intro .fondo").css('height',intro);
 
 		//Mostrar proyectos
-		$(".grilla").click(function(){
-			$(".grilla").removeClass("active");
-			$(this).addClass("active");
+		$(".portfolio-link").click(function(e){
+			e.preventDefault();
+			$('.modal-proyecto').fadeIn();
 			var content=$(this).data("content");
 			var gallery=$(this).data("gallery");
 			var tags=$(this).data("tags");
+			var cats=$(this).data("cats");
+			var titulo=$(this).data("title");
+			$(".muestra .titulo-proyecto").html(titulo);
+			$(".muestra .categorias-proyecto").html(cats);
 			$(".muestra .contenido-proyecto").html(content);
 			$( '.muestra .rslides li' ).each(function( index ) {
 				$(this).children().remove();
 				$(this).append('<img src="'+gallery[index]+'">');
 			});
-			$('.muestra .selector2').remove();
 			for (var i = 0; i < tags.length; i++) {
-				$('.muestra').append('<p class="selector2">'+tags[i]+'</p>')
+				$('.muestra .tags').append('<p class="selector2">'+tags[i]+'</p>');
 			}
 		});
+		$(".portfolio-close").click(function(e){
+			e.preventDefault();
+			$('.modal-proyecto').fadeOut();
+		});
+
 		//Filtrar Proyectos
-		$(".proyectos .selector").click(function(){
+		$(".selector").click(function(){
 			var category=$(this).data("cat");
 			if(category!='todos'){
-				$(".grilla").parent().hide();
-				$(".grilla").each(function( index ) {
+				$(".portfolio-link").parent().hide();
+				$(".portfolio-link").each(function( index ) {
 					if($(this).hasClass(category)){
 						$(this).parent().show();
 					}
 				});
 			}else{
-				$(".grilla").parent().show();
+				$(".portfolio-link").parent().show();
 			}
 		});
 

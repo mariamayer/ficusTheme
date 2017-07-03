@@ -192,6 +192,7 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 			</div>
 		</div>
 </section><!--end seccion como trabajamos-->
+
 <section id="proyectos" class="content-section">
 		<div class="ejemplos scrollme">
 		<h1><?php echo __('[:en]PROJECTS[:es]PROYECTOS'); ?></h1>
@@ -200,13 +201,13 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 				<h2 class="notes" id="largo">
 				<?php echo __('[:en]our work [:es]algunos trabajos'); ?>
 				 </h2>
-		</div>	 
+		</div>
 		</div>
 
 		<div class="container-fluid">
-			<div class="col-md-10 col-md-offset-1 preview">
+			<div class="col-md-12 preview">
 					<div>
-						<ul class="servicios">
+						<ul class="preview-ul">
 							<?php
 							$categories = get_categories( array(
 							    'orderby' => 'name',
@@ -219,203 +220,60 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 						<li class="selector" data-cat="todos"> Todos </li>
 						</ul>
 					</div>
-			</div>		
-		<div class="col-md-10 col-md-offset-1">
-
-			<div class="col-md-4 proy-preview">
-				<a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="proy-hover">
-                            <div class="proy-info">
-                            	<p>Desarrollos a medida</p>
-                            	<h3>BETTEREZ</h3>
-                               
-                            </div>
-                        </div>				
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/portfolio-51.jpg"></li>
-                 </a>
-            </div>     
-
-
-			<div class="col-md-4 proy-preview">
-				<a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="proy-hover">
-                            <div class="proy-info">
-                            	<p>Desarrollos a medida</p>
-                            	<h3>BETTEREZ</h3>
-                            </div>
-                        </div>			
-				
-				<img src="<?php echo get_template_directory_uri(); ?>/img/portfolio-52.jpg"></li>
-                 </a>
-            </div>   
-
-			<div class="col-md-4 proy-preview">
-				<a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="proy-hover">
-                            <div class="proy-info">
-                            	<p>Desarrollos a medida</p>
-                            	<h3>BETTEREZ</h3>
-                            </div>
-                        </div>				
-			
-				<img src="<?php echo get_template_directory_uri(); ?>/img/portfolio-53.jpg"></li>
-                 </a>
-            </div>  
-
-		</div>
-
-		<div class="col-md-10 col-md-offset-1">
-			<div class="col-md-4 proy-preview">
-				<a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="proy-hover">
-                            <div class="proy-info">
-                            	<p>Desarrollos a medida</p>
-                            	<h3>BETTEREZ</h3>
-                            </div>
-                        </div>
-				<img src="<?php echo get_template_directory_uri(); ?>/img/portfolio-54.jpg"></li>
-                 </a>
-            </div>  			
-
-			<div class="col-md-4 proy-preview">
-				<a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="proy-hover">
-                            <div class="proy-info">
-                            	<p>Desarrollos a medida</p>
-                            	<h3>BETTEREZ</h3>
-                            </div>
-                        </div>				
-				<img src="<?php echo get_template_directory_uri(); ?>/img/portfolio-54.jpg"></li>
-                 </a>
-            </div>  			
-
-			<div class="col-md-4 proy-preview">
-				<a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="proy-hover">
-                            <div class="proy-info">
-                            	<p>Desarrollos a medida</p>
-                            	<h3>BETTEREZ</h3>
-                            </div>
-                        </div>
-				<img src="<?php echo get_template_directory_uri(); ?>/img/portfolio-54.jpg"></li>
-                 </a>
-            </div>  			
-		</div>
-	</div>
-</section><!--end seccion proyectos-->
-
-
-
-
-<section id="proyectos" class="content-section">
-		<div class="ejemplos scrollme">
-		<h1><?php echo __('[:en]PROJECTS[:es]PROYECTOS'); ?></h1>
-
-			<div class="animateme" data-when="enter" data-from="1" data-to="0.5" data-opacity="0" data-translatey="-50">
-				<h2 class="notes" id="largo">
-				<?php echo __('[:en]our work [:es]algunos trabajos'); ?>
-				 </h2>
-		</div>	 
-		</div>
-
-		<div class="container-fluid">
+			</div>
 			<div class="col-md-10 col-md-offset-1">
+				<?php query_posts('posts_per_page=-1'); ?>
+				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+					<?php
+					$gal=get_post_gallery( get_the_ID(), false );
+					$ids = explode( ",", $gal['ids'] );
+					$imgs= array();
+					foreach( $ids as $id ){
+						$src=wp_get_attachment_image_src($id , 'large' );
+						array_push($imgs,$src[0]);
+					}
+					$post_tags=wp_get_post_tags(get_the_ID());
+					$tags_array= array();
+					foreach($post_tags as $tag) {
+						array_push($tags_array, $tag->description);
+					}
+					$classes='';
+					$categorias='';
+					$cats=get_the_category(get_the_ID());
+					foreach ($cats as $cat) {
+						$classes.= ' '.$cat->slug;
+						$categorias.=$cat->name.' ';
+					}
+					?>
+					<div class="col-md-4 proy-preview">
+						<a href="#" class="portfolio-link<?php echo $classes; ?>" data-content='<?php echo strip_shortcodes(get_the_content());?>'
+						data-gallery='<?php echo json_encode($imgs); ?>'
+						data-cats='<?php echo $categorias; ?>'
+						data-title='<?php echo get_the_title(); ?>'
+						data-tags='<?php echo json_encode($tags_array);?>'
+						>
+					      <div class="proy-hover">
+					          <div class="proy-info">
+					          	<p><?php echo $categorias ?></p>
+					          	<h3><?php echo get_the_title(); ?></h3>
 
-				<div class="col-md-10  col-md-offset-1 proyectos">
-					<div>
-						<ul class="servicios">
-							<?php
-							$categories = get_categories( array(
-							    'orderby' => 'name',
-							    'parent'  => 0
-							) );
-							foreach ( $categories as $category ) {
-								echo '<li class="selector" data-cat="'.$category->slug.'"> '.$category->name.'</li>';
-							}
-							?>
-						<li class="selector" data-cat="todos"> Todos </li>
-						</ul>
-					</div>
-					<?php $i=1; ?>
-					<?php query_posts('posts_per_page=-1'); ?>
-					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-						<div class="col-md-4">
-							<?php if($i==1){
-								$content = strip_shortcodes(get_the_content());
-								$gallery = get_post_gallery( get_the_ID(), false );
-								$excerpt=get_the_excerpt();
-								$tags_current = wp_get_post_tags(get_the_ID());
-								$active="active";
-							}else{
-								$active="";
-							}
-							$gal=get_post_gallery( get_the_ID(), false );
-							$ids = explode( ",", $gal['ids'] );
-							$imgs= array();
-							foreach( $ids as $id ){
-								$src=wp_get_attachment_image_src($id , 'large' );
-								array_push($imgs,$src[0]);
-							}
-							$post_tags=wp_get_post_tags(get_the_ID());
-							$tags_array= array();
-							foreach($post_tags as $tag) {
-							  array_push($tags_array, $tag->description);
-							}
-							$classes='';
-							$cats=get_the_category(get_the_ID());
-							foreach ($cats as $cat) {
-								$classes.= ' '.$cat->slug;
-							}
-							?>
-							<div class="grilla <?php echo $active; ?><?php echo $classes; ?>"
-							data-content='<?php echo strip_shortcodes(get_the_content());?>'
-							data-gallery='<?php echo json_encode($imgs); ?>'
-							data-tags='<?php echo json_encode($tags_array);?>'
-							>
-							<h4><?php echo get_the_title(); ?></h4>
-							<?php echo the_excerpt(); ?>
-							<?php
-							$tags = wp_get_post_tags(get_the_ID());
-							echo '<ul class="tag-ul">';
-							foreach ($tags as $tag) {
-							  echo '<li class="tag">' . $tag->name . '</li>';
-							}
-							echo '</ul>';
-							?>
-						</div>
-						</div>
-						<?php $i++; ?>
-						<?php endwhile; endif; ?>
-
-				</div>
-					<div class="col-md-10 col-md-offset-1muestra">
-						<ul class="rslides">
-							<?php
-							$ids = explode( ",", $gallery['ids'] );
-							foreach( $ids as $id ) {
-							    $image  = wp_get_attachment_image( $id, "large");
-							    echo "<li class='img-container' >" . $image . "</li>" ;
-							} ?>
-						</ul>
-						<?php
-						foreach ($tags_current as $tag) {
-						  echo '<p class="selector2">' . $tag->name . '</p>';
-						}
-					 	?>
-						<p class="contenido-proyecto"><?php echo $content; ?></p>
-						</div>
-					</div>
-			</div>
+					          </div>
+					      </div>
+					      <?php the_post_thumbnail(); ?>
+						</a>
+		      </div>
+				<?php endwhile; endif; ?>
 			</div>
 		</div>
+	</section><!--end seccion proyectos-->
 
-</section><!--end seccion proyectos-->
+
 
 <section id="productos" class="content-section">
 	<div class="ejemplos">
 	<h1><?php echo __('[:en]OUR PRODUCTS[:es]NUESTROS PRODUCTOS'); ?></h1>
 		<div class="subrayado" >
-		</div>	 
+		</div>
 
 	</div>
 
@@ -477,19 +335,23 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 	<div class="ejemplos head-blog">
 			<h1 class="blog-header">
 			<a href="/blog"><?php echo __('[:en]VISIT OUR BLOG[:es]VISITA NUESTRO BLOG'); ?>
-			 </a> </h1> 
-	
+			 </a> </h1>
+
 	</div>
-	
+
 	</div>
 	<div class="container-fluid">
-		<div class="col-md-12 col-md-offset-1 ">
+		<div class="col-md-10 col-md-offset-1">
 			<?php
-			    $loop = new WP_Query( array( 'post_type' => 'nota', 'posts_per_page' => '4') );
+			    $loop = new WP_Query( array( 'post_type' => 'nota', 'posts_per_page' => '3') );
 			    if ( $loop->have_posts() ) :
 			        while ( $loop->have_posts() ) : $loop->the_post(); ?>
-								<div class="noticia col-md-3 text-left prod-descripcion">
+								<div class="noticia col-md-4 text-left prod-descripcion">
+									<?php the_post_thumbnail(); ?>
 									<h2 class="novedad"><?php echo get_the_title(); ?></h2>
+									<?php $author_id=$post->post_author; ?>
+									<p class="fecha"><?php echo get_the_date('Y-m-d'); ?></p>
+									<p class="autor"><?php echo get_the_author_meta( 'user_nicename' , $author_id ); ?></p>
 									<p class="contenido"><?php echo get_the_excerpt(); ?></p>
 									<span><a href="<?php echo get_the_permalink(); ?>" class="leermas"><?php echo __('[:en]Read More[:es]Leer más'); ?></a> </span>
 								</div>
@@ -497,15 +359,15 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 			    endif;
 			    wp_reset_postdata(); ?>
 		</div>
-		
+
 	</div>
 	<div class="scrollme">
 	<div class="animateme ir-blog" data-when="exit" data-from="1" data-to="0" data-opacity="1" data-translatex="-100">
 				<h3 class="notes" id="notaverde">
 				<?php echo __('[:en]<span class="hidden-xs">  ----- </span>VISIT OUR BLOG [:es]<span class="hidden-xs">-------</span>ir al blog'); ?>
 				 </h3>
-		</div>		
-	</div>	
+		</div>
+	</div>
 </section>
 
 
@@ -516,13 +378,13 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 			<h2 class="notes">
 			<?php echo __('[:en]llamanos [:es]llamanos'); ?>
 			 </h2>
-	</div>	 
+	</div>
 
 	</div>
 
 	<div class="container-fluid">
 		<div class="col-md-10 col-md-offset-1">
-			
+
 			<div class="col-md-6 text-left">
 				<ul class="horizontal telefono">
 					<li class="social"><img src="<?php echo get_template_directory_uri(); ?>/img/fiquscontacto.png"></li>
@@ -581,6 +443,20 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 		</div>
 	</div>
 </section>
+
+<div class="modal-proyecto">
+	<a href="#" class="portfolio-close">x</a>
+	<div class="col-md-4 col-md-offset-4 muestra">
+		<p class="categorias-proyecto">Categorias</p>
+		<h3 class="titulo-proyecto">Titulo</h3>
+		<ul class="rslides">
+			<li class='img-container'><img src="" alt=""></li>
+			<li class='img-container'><img src="" alt=""></li>
+		</ul>
+		<p class="contenido-proyecto"><?php echo $content; ?></p>
+		<div class="tags"></div>
+		</div>
+</div>
 
 
 <?php get_footer(); ?>

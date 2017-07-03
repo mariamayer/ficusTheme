@@ -73,7 +73,7 @@ html,.home,.page-template-blog,.single-nota{
 body {
 	margin:0;
 	text-align: center;
-    color: #333333;
+  color: #333333;
 }
 
 article,
@@ -704,23 +704,30 @@ h2.boton.animateme {
 }
 
 .nosotros {
-background: #fff;
-color: #666;
-position: absolute !important;
+background: #333333;
+color: #fff;
+position: fixed !important;
 display: none;
-top: 58%;
-height:auto;
-padding:15px;
-left:22.5%;
-width:55%;
+top:0;
+padding:15%;
+left:0;
+width:100%;
+height:100vh;
 z-index: 20;
 font-size: 16px;
+-webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count:2; /* Firefox */
+    column-count: 2;
 }
 
 
 .intro .nosotros .close{
   color:#666;
   opacity: 1;
+  font-size: 30px;
+  position: absolute;
+  top:50px;
+  right:50px;
 }
 
 
@@ -954,7 +961,7 @@ overflow: hidden;
 text-decoration: none !important;
 text-transform: uppercase;
 margin-bottom: 2em; }
-    
+
 
 
 .mantenimiento {
@@ -993,7 +1000,7 @@ border-top: 2px solid #333;
 
 .producto-final {
 	margin-top: 80px;
-	margin-right: 49.15%; 
+	margin-right: 49.15%;
 }
 
 
@@ -1089,8 +1096,31 @@ border-top: 10px solid #c2d72e !important;
 #proyectos .container-fluid{
     padding:0px 50px;
 }
+.modal-proyecto{
+  display: none;
+  position: fixed;
+  top:0;
+  height: 0;
+  overflow: hidden;
+  z-index: 1000;
+  width: 100%;
+  background: #333333;
+  height: 100vh;
+}
 
+.portfolio-close{
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 30px;
+  font-weight: 100;
+  text-decoration: none;
+}
 
+.preview .preview-ul{
+  margin:0 0 40px 0;;
+  padding: 0;
+}
 .proy-preview {
 	margin: 20px 0px;
 }
@@ -1165,7 +1195,7 @@ color: #f1f1f1;
 }
 
 
-.selector:hover { 
+.selector:hover {
     color: #c2d72e;
     box-shadow: inset 0 100px 0 0 #333333;
 }
@@ -1239,7 +1269,6 @@ margin: 2em;
 	text-align: center;
 	border-right: 3px black;
 	padding: 0px 60px;
-	color: #333333;
 	font-family: 'Van Condensed Light';
  ¡
 }
@@ -1339,19 +1368,14 @@ background: #ffffff;
 	transition: all ease 0.8s;
 }
 
-
-.leermas:hover { 
+.leermas:hover {
     color: #c2d72e;
     box-shadow: inset 0 100px 0 0 #f1f1f1;
-
 }
-
-
 
 .contacto{
 	text-align: left;
 	padding-left: 20px;
-
 }
 
 #contactos {
@@ -1398,7 +1422,7 @@ box-shadow: inset 0 0 0 0 #f1f1f1;
 }
 
 
-.enviar:hover { 
+.enviar:hover {
     color: #333333;
     box-shadow: inset 0 100px 0 0 #f1f1f1;
 }
@@ -1414,7 +1438,7 @@ box-shadow: inset 0 0 0 0 #f1f1f1;
  }
 
 .telefono {
-	margin: 10px 0px 50px 0px; 
+	margin: 10px 0px 50px 0px;
 }
 
 
@@ -1716,7 +1740,7 @@ display: none;
 }
 
 
-.single-nota .submit:hover { 
+.single-nota .submit:hover {
     color: #333333;
     box-shadow: inset 0 100px 0 0 #f1f1f1;
 }
@@ -1747,35 +1771,6 @@ display: none;
 
 
 @media (max-width: 1170px) {
-	.home .intro .valores.text-left {
-    margin-top:0 ;
-  }
-
-  .home .intro .valores.linea{
-    margin-top:100px;
-       text-align: center;
-    border:0;
-  }
-
-.intro .valores .valor li {
-  	margin-bottom: 0px;
-    margin-top: 30px;
-	}
-
-
-  .valor .dot{
-    display: none;
-  }
-  .home .intro .valores{
-    text-align: center;
-    margin-bottom: 0;
-  }
-
-  .valorderecha {
-	text-align: center;
-}
-
-
     .feed{
 	visibility: visible;
 	margin-bottom: 20px;
@@ -1793,6 +1788,35 @@ display: none;
 
 
 
+}
+@media (max-width:992px){
+  .home .intro .valores.text-left {
+    margin-top:0 ;
+  }
+
+  .home .intro .valores.linea{
+    margin-top:100px;
+       text-align: center;
+       border:0;
+  }
+
+.intro .valores .valor li {
+    margin-bottom: 0px;
+    margin-top: 30px;
+  }
+
+
+  .valor .dot{
+    display: none;
+  }
+  .home .intro .valores{
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  .valorderecha {
+  text-align: center;
+}
 }
 
 @media (max-width: 600px) {
@@ -1847,7 +1871,7 @@ display: none;
     margin-top: 30px;
 	}
 
-  
+
 .valorderecha {
 	text-align: center;
 }

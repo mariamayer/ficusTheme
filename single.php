@@ -24,6 +24,10 @@ get_header(); ?>
 
 			get_template_part( 'template-parts/content', get_post_format() );
 
+			$author_id=$post->post_author;
+			echo '<p class="fecha">'.get_the_date('Y-m-d').'</p>';
+			echo '<p class="autor">'.get_the_author_meta( 'user_nicename' , $author_id ).'</p>';
+
 
 			// Previous/next post navigation.
 			the_post_navigation( array(
