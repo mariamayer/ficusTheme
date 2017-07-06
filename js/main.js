@@ -88,6 +88,7 @@
 				$(this).children().remove();
 				$(this).append('<img src="'+gallery[index]+'">');
 			});
+			$('.muestra .tags').empty();
 			for (var i = 0; i < tags.length; i++) {
 				$('.muestra .tags').append('<p class="selector2">'+tags[i]+'</p>');
 			}
