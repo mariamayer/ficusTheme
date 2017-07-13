@@ -25,7 +25,7 @@
 					<img src="<?php echo get_template_directory_uri(); ?>/img/footer/2.png">
 				
 				
-					<a class="pull-right"href="http://qr.afip.gob.ar/?qr=fS0oCBuZkm5ebZRKmrNHNg,," alt="AFIP">
+					<a class="pull-right hidden-xs"href="http://qr.afip.gob.ar/?qr=fS0oCBuZkm5ebZRKmrNHNg,," alt="AFIP">
 					<img src="<?php echo get_template_directory_uri(); ?>/img/footer/3.png">
 				
 			</div>

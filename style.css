@@ -1,12 +1,12 @@
 /*
-Theme Name: FICUS
+Theme Name: FIQUS
 Author: Maria Mayer
 Author URI: http://innovateordie.com.ar/
 Description: Description
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
-Text Domain: ficus
+Text Domain: fiqus
 Tags:
 
 This theme, like WordPress, is licensed under the GPL.
@@ -548,12 +548,7 @@ a:active {
 /*--------------------------------------------------------------
 ## Styles Ficus
 --------------------------------------------------------------*/
-:target:before {
-content:"";
-display:block;
-height:45px; /* fixed header height*/
-margin:-45px 0 0; /* negative fixed header height */
-}
+
 
 .header .navbar-default {
     background-color: #333333;
@@ -613,19 +608,19 @@ margin:-45px 0 0; /* negative fixed header height */
 .central {
 width: 600px;
 margin: 0 auto;
-margin-top: 25em;
+margin-top: 20em;
 position: relative;
 z-index: 2;
 }
 
 
 #intro{
-height: 1200px;
+height: 1050px;
 }
 
 .fiqus {
     color: #c2d72e;
-    font-size: 3.8em;
+    font-size: 3.9em;
     text-align: center;
     text-transform: uppercase;
 
@@ -640,7 +635,7 @@ height: 1200px;
 	font-size: 22px;
 	padding:5px;
   color: #fff;
-  margin:50px 0px 120px 0px;
+  margin:100px 0px 120px 0px;
   padding:0 20px;
   line-height: 30px;
 }
@@ -673,7 +668,7 @@ height: 1200px;
     height: auto;
     z-index: -100;
     transform: translateX(-50%) translateY(-50%);
- background: transparent url(../fiqustheme/img/fondo.png) no-repeat  center;
+ background: transparent url(../fiqustheme/img/fondo.jpg) no-repeat  center;
   transition: 1s opacity;
 
 }
@@ -699,80 +694,95 @@ text-transform: uppercase;
 }
 
 h2.boton.animateme {
-    left: 0;
-    top: -35px;
+  left: 0;
+  top: -35px;
 }
 
 .nosotros {
-background: #333333;
-color: #fff;
-position: fixed !important;
-display: none;
-top:0;
-padding:15%;
-left:0;
-width:100%;
-height:100vh;
-z-index: 20;
-font-size: 16px;
--webkit-column-count: 2; /* Chrome, Safari, Opera */
-    -moz-column-count:2; /* Firefox */
-    column-count: 2;
+  background: #333333;
+  color: #fff;
+  position: fixed !important;
+  display: none;
+  top:0;
+  padding:14% 10% 10% 10%;
+  left:0;
+  width:100%;
+  height:100vh;
+  z-index: 20;
+  font-size: 18px;
+  font-family: 'Van Condensed Light';
+  text-align: justify;
+  -webkit-column-count: 2; /* Chrome, Safari, Opera */
+  -moz-column-count:2; /* Firefox */
+  column-count: 2;
+  overflow: scroll;
 }
 
+.nosotros p{
+  width:92%;
+}
 
 .intro .nosotros .close{
   color:#666;
   opacity: 1;
-  font-size: 30px;
-  position: absolute;
-  top:50px;
-  right:50px;
+  font-size: 50px;
+  position: fixed;
+  top: 15%;
+  right: 10%;
 }
 
 
 .nosotros-derecha {
-float: left;
-width: 50%;
-display: block;
-height:inherit;
+  float: left;
+  width: 50%;
+  display: block;
+  height:inherit;
 }
 
 .nosotros-izquierda {
-float: left;
-width: 50%;
-height:inherit;
+  float: left;
+  width: 50%;
+  height:inherit;
 }
 
 .home .intro .valores {
 	text-align: left;
   padding:0 ;
-	margin-top: 15em;
-	margin-bottom: 3em;
+	margin-top: 10em;
+	margin-bottom: 1em;
 }
 
 .valor {
-list-style: none;
-margin:0;
-padding:0;
-font-size: 14px;
-line-height: 24px;
+  list-style: none;
+  margin:0;
+  padding:0;
+  font-size: 14px;
+  line-height: 24px;
 }
+
 .valor .dot{
   top:0;
   font-size: 30px;
   position: absolute;
   color: #c2d72e;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
 .dot.right{
-  right:-10px;
+  right:0;
+  transform: translateX(57%);
 }
+
 .dot.left{
-  left:-10px;
+  left: 0;
+  transform: translateX(-57%);
 }
+
 .fiqus{
   opacity: 0;
 }
+
 .somos {
   color:#fff;
   font-size: 22px;
@@ -783,59 +793,75 @@ line-height: 24px;
 }
 
 .enterate {
-	 vertical-align: -16px;
-	 font-size: 14px;
-	 padding: 1px 10px;
+  vertical-align: -16px;
+  font-size: 14px;
+  padding: 1px 10px;
 }
 
 .quehacemos {
-text-align: center;
-width: 80%;
-height: 250px;
-overflow-x: hidden;
-overflow-y: hidden;
+  text-align: center;
+  width: 80%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  margin-top: 0% !important;
+  top:-100px;
+  position: relative;
 }
+
 #nextHacemos,#prevHacemos{
   position: absolute;
   z-index: 10;
   font-size: 60px;
   color: #3c3d33;
-  top: 10%;
+  top: 35%;
   display: none;
 }
 #prevHacemos{
-  left:5%
+  left:5%;
+  cursor: pointer;
 }
+
 #nextHacemos{
-  right:5%
+  right:5%;
+  cursor: pointer;
 }
+
 #nextTecno{
   left:5%;
   text-align: right;
 }
+
 #prevTecno,#nextTecno{
   position: absolute;
-  z-index: 10;
   top:15%;
   font-size: 60px;
   color: #fff;
   display: none;
 }
+
 #prevTecno{
-  left: 3%;
+  left: 5%;
+  cursor: pointer;
+  z-index:10;
 }
+
 #nextTecno{
-  right:3%;
+  right:5%;
+  cursor: pointer;
 }
+
 #servicio{
-	background: #c2d72e;
-	position: relative;
+  background: #c2d72e;
+  position: relative;
+  padding: 0px !important;
+  height:200px;
 }
+
 .servicios {
-list-style: none;
-margin:1em;
-padding: 0;
-width: 100%;
+  list-style: none;
+  margin:1em;
+  padding: 0;
+  width: 100%;
 }
 
 .hacemos {
@@ -845,9 +871,10 @@ width: 100%;
   left: -15px;
 	height:60px;
 	position: relative;
-	margin:20px 0 100px 0;
+	margin:0 0 100px 0;
 	background-color: #c2d72e;
 }
+
 .hacemos .ti-servicio{
 	display: block;
 	font-family: 'Van Condensed Bold';
@@ -858,13 +885,15 @@ width: 100%;
 	bottom:-100px;
 	width:100%;
 }
+
 #tecnologias{
   background: #333333;
   padding:2em 0;
   position: relative;
 }
+
 .tecnologias {
-  width:90%;
+  width:80%;
   margin:auto;
   text-align: center;
   overflow-x: hidden;
@@ -872,17 +901,17 @@ width: 100%;
 }
 
 .usamos {
-list-style: none;
-padding:0;
-margin:0;
-width:100%;
-
+  list-style: none;
+  padding:0;
+  margin:0;
+  width:100%;
 }
+
 .tecno {
-width: 20%;
-text-align: center;
-display: inline-block;
-vertical-align: top;
+  width: 20%;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .tecno .ti-servicio{
@@ -895,13 +924,12 @@ vertical-align: top;
 
 .como-trabajamos {
     margin-top: 80px;
-    margin-right: 49.15%;
+    margin-right: 49.21%;
 }
 
 #subido{
    vertical-align: -20px;
 }
-
 
 .feedback {
 	overflow: inherit !important;
@@ -1047,12 +1075,41 @@ font-family: 'Van Condensed Bold';
  	color: #333333;
 }
 
- #notaverde {
+ #notaverde4 {
+ background: transparent url(../fiqustheme/img/brushg-04.png) no-repeat  center;
+ text-align: center;
+ color: #c2d72e;
+ }
+
+  #notaverde3 {
  background: transparent url(../fiqustheme/img/brushg-03.png) no-repeat  left;
  text-align: left;
  color: #c2d72e;
  margin-left: 10%;
  }
+
+ #notaverde2 {
+ background: transparent url(../fiqustheme/img/brushg-02.png) no-repeat  center;
+ color: #c2d72e;
+ }
+
+  #notaverde1 {
+ background: transparent url(../fiqustheme/img/brushg-01.png) no-repeat  left;
+ color: #c2d72e;
+ }
+
+ #notagris1 {
+ background: transparent url(../fiqustheme/img/brush-01.png) no-repeat  center;
+ }
+
+  #notagris2 {
+ background: transparent url(../fiqustheme/img/brush-02.png) no-repeat  center;
+ }
+
+  #notagris4 {
+ background: transparent url(../fiqustheme/img/brush-04.png) no-repeat  center;
+ }
+
 
  .ir-blog {
  	text-align: left !important;
@@ -1061,8 +1118,8 @@ font-family: 'Van Condensed Bold';
 .head-blog{
 text-align: center;
 color: #c2d72e;
-padding: 40px 0px 20px 0px;
-border-top: 10px solid #c2d72e !important;
+padding: 100px 0px 50px 0px;
+border-bottom: 10px solid #333333 !important;
 }
 
 .ejemplos h1{
@@ -1073,11 +1130,12 @@ border-top: 10px solid #c2d72e !important;
 
 #trabajamos{
   position: relative;
-  background-color: #ffffff;
   background:url(../fiqustheme/img/trabajamos.png) no-repeat;
   background-size: cover;
   background-position:top center;
+  background-color: #fff;
   height:850px;
+
 }
 #proyectos{
   position: relative;
@@ -1085,6 +1143,7 @@ border-top: 10px solid #c2d72e !important;
   background-size:100% 100%;
   background-position:0 20px;
   color: #f1f1f1;
+  padding-bottom: 5%
 }
 #proyectos .proyectos{
 
@@ -1094,27 +1153,43 @@ border-top: 10px solid #c2d72e !important;
     padding: 30px 30px;
 }
 #proyectos .container-fluid{
-    padding:0px 50px;
+    padding:0px 20px;
 }
 .modal-proyecto{
   display: none;
   position: fixed;
   top:0;
   height: 0;
-  overflow: hidden;
+  overflow: scroll;
   z-index: 1000;
   width: 100%;
   background: #333333;
   height: 100vh;
+  padding: 5% 2%;
+}
+
+.categorias-proyecto {
+	text-transform: uppercase;
+	color: #c2d72e;
+}
+
+.titulo-proyecto {
+	text-transform: uppercase;
 }
 
 .portfolio-close{
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  font-size: 30px;
+  position: fixed;
+top: 15%;
+right: 10%;
+    font-size: 50px;
   font-weight: 100;
   text-decoration: none;
+z-index: 1000;
+}
+
+.portfolio-close a:hover {
+ color: #f1f1f1;
+ text-decoration: none;
 }
 
 .preview .preview-ul{
@@ -1138,7 +1213,7 @@ border-top: 10px solid #c2d72e !important;
 
 #proyectos .proy-preview .proy-hover:hover {
  opacity:1;
- padding-top: 25%;
+ padding-top: 22%;
 
 }
 
@@ -1188,33 +1263,22 @@ color: #f1f1f1;
   text-transform: uppercase;
   margin-left: 5px;
   cursor:pointer;
-  box-shadow: inset 0 0 0 0 #f1f1f1;
-  	-webkit-transition: all ease 0.8s;
-	-moz-transition: all ease 0.8s;
-	transition: all ease 0.8s;
+  	-webkit-transition: color 0.1s; /* For Safari 3.1 to 6.0 */
+    transition: background-color 0.1s;
 }
 
 
 .selector:hover {
-    color: #c2d72e;
-    box-shadow: inset 0 100px 0 0 #333333;
+    background-color: #c2d72e;
 }
 
-.grilla {
-	min-height: 11em;
-	background: #333333;
-	margin-bottom: 2em;
-	padding: 0.5em;
-	color: #ffffff;
-	text-align: center;
-  -webkit-transition: all 1s; /* For Safari 3.1 to 6.0 */
-  transition: all 1s;
-}
-.grilla.active{
+
+.selector.active{
   background:#c2d72e;
   -webkit-transition: all 1s; /* For Safari 3.1 to 6.0 */
   transition: all 1s;
 }
+
 .tag-ul {
 list-style: none;
 padding: 0;
@@ -1247,9 +1311,9 @@ margin-right: 5px;
 font-size: 12px;
 display: inline-block;
 font-family: 'Van Condensed Bold';
-color:#fff;
+color:#333333;
 padding: 4px 8px;
-background-color: #333333;
+background-color: #c2d72e;
 position: relative;
 overflow: hidden;
 text-decoration: none !important;
@@ -1268,9 +1332,9 @@ margin: 2em;
 	font-size: 16px;
 	text-align: center;
 	border-right: 3px black;
-	padding: 0px 60px;
+	padding: 0px 10px;
 	font-family: 'Van Condensed Light';
- ¡
+
 }
 
 #productos {
@@ -1278,11 +1342,11 @@ margin: 2em;
 }
 
 .blog-header{
-
 	padding-right: 20px;
 }
 
-
+.banda-verde {
+	border-top: 10px solid #c2d72e !important; }
 
 .novedad {
 	font-family: 'Van Condensed Bold';
@@ -1296,7 +1360,8 @@ margin: 2em;
 }
 
 .contenido-producto {
-	margin-top: 20px;
+	margin: 30px 0px;
+
 
 }
 
@@ -1305,6 +1370,7 @@ margin: 2em;
 	max-width: 80%;
 	font-size: 17px;
 	margin-bottom: 20px;
+	 margin: auto;
 }
 
 .slick-dots li button::before {
@@ -1346,11 +1412,15 @@ background: #ffffff;
 	border-right: 3px;
 }
 
-.formulario {
-	padding: 20px;
+.formulario.col-md-12{
+	padding: 20px 0;
 	border-right: 3px;
-
 }
+
+.mapas.col-md-6{
+	padding: 0;
+}
+
 .leermas{
     font-size: 14px;
     display: inline-block;
@@ -1362,15 +1432,14 @@ background: #ffffff;
     overflow: hidden;
     text-decoration: none !important;
     text-transform: uppercase;
-    box-shadow: inset 0 0 0 0 #f1f1f1;
-	-webkit-transition: all ease 0.8s;
-	-moz-transition: all ease 0.8s;
-	transition: all ease 0.8s;
+	-webkit-transition: background-color 0.1s; /* For Safari 3.1 to 6.0 */
+    transition: background-color 0.1s;
+
 }
 
 .leermas:hover {
-    color: #c2d72e;
-    box-shadow: inset 0 100px 0 0 #f1f1f1;
+    color: #333333;
+    background-color: #f1f1f1;
 }
 
 .contacto{
@@ -1386,9 +1455,11 @@ font-size: 1.2em;
 }
 
 .mapas {
-	padding: 20px;
+	padding: 0px;
 }
-
+.mapas .text-left{
+  height: 110px;
+}
 
 .completar {
 width: 100%;
@@ -1438,7 +1509,8 @@ box-shadow: inset 0 0 0 0 #f1f1f1;
  }
 
 .telefono {
-	margin: 10px 0px 50px 0px;
+  height: 80px;
+	margin: 10px 0px 30px 0px;
 }
 
 
@@ -1447,9 +1519,16 @@ box-shadow: inset 0 0 0 0 #f1f1f1;
  }
 
  .social {
+   display: inline-block;
+  float: left;
+  margin: 0 20px 0 0;
+
+ }
+
+  .datos {
  	 display:inline-block;
  	 float:left;
- 	 margin: 0px 20px;
+ 	 margin: 0 40px 0 0;
 
  }
 
@@ -1507,8 +1586,6 @@ font-size: 32px;
 .img-container{
   width: 90%;
   margin: auto;
-  background: url(../ficus/img/fiqus-19.png) no-repeat;
-  padding: 3%;
   background-size: 100% 100%;
   position: relative;
   height: 100%;
@@ -1537,7 +1614,7 @@ font-size: 14px;
   position: relative;
   list-style: none;
   overflow: hidden;
-  width: 80%;
+  width: 100%;
   padding: 0;
   margin: auto;
   }
@@ -1589,7 +1666,7 @@ font-size: 14px;
 }
 .slick-arrow{
   position: absolute;
-  top: 50%;
+  top: 40%;
   color:#1a1a1a;
   font-size: 50px;
   padding:10px;
@@ -1603,10 +1680,10 @@ font-size: 14px;
   text-decoration: none;
 }
 .arrow-right{
-  left:0
+  left:-6%;
 }
 .arrow-left{
-  right:0
+  right:-6%;
 }
 
 .nota h1{
@@ -1615,6 +1692,8 @@ font-size: 14px;
   max-width: 700px;
 margin-left: auto;
 margin-right: auto;
+    text-align: center;
+    font-size: 46px;
 }
 
 .nota p{
@@ -1623,8 +1702,11 @@ margin-right: auto;
   margin: auto;
   text-align: left;
   line-height: 1.5;
-	font-family: 'Roboto', sans-serif;
   font-size: 18px;
+}
+
+.single-nota .date {
+	font-size: 48px !important;
 }
 
 
@@ -1638,20 +1720,20 @@ margin-right: auto;
 
 .encabezado-blog {
 text-align: left;
-padding-left: 25%;
-font-size: 40px;
-margin-top: 50px !important;
 }
 
 .single-nota #comments,.single-nota .nav-links{
 max-width: 740px;
-padding-left: 20px;
-padding-right: 20px;
+padding: 20px;
 margin-left: auto;
 margin-right: auto;
-
+border-top: solid 3px #333333;
 }
 
+
+.single-nota .comments-title {
+	display: none;
+}
 
 
 .single-nota .comment-content{
@@ -1664,8 +1746,7 @@ margin-right: auto;
 }
 
 .single-nota .post-navigation {
-	background: #f2f2f2;
-	padding: 20px;
+	text-align: center;
 }
 
 .single-nota .reply {
@@ -1677,6 +1758,42 @@ margin-right: auto;
     text-decoration: none !important;
     text-transform: uppercase;
     margin-bottom: 20px;
+}
+
+.single-nota .autor{
+	text-transform: uppercase;
+	max-width: 740px;
+	padding: 0px 10px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 50px;
+}
+
+.single-nota .autor:before{
+	content: "";
+    display: block;
+    background: url(../fiqustheme/img/author.png) no-repeat;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: 0 6px 0 0;
+}
+
+.single-nota .fecha {
+	max-width: 740px;
+padding: 20px 10px 0px 10px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.single-nota .fecha:before{
+	content: "";
+    display: block;
+    background: url(../fiqustheme/img/date.png) no-repeat;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: 0 6px 0 0;
 }
 
 .screen-reader-text {
@@ -1768,10 +1885,15 @@ display: none;
 }
 
 
-
+@media (max-width: 1280px) {
+ .nosotros {
+ 	font-size: 16px;
+ 	padding: 15% 10%;
+ 		}
+  }
 
 @media (max-width: 1170px) {
-    .feed{
+  .feed{
 	visibility: visible;
 	margin-bottom: 20px;
 	}
@@ -1779,6 +1901,11 @@ display: none;
 .bgrande {
 	display: none;
 }
+
+ .nosotros {
+ 	font-size: 16px;
+ 	padding: 15% 10%;
+ }
 
 
   .como-trabajamos{
@@ -1790,8 +1917,21 @@ display: none;
 
 }
 @media (max-width:992px){
+
+  .fq_servicio{
+    height: 110px;
+    padding: 20px;
+  }
+  .hacemos .ti-servicio{
+    font-size: 18px;
+  }
+
   .home .intro .valores.text-left {
     margin-top:0 ;
+  }
+
+  .quehacemos{
+    top:0;
   }
 
   .home .intro .valores.linea{
@@ -1819,10 +1959,19 @@ display: none;
 }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 680px) {
   .central{
     width:90%;
   }
+
+ .nosotros {
+ 	font-size: 14px;
+ 	padding: 15% 2% 5% 2%;
+ 	-webkit-column-count: 1; /* Chrome, Safari, Opera */
+    -moz-column-count:1; /* Firefox */
+    column-count: 1;
+  }
+
   .hacemos{
     border:0;
   }
@@ -1848,6 +1997,10 @@ display: none;
   }
   .hacemos{
     width:100%;
+    height:auto;
+  }
+  .hacemos img{
+    height:100px;
   }
   .tecno {
     width:100%;
@@ -1876,26 +2029,23 @@ display: none;
 	text-align: center;
 }
 
-  .quehacemos{
+  #servicio{
     height:auto;
   }
   .hacemos:first-child{
     border:0;
   }
   .hacemos{
-    left:0;
+    left:-15px;
     height:40px;
   }
-  .hacemos img{
-    width: auto;
-    height: 65px;
-  }
+
   .hacemos .ti-servicio{
     font-size: 25px;
     bottom:-85px;
   }
   .tecno{
-    margin: 5px 0;
+    margin: 20px 0px;
   }
   #trabajamos{
     height:auto;
@@ -1915,6 +2065,26 @@ display: none;
     max-width: 100%;
   }
 
+
+.telefono {
+   margin: unset; }
+
+.redes {
+	margin: unset;
+}
+
+  .social {
+ 	 margin: 0px 5px;
+ }
+
+.datos {
+ 	 margin: 10px 20px;
+ }
+
+ .horizontal {
+ 	 margin: unset;
+ }
+
   .noticia{
     padding-bottom: 80px;
   }
@@ -1931,5 +2101,18 @@ display: none;
 	display: none;
 }
 
+
+}
+
+@media (max-width: 320px) {
+
+ .nosotros {
+ 	font-size: 12px;
+ 	padding: 15% 2% 5% 2%;
+ 	-webkit-column-count: 1 !important; /* Chrome, Safari, Opera */
+    -moz-column-count:1 !important; /* Firefox */
+    column-count: 1 !important;
+
+ 	}
 
 }

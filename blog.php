@@ -7,7 +7,14 @@ get_header(); ?>
 
 <section id="blog content-section">
 	<div class="ejemplos head-blog">
-	<h1 class="encabezado-blog">BLOG</h1>
+	<h1>
+		<img class="logo" src="<?php echo get_template_directory_uri(); ?>/img/blog_logo.png">
+		<div class="animateme" data-when="enter" data-from="1" data-to="0.5" data-opacity="0" data-translatey="-50">
+				<h2 class="notes" >
+				<?php echo __('[:en]blog [:es]blog'); ?>
+				 </h2>
+		</div>	 
+	</h1>
 	</div>
 	<div class="container-fluid">
 		<div class="col-md-6 col-md-offset-3 ">

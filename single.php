@@ -11,7 +11,8 @@ get_header(); ?>
 
 	<div class="ejemplos head-blog">
 	<h1 class="encabezado-blog">
-		BLOG FIQUS
+		<img class="logo" src="<?php echo get_template_directory_uri(); ?>/img/blog_logo.png">
+
 	</h1>
 	</div>
 
