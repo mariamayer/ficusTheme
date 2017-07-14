@@ -105,7 +105,7 @@ add_action( 'widgets_init', 'ficus_widgets_init' );
  * Enqueue scripts and styles.
  */
 function ficus_scripts() {
-	wp_enqueue_style( 'ficus-style', get_stylesheet_uri());
+	wp_enqueue_style( 'ficus-style', get_stylesheet_uri(),false, null);
 
 	wp_enqueue_style( 'ficus-slick-theme', get_template_directory_uri() . '/slick-theme.css',false,auto);
 
@@ -117,7 +117,7 @@ function ficus_scripts() {
 
 	wp_enqueue_script( 'ficus-slick', get_template_directory_uri() . '/js/slick.min.js', array(), '1.0.3', true );
 
-	wp_enqueue_script( 'ficus-main', get_template_directory_uri() . '/js/main.js', array(), '1.2.4', true );
+	wp_enqueue_script( 'ficus-main', get_template_directory_uri() . '/js/main.js', array(), '1.2.5', true );
 
 	wp_enqueue_script( 'ficus-boostsrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array(), true );
 

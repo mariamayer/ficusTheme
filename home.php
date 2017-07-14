@@ -84,7 +84,7 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 					<?php echo __('[:en]Horizontality[:es]Horizontalidad'); ?></div></li>
 				<li class="scrollme"><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="300">
 					<?php echo __('[:en]Mutual help  [:es]Ayuda mutua '); ?></div><span class="dot left">&#x25CF;</span></li>
-				<li class="scrollme"><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="300">
+				<li class="scrollme height-60"><div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="0" data-translatex="300">
 					<?php echo __('[:en]Decision making [:es]Participación en la toma de decisiones '); ?></div><span class="dot left">&#x25CF;</span></li>
 
 			</ul>
@@ -463,6 +463,71 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 		<div class="tags"></div>
 		</div>
 </div>
+
+<script type="text/javascript">
+	(function(document, history, location) {
+		var HISTORY_SUPPORT = !!(history && history.pushState);
+
+		var anchorScrolls = {
+			ANCHOR_REGEX: /^#[^ ]+$/,
+			OFFSET_HEIGHT_PX: 50,
+
+			init: function() {
+				this.scrollToCurrent();
+				window.addEventListener('hashchange', this.scrollToCurrent.bind(this));
+				document.body.addEventListener('click', this.delegateAnchors.bind(this));
+			},
+
+			getFixedOffset: function() {
+				return this.OFFSET_HEIGHT_PX;
+			},
+
+			scrollIfAnchor: function(href, pushToHistory) {
+				var match, rect, anchorOffset;
+
+				if(!this.ANCHOR_REGEX.test(href)) {
+					return false;
+				}
+
+				match = document.getElementById(href.slice(1));
+
+				if(match) {
+					rect = match.getBoundingClientRect();
+					anchorOffset = window.pageYOffset + rect.top - this.getFixedOffset();
+					window.scrollTo(window.pageXOffset, anchorOffset);
+
+					if(HISTORY_SUPPORT && pushToHistory) {
+						history.pushState({}, document.title, location.pathname + href);
+					}
+				}
+
+				return !!match;
+			},
+
+			scrollToCurrent: function() {
+				this.scrollIfAnchor(window.location.hash);
+			},
+
+			/**
+			 * If the click event's target was an anchor, fix the scroll position.
+			 */
+			delegateAnchors: function(e) {
+				var elem = e.target;
+
+				if(
+					elem.nodeName === 'A' &&
+					this.scrollIfAnchor(elem.getAttribute('href'), true)
+				) {
+					e.preventDefault();
+				}
+			}
+		};
+
+		window.addEventListener(
+			'DOMContentLoaded', anchorScrolls.init.bind(anchorScrolls)
+		);
+	})(window.document, window.history, window.location);
+</script>
 
 
 <?php get_footer(); ?>

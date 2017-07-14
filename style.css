@@ -640,6 +640,9 @@ height: 1050px;
   line-height: 30px;
 }
 
+.valor .height-60{
+  height:60px;
+}
 
 .valorderecha {
 	text-align: right;

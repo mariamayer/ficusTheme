@@ -37,12 +37,12 @@
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav superior">
-		        <li><a href="#intro"><?php echo __('[:en]Home[:es]Intro'); ?></a></li>
-		        <li><a href="#servicio"><?php echo __('[:en]Services[:es]Servicios'); ?></a></li>
-						<li><a href="#tecnologias"><?php echo __('[:en]Technologies[:es]Tecnologías'); ?></a></li>
-						<li><a href="#proyectos"><?php echo __('[:en]Projects[:es]Proyectos'); ?></a></li>
-						<li><a href="#productos"><?php echo __('[:en]Products[:es]Productos'); ?></a></li>
-						<li><a href="#contactos"><?php echo __('[:en]Contact[:es]Contacto'); ?></a></li>
+		        <li><a href="<?php echo !(is_front_page()) ? get_home_url() : '#intro'; ?>"><?php echo __('[:en]Home[:es]Intro'); ?></a></li>
+		        <li><a href="<?php if(!is_front_page()) echo get_home_url(); ?>#servicio"><?php echo __('[:en]Services[:es]Servicios'); ?></a></li>
+						<li><a href="<?php if(!is_front_page()) echo get_home_url(); ?>#tecnologias"><?php echo __('[:en]Technologies[:es]Tecnologías'); ?></a></li>
+						<li><a href="<?php if(!is_front_page()) echo get_home_url(); ?>#proyectos"><?php echo __('[:en]Projects[:es]Proyectos'); ?></a></li>
+						<li><a href="<?php if(!is_front_page()) echo get_home_url(); ?>#productos"><?php echo __('[:en]Products[:es]Productos'); ?></a></li>
+						<li><a href="<?php if(!is_front_page()) echo get_home_url(); ?>#contactos"><?php echo __('[:en]Contact[:es]Contacto'); ?></a></li>
 						<li><a href="<?php echo get_home_url(); ?>/blog/">Blog</a></li>
 						<li><?php echo the_widget('qTranslateXWidget', array('type' => 'text', 'hide-title' => true) ); ?></li>
 		      </ul>
