@@ -715,10 +715,7 @@ h2.boton.animateme {
   font-size: 18px;
   font-family: 'Van Condensed Light';
   text-align: justify;
-  -webkit-column-count: 2; /* Chrome, Safari, Opera */
-  -moz-column-count:2; /* Firefox */
-  column-count: 2;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 .nosotros p{
@@ -887,6 +884,7 @@ h2.boton.animateme {
 	position: absolute;
 	bottom:-100px;
 	width:100%;
+  padding: 0 10px;
 }
 
 #tecnologias{
@@ -1465,13 +1463,12 @@ font-size: 1.2em;
 }
 
 .completar {
-width: 100%;
-margin-bottom: 20px;
-	border-bottom: 1px dotted #fff;
-    color: #fff;
-    background: none;
-    opacity: 0.7;
-    line-height: 25px;
+  width: 100%;
+  margin-bottom: 20px;
+  border-bottom: 1px dotted #fff;
+  color: #fff;
+  background: none;
+  line-height: 25px;
 }
 
 
@@ -1975,6 +1972,11 @@ display: none;
     column-count: 1;
   }
 
+  .intro .nosotros .close{
+    top:45px;
+    left:5px;
+  }
+
   .hacemos{
     border:0;
   }
@@ -2044,8 +2046,8 @@ display: none;
   }
 
   .hacemos .ti-servicio{
-    font-size: 25px;
-    bottom:-85px;
+    font-size: 20px;
+    bottom: -95px;
   }
   .tecno{
     margin: 20px 0px;
@@ -2081,7 +2083,7 @@ display: none;
  }
 
 .datos {
- 	 margin: 10px 20px;
+ 	 margin: 10px 0;
  }
 
  .horizontal {

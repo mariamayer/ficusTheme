@@ -13,7 +13,7 @@ get_header(); ?>
 				<h2 class="notes" >
 				<?php echo __('[:en]blog [:es]blog'); ?>
 				 </h2>
-		</div>	 
+		</div>
 	</h1>
 	</div>
 	<div class="container-fluid">
@@ -23,6 +23,7 @@ get_header(); ?>
 			    if ( $loop->have_posts() ) :
 			        while ( $loop->have_posts() ) : $loop->the_post(); ?>
 								<div class="noticia col-md-12 text-left prod-descripcion">
+									<?php the_post_thumbnail(); ?>
 									<h2 class="titulo-nota"><?php echo get_the_title(); ?></h2>
 									<p class="contenido"><?php echo get_the_excerpt(); ?></p>
 									<span><a href="<?php echo get_the_permalink(); ?>" class="leermas"><?php echo __('[:en]Read More[:es]Leer más'); ?></a> </span>
