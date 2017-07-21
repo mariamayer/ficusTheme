@@ -193,6 +193,9 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 				<div class="animateme" data-when="enter" data-from="0.5" data-to="0" data-opacity="1" data-translatex="-300">
 				<span class="mantenimiento">
 					<?php echo __('[:en]New Functionalities[:es]Nuevas Funcionalidades '); ?>
+					<br>
+					<hr class="separacion">
+					<?php echo __('[:en]Maintenance[:es]Mantenimiento'); ?>
 				</span>
 				</div>
 			</div>
@@ -203,7 +206,7 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 		<div class="ejemplos scrollme">
 		<h1><?php echo __('[:en]PROJECTS[:es]PROYECTOS'); ?></h1>
 
-			<div class="animateme" data-when="enter" data-from="1" data-to="0.5" data-opacity="0" data-translatey="-50">
+			<div class="animateme" data-when="enter" data-from="0.8" data-to="0.5" data-opacity="0" data-translatey="-50">
 				<h2 class="notes" id="notagris1">
 				<?php echo __('[:en]our work [:es]algunos trabajos'); ?>
 				 </h2>
@@ -343,7 +346,7 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 			<a href="/blog"><?php echo __('[:en]VISIT OUR BLOG[:es]VISITA NUESTRO BLOG'); ?>
 			 </a>
 			</h1>
-			<div class="animateme" data-when="enter" data-from="1" data-to="0.5" data-opacity="0" data-translatey="-50">
+			<div class="animateme" data-when="enter" data-from="0.8" data-to="0.5" data-opacity="0" data-translatey="-50">
 			<h2 class="notes" id="notaverde4">
 			<?php echo __('[:en]articles [:es]articulos'); ?>
 			 </h2>
@@ -385,7 +388,7 @@ $somos_en='We are a <span style="color:#c2d72e">cooperative</span> company speci
 <section id="contactos" class="content-section">
 	<div class="ejemplos scrollme">
 	<h1> <?php echo __('[:en]CONTACT[:es]CONTACTO'); ?></h1>
-	<div class="animateme" data-when="enter" data-from="1" data-to="0.5" data-opacity="0" data-translatey="-50">
+	<div class="animateme" data-when="enter" data-from="0.6" data-to="0.5" data-opacity="0" data-translatey="-50">
 			<h2 class="notes" id="notagris4">
 			<?php echo __('[:en]Call us [:es]llamanos'); ?>
 			 </h2>
